@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Unheld</title>
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/css/fontawesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/border.css" />
+
+    <style>
+      :root {
+        --primary: #17352d;
+        --secondary: #21473d;
+        --accent: #c4a86d;
+        --cream: #f8f5ef;
+        --white: #ffffff;
+        --text: #d8d8d8;
+        --border: rgba(255, 255, 255, 0.08);
+        --transition: 0.4s ease;
+      }
+
+      /* Custom Scrollbar */
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #11261f;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-top d-none d-lg-block">
+        <div class="container-xl header-top-inner">
+          <!-- Social -->
+          <div class="header-socials">
+            <a href="#" class="header-social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Optional Alert -->
+          <div id="header-alert"></div>
+
+          <!-- Contact -->
+          <div class="header-contact">
+            <div class="header-contact-item">
+              <i class="fa-regular fa-envelope"></i>
+
+              <a href="mailto:hello@theunheld.in"> hello@theunheld.in </a>
+            </div>
+
+            <div class="header-contact-item">
+              <i class="fa-solid fa-phone"></i>
+
+              <a href="tel:+919840221718"> +91 98402 21718 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-dark site-navbar">
+        <div class="container-xl navbar-container">
+          <a class="navbar-brand site-logo" href="index.html">
+            <img
+              src="images/logo.png"
+              alt="The unheld"
+              width="300"
+              height="150"
+            />
+          </a>
+
+          <div class="site-navigation">
+            <!-- Desktop Navigation -->
+            <ul class="navbar-nav site-nav-list">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="sanctuaries.html"> Sanctuaries </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="we-come-to-you.html">
+                  We Come To You
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="organisations.html">
+                  For Organisations
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header-action">
+            <a href="#unheardBooking" class="btn-light"> Make Appointment </a>
+          </div>
+
+          <button
+            type="button"
+            class="site-menu-toggle"
+            id="siteMenuToggle"
+            aria-label="Open navigation"
+            aria-controls="siteMobileMenu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="site-menu-backdrop" id="siteMenuBackdrop"></div>
+
+      <aside class="site-mobile-menu" id="siteMobileMenu" aria-hidden="true">
+        <!-- Menu Header -->
+
+        <div class="site-mobile-menu-header">
+          <span class="site-mobile-title"> MENU </span>
+
+          <button
+            type="button"
+            class="site-menu-close"
+            id="siteMenuClose"
+            aria-label="Close navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Menu Body -->
+
+        <div class="site-mobile-menu-body">
+          <ul class="site-mobile-nav-list">
+            <li>
+              <a href="index.html" class="active"> Home </a>
+            </li>
+
+            <li>
+              <a href="about.html"> About </a>
+            </li>
+
+            <li>
+              <a href="sanctuaries.html"> Sanctuaries </a>
+            </li>
+
+            <li>
+              <a href="we-come-to-you.html"> We Come To You </a>
+            </li>
+
+            <li>
+              <a href="organisations.html"> For Organisations </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Appointment -->
+
+          <div class="mobile-menu-action">
+            <a href="#unheardBooking" class="mobile-menu-button">
+              Make Appointment
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Hero -->
+    <section class="unheard-hero">
+      <!-- Hero Background Overlay -->
+      <div class="unheard-hero-overlay">
+        <div class="container-xl">
+          <!-- Hero Content -->
+          <div class="unheard-hero-content">
+            <!-- Small Label -->
+            <div class="unheard-hero-label">
+              <span class="unheard-label-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+
+              <span>
+                UNHELD - India's First Anonymous-Entry Counseling Center
+              </span>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="unheard-hero-title">
+              You don't have to say your name. Just say you're ready.
+            </h1>
+
+            <!-- Description -->
+            <p class="unheard-hero-description">
+              The Unheld is a sanctuary — not a clinic, not a hospital. A warm,
+              private space built for the emotions you've never been able to say
+              out loud: guilt, shame, secrets, exhaustion, and the quiet grief
+              of feeling like less than enough.
+            </p>
+
+            <!-- Hero Buttons -->
+            <div class="unheard-hero-actions">
+              <!-- <a href="#unheardContact" class="btn-light"> Contact Us </a> -->
+
+              <a href="index.html#unheardBooking" class="btn-light">
+                Book Anonymously
+              </a>
+            </div>
+          </div>
+
+          <div class="unheard-booking-wrapper" id="unheardBooking">
+            <div class="unheard-booking-card">
+              <!-- Booking Introduction -->
+              <div class="unheard-booking-intro">
+                <h2>HOW IT WORKS</h2>
+
+                <p>
+                  <strong>First Session — Zero Identity:</strong>
+                  <br />
+
+                  No name. No registration. No login. You pick a sanctuary,
+                  choose a time, and show up. We ask nothing except that you
+                  walk through the door. After the first session, if you'd like
+                  to continue, you decide what you share.
+                </p>
+              </div>
+
+              <!-- Booking Form -->
+              <form action="#" method="POST" class="unheard-booking-form">
+                <!-- Sanctuary -->
+                <div class="unheard-form-group">
+                  <label for="unheardSanctuary"> TYPE SANCTUARY </label>
+
+                  <select
+                    id="unheardSanctuary"
+                    name="sanctuary"
+                    class="unheard-form-control unheard-select"
+                    required
+                  >
+                    <option value="" selected disabled>Select Sanctuary</option>
+
+                    <option value="the-confessional">The Confessional</option>
+
+                    <option value="the-tide-room">The Tide Room</option>
+
+                    <option value="the-root-room">The Root Room</option>
+
+                    <option value="the-mirror-room">The Mirror Room</option>
+
+                    <option value="quiet-corner">Quiet Corner</option>
+                  </select>
+                </div>
+
+                <!-- Phone -->
+                <div class="unheard-form-group">
+                  <label for="unheardPhone"> YOUR NUMBER </label>
+
+                  <input
+                    type="tel"
+                    id="unheardPhone"
+                    name="phone"
+                    class="unheard-form-control"
+                    placeholder="Your Number"
+                    required
+                  />
+                </div>
+
+                <!-- Date -->
+                <div class="unheard-form-group">
+                  <label for="unheardDate"> DATE </label>
+
+                  <input
+                    type="date"
+                    id="unheardDate"
+                    name="date"
+                    class="unheard-form-control unheard-date-input"
+                    required
+                  />
+                </div>
+
+                <!-- Button -->
+                <div class="unheard-form-submit">
+                  <button type="submit" class="btn-light">Book Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Main -->
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-about">
+            <img src="images/logo.png" class="footer-logo" alt="The Unheard" />
+
+            <p>
+              Embrace the power of healing to restore balance, reconnect with
+              yourself, and begin your journey toward emotional wellness.
+            </p>
+
+            <div class="footer-social-icons">
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Explore -->
+          <div class="footer-column">
+            <h3>Explore</h3>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html">About</a>
+              </li>
+
+              <li>
+                <a href="sanctuaries.html">Sanctuaries</a>
+              </li>
+
+              <li>
+                <a href="we-come-to-you.html">We Come To You</a>
+              </li>
+
+              <li>
+                <a href="organisations.html">Organisations</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="footer-column footer-hours">
+            <h3>Working Hours</h3>
+
+            <div class="footer-info-item">
+              <span class="footer-info-icon">
+                <i class="bi bi-clock"></i>
+              </span>
+
+              <p>Our doors are open 24/7 for your healing journey.</p>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <ul class="footer-contact-list">
+              <!-- Phone -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-telephone"></i>
+                </span>
+
+                <a href="tel:+919840221718"> +91 98402 21718 </a>
+              </li>
+
+              <!-- Email -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-envelope"></i>
+                </span>
+
+                <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+              </li>
+
+              <!-- WhatsApp -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-whatsapp"></i>
+                </span>
+
+                <a
+                  href="https://wa.me/919840221718"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp Us
+                </a>
+              </li>
+
+              <!-- Address -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </span>
+
+                <span class="footer-address"> Chennai, Tamil Nadu, India </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 The Unheld. All Rights Reserved.
+          </div>
+
+          <div class="footer-credit">
+            Designed &amp; Developed by
+            <a href="#" target="_blank" rel="noopener">
+              Dazzle Tech Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("siteMenuToggle");
+
+        const menu = document.getElementById("siteMobileMenu");
+
+        const menuClose = document.getElementById("siteMenuClose");
+
+        const backdrop = document.getElementById("siteMenuBackdrop");
+
+        if (!menuToggle || !menu || !menuClose || !backdrop) {
+          console.warn("Mobile navigation elements not found.");
+
+          return;
+        }
+
+        function openMenu() {
+          menu.classList.add("show");
+
+          backdrop.classList.add("show");
+
+          menuToggle.classList.add("active");
+
+          menuToggle.setAttribute("aria-expanded", "true");
+
+          menu.setAttribute("aria-hidden", "false");
+
+          menuToggle.setAttribute("aria-label", "Close navigation");
+
+          document.body.classList.add("site-menu-open");
+        }
+
+        function closeMenu() {
+          menu.classList.remove("show");
+
+          backdrop.classList.remove("show");
+
+          menuToggle.classList.remove("active");
+
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menu.setAttribute("aria-hidden", "true");
+
+          menuToggle.setAttribute("aria-label", "Open navigation");
+
+          document.body.classList.remove("site-menu-open");
+        }
+
+        menuToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          event.stopPropagation();
+
+          if (menu.classList.contains("show")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        menuClose.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          closeMenu();
+        });
+
+        backdrop.addEventListener("click", function () {
+          closeMenu();
+        });
+
+        const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
+
+        menuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && menu.classList.contains("show")) {
+            closeMenu();
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          /*
+        When returning to desktop,
+        always close mobile menu.
+      */
+
+          if (window.innerWidth >= 992) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+.swiper-container {
+    width: 100%;
+    max-width: 1220px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.swiper-wrapper {
+    display: flex;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+.swiper-slide:hover {
+    opacity: 1;
+}
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }

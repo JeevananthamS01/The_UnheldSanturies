@@ -1,0 +1,1462 @@
+<!doctype html>
+<html lang="en">
+  <!-- Mirrored from wivana-html.zaderonstudio.com/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2026 11:08:17 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanctuaries - Unheld</title>
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/css/fontawesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/border.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <style>
+      :root {
+        --primary: #17352d;
+        --secondary: #21473d;
+        --accent: #c4a86d;
+        --cream: #f8f5ef;
+        --white: #ffffff;
+        --text: #d8d8d8;
+        --border: rgba(255, 255, 255, 0.08);
+        --transition: 0.4s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Manrope", sans-serif;
+        background: #f4f7f5;
+        color: #000;
+        line-height: 1.8;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+        border-radius: 18px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .container {
+        width: 92%;
+        max-width: 1320px;
+        margin: auto;
+      }
+
+      /*==================================================
+SECTION SPACING
+==================================================*/
+
+      section {
+        position: relative;
+      }
+
+      .sanctuary-section,
+      .services-intro,
+      .why-sanctuaries,
+      .session-info,
+      .faq-section {
+        padding: 100px 0;
+      }
+
+      /*==================================================
+HERO
+==================================================*/
+
+      .service-hero {
+        padding: 160px 0 120px;
+        text-align: center;
+        background:
+          linear-gradient(#f4f7f5, #f4f7f5),
+          url(images/services/hero.jpg) center/cover;
+      }
+
+      .service-hero .eyebrow {
+        display: inline-block;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .service-hero h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 68px;
+        color: #000;
+        line-height: 1.15;
+        margin-bottom: 25px;
+      }
+
+      .service-hero p {
+        max-width: 820px;
+        margin: auto;
+        color: #000;
+        font-size: 18px;
+      }
+
+      .hero-btn {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 16px 40px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 40px;
+        transition: var(--transition);
+      }
+
+      .hero-btn:hover {
+        transform: translateY(-4px);
+        background: #d4b67b;
+      }
+
+      /*==================================================
+INTRO
+==================================================*/
+
+      .intro-box {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .intro-box h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 48px;
+        color: #000;
+        margin-bottom: 20px;
+      }
+
+      .intro-box p {
+        color: #000;
+        font-size: 18px;
+      }
+
+      /*==================================================
+STICKY NAVIGATION
+==================================================*/
+
+      .sanctuary-nav {
+        background: #163128;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .sanctuary-nav .container {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+        padding: 20px 0;
+      }
+
+      .sanctuary-nav a {
+        color: #ddd;
+        padding: 12px 22px;
+        border-radius: 30px;
+        transition: var(--transition);
+        border: 1px solid transparent;
+      }
+
+      .sanctuary-nav a:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      /*==================================================
+SANCTUARY LAYOUT
+==================================================*/
+
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+      }
+
+      .row.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .content {
+        flex: 1;
+      }
+
+      .image {
+        flex: 1;
+      }
+
+      .image img {
+        height: 620px;
+        object-fit: cover;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      }
+
+      .section-number {
+        display: inline-block;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 13px;
+        margin-bottom: 15px;
+      }
+
+      .content h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 56px;
+        color: #000;
+        margin-bottom: 18px;
+      }
+
+      .lead {
+        color: var(--accent);
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .content p {
+        color: #000;
+        margin-bottom: 18px;
+      }
+
+      /*==================================================
+FEATURE GRID
+==================================================*/
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin: 40px 0;
+      }
+
+      .feature {
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(100, 94, 94, 0.04);
+        transition: var(--transition);
+      }
+
+      .feature:hover {
+        background: rgba(196, 168, 109, 0.12);
+        transform: translateY(-4px);
+      }
+
+      /*==================================================
+BUTTON
+==================================================*/
+
+      .service-btn {
+        display: inline-block;
+        padding: 15px 34px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 40px;
+        transition: var(--transition);
+      }
+
+      .service-btn:hover {
+        background: #d4b67b;
+        transform: translateY(-4px);
+      }
+
+      /*==================================================
+COMMON HEADING
+==================================================*/
+
+      .section-heading {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-heading span {
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 14px;
+      }
+
+      .section-heading h2 {
+        font-family: "Cormorant Garamond", serif;
+        color: #fff;
+        font-size: 52px;
+        margin: 15px 0;
+      }
+
+      .section-heading p {
+        max-width: 760px;
+        margin: auto;
+        color: #d8d8d8;
+      }
+
+      /*==================================================
+TABLET
+==================================================*/
+
+      @media (max-width: 992px) {
+        .service-hero h1 {
+          font-size: 52px;
+        }
+
+        .row {
+          flex-direction: column;
+        }
+
+        .row.reverse {
+          flex-direction: column;
+        }
+
+        .image img {
+          height: 480px;
+        }
+
+        .content h2 {
+          font-size: 44px;
+        }
+
+        .features {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /*==================================================
+MOBILE
+==================================================*/
+
+      @media (max-width: 768px) {
+        .service-hero {
+          padding: 120px 0 80px;
+        }
+
+        .service-hero h1 {
+          font-size: 38px;
+        }
+
+        .intro-box h2 {
+          font-size: 34px;
+        }
+
+        .content h2 {
+          font-size: 34px;
+        }
+
+        .image img {
+          height: 320px;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        .sanctuary-nav .container {
+          justify-content: flex-start;
+          overflow: auto;
+          flex-wrap: nowrap;
+          padding: 15px;
+        }
+
+        .sanctuary-nav a {
+          white-space: nowrap;
+        }
+      }
+      /*==================================================
+PART 4B
+WHY • SESSION INFO • FAQ • CTA • ANIMATIONS
+==================================================*/
+
+      /*=========================================
+WHY CHOOSE OUR SANCTUARIES
+=========================================*/
+
+      .why-sanctuaries {
+        background: #5c9269;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      .why-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        transition: var(--transition);
+      }
+
+      .why-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--accent);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+      }
+
+      .why-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: rgba(196, 168, 109, 0.15);
+        font-size: 36px;
+      }
+
+      .why-card h3 {
+        font-family: "Cormorant Garamond", serif;
+        color: var(--cream);
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+
+      .why-card p {
+        color: #d6d6d6;
+        font-size: 15px;
+      }
+
+      /*=========================================
+SESSION INFO
+=========================================*/
+
+      .session-info {
+        background: #5c9269;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+
+      .info-box {
+        background: #396443;
+        border-radius: 18px;
+        padding: 35px;
+        text-align: center;
+        border: 1px solid var(--border);
+        transition: var(--transition);
+      }
+
+      .info-box:hover {
+        background: #21473d;
+        transform: translateY(-8px);
+      }
+
+      .info-box h4 {
+        color: var(--accent);
+        margin-bottom: 12px;
+        font-size: 20px;
+      }
+
+      .info-box p {
+        color: var(--cream);
+        font-size: 17px;
+      }
+
+      /*=========================================
+FAQ
+=========================================*/
+
+      .faq-section {
+        background: #bbc0bf;
+      }
+
+      .faq-wrapper {
+        max-width: 950px;
+        margin: auto;
+      }
+
+      .faq-item {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px 35px;
+        margin-bottom: 20px;
+        transition: var(--transition);
+      }
+
+      .faq-item:hover {
+        border-color: var(--accent);
+        transform: translateX(8px);
+      }
+
+      .faq-item h3 {
+        color: #000;
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+
+      .faq-item p {
+        color: #000;
+      }
+
+      /*=========================================
+CTA
+=========================================*/
+
+      .service-cta {
+        padding: 120px 0;
+        background:
+          linear-gradient(rgba(16, 35, 29, 0.92), rgba(16, 35, 29, 0.92)),
+          url(images/services/cta-bg.jpg) center/cover;
+      }
+
+      .cta-content {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .cta-content span {
+        display: inline-block;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+      }
+
+      .cta-content h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 58px;
+        color: #000;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .cta-content p {
+        color: #000;
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        display: inline-block;
+        padding: 16px 38px;
+        border-radius: 40px;
+        transition: var(--transition);
+        font-weight: 600;
+      }
+
+      .primary-btn {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .primary-btn:hover {
+        background: #d5b87e;
+        transform: translateY(-5px);
+      }
+
+      .secondary-btn {
+        border: 2px solid var(--accent);
+        color: var(--cream);
+      }
+
+      .secondary-btn:hover {
+        background: var(--accent);
+        color: #fff;
+        transform: translateY(-5px);
+      }
+
+      /*=========================================
+SCROLL ANIMATION
+=========================================*/
+
+      .sanctuary-section,
+      .why-card,
+      .info-box,
+      .faq-item,
+      .cta-content {
+        opacity: 0;
+        transform: translateY(60px);
+        animation: fadeUp 0.8s ease forwards;
+      }
+
+      .sanctuary-section:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .sanctuary-section:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .sanctuary-section:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .sanctuary-section:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(60px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /*=========================================
+CUSTOM SCROLLBAR
+=========================================*/
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #11261f;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 20px;
+      }
+
+      @media (max-width: 992px) {
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .info-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cta-content h2 {
+          font-size: 44px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .why-grid,
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .why-card,
+        .info-box,
+        .faq-item {
+          padding: 25px;
+        }
+
+        .cta-content h2 {
+          font-size: 34px;
+        }
+
+        .cta-content p {
+          font-size: 16px;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+          width: 100%;
+          max-width: 300px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+     <!-- Header -->
+    <header class="site-header">
+      <div class="header-top d-none d-lg-block">
+        <div class="container-xl header-top-inner">
+          <!-- Social -->
+          <div class="header-socials">
+            <a href="#" class="header-social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Optional Alert -->
+          <div id="header-alert"></div>
+
+          <!-- Contact -->
+          <div class="header-contact">
+            <div class="header-contact-item">
+              <i class="fa-regular fa-envelope"></i>
+
+              <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+            </div>
+
+            <div class="header-contact-item">
+              <i class="fa-solid fa-phone"></i>
+
+              <a href="tel:+919840221718"> +91 98402 21718 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-dark site-navbar">
+        <div class="container-xl navbar-container">
+          <a class="navbar-brand site-logo" href="index.html">
+            <img
+              src="images/logo.png"
+              alt="The Unheard"
+              width="166"
+              height="41"
+            />
+          </a>
+
+          <div class="site-navigation">
+            <!-- Desktop Navigation -->
+            <ul class="navbar-nav site-nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="sanctuaries.html"> Sanctuaries </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="we-come-to-you.html">
+                  We Come To You
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="organisations.html">
+                  For Organisations
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header-action">
+            <a href="#unheardBooking" class="btn-light"> Make Appointment </a>
+          </div>
+
+          <button
+            type="button"
+            class="site-menu-toggle"
+            id="siteMenuToggle"
+            aria-label="Open navigation"
+            aria-controls="siteMobileMenu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="site-menu-backdrop" id="siteMenuBackdrop"></div>
+
+      <aside class="site-mobile-menu" id="siteMobileMenu" aria-hidden="true">
+        <!-- Menu Header -->
+
+        <div class="site-mobile-menu-header">
+          <span class="site-mobile-title"> MENU </span>
+
+          <button
+            type="button"
+            class="site-menu-close"
+            id="siteMenuClose"
+            aria-label="Close navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Menu Body -->
+
+        <div class="site-mobile-menu-body">
+          <ul class="site-mobile-nav-list">
+            <li>
+              <a href="index.html" > Home </a>
+            </li>
+
+            <li>
+              <a href="about.html"> About </a>
+            </li>
+
+            <li>
+              <a href="sanctuaries.html" class="active"> Sanctuaries </a>
+            </li>
+
+            <li>
+              <a href="we-come-to-you.html"> We Come To You </a>
+            </li>
+
+            <li>
+              <a href="organisations.html"> For Organisations </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Appointment -->
+
+          <div class="mobile-menu-action">
+            <a href="#unheardBooking" class="mobile-menu-button">
+              Make Appointment
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Hero -->
+    <section class="unheard-hero">
+      <!-- Hero Background Overlay -->
+      <div class="unheard-hero-overlay">
+        <div class="container-xl">
+          <!-- Hero Content -->
+          <div class="unheard-hero-content">
+            <!-- Small Label -->
+            <div class="unheard-hero-label">
+              <span class="unheard-label-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+
+              <span> UNHELD - Our Sanctuaries </span>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="unheard-hero-title">
+              Five Unique Spaces.<br />
+              One Purpose — Helping You Heal.
+            </h1>
+
+            <!-- Description -->
+            <p class="unheard-hero-description">
+              Every healing journey is different. That's why The Unheld offers
+              five thoughtfully designed sanctuaries, each created for a
+              different emotional need while sharing the same promise: complete
+              privacy, compassion, and genuine human connection.
+            </p>
+
+            <!-- Hero Buttons -->
+            <div class="unheard-hero-actions">
+              <!-- <a href="#unheardContact" class="btn-light"> CONTACT US </a> -->
+
+              <a href="#unheardBooking" class="btn-light"> Book a Sanctuary </a>
+            </div>
+          </div>
+
+          <div class="unheard-booking-wrapper" id="unheardBooking">
+            <div class="unheard-booking-card">
+              <!-- Booking Introduction -->
+              <div class="unheard-booking-intro">
+                <h2>HOW IT WORKS</h2>
+
+                <p>
+                  <strong>First Session — Zero Identity:</strong>
+                  <br />
+
+                  No name. No registration. No login. You pick a sanctuary,
+                  choose a time, and show up. We ask nothing except that you
+                  walk through the door. After the first session, if you'd like
+                  to continue, you decide what you share.
+                </p>
+              </div>
+
+              <!-- Booking Form -->
+              <form action="#" method="POST" class="unheard-booking-form">
+                <!-- Sanctuary -->
+                 <div class="unheard-form-group">
+                  <label for="unheardSanctuary"> TYPE SANCTUARY </label>
+
+                  <select
+                    id="unheardSanctuary"
+                    name="sanctuary"
+                    class="unheard-form-control unheard-select"
+                    required
+                  >
+                    <option value="" selected disabled>Select Sanctuary</option>
+
+                    <option value="the-confessional">
+                      The Confessional
+                    </option>
+
+                    <option value="the-tide-room">
+                     The Tide Room
+                    </option>
+
+                    <option value="the-root-room">The Root Room</option>
+
+                    <option value="the-mirror-room">
+                      The Mirror Room
+                    </option>
+
+                    <option value="quiet-corner">
+                     Quiet Corner
+                    </option>
+                  </select>
+                </div>
+
+                <!-- Phone -->
+                <div class="unheard-form-group">
+                  <label for="unheardPhone"> YOUR NUMBER </label>
+
+                  <input
+                    type="tel"
+                    id="unheardPhone"
+                    name="phone"
+                    class="unheard-form-control"
+                    placeholder="Your Number"
+                    required
+                  />
+                </div>
+
+                <!-- Date -->
+                <div class="unheard-form-group">
+                  <label for="unheardDate"> DATE </label>
+
+                  <input
+                    type="date"
+                    id="unheardDate"
+                    name="date"
+                    class="unheard-form-control unheard-date-input"
+                    required
+                  />
+                </div>
+
+                <!-- Button -->
+                <div class="unheard-form-submit">
+                  <button type="submit" class="btn-light">Book Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="sanctuary-nav">
+      <div class="container">
+        <a href="#confessional"> The Confessional </a>
+
+        <a href="#tide"> The Tide Room </a>
+
+        <a href="#root"> The Root Room </a>
+
+        <a href="#mirror"> The Mirror Room </a>
+
+        <a href="#quiet"> Quiet Corner </a>
+      </div>
+    </section>
+
+    <!-- The Confessional  -->
+    <section id="confessional" class="sanctuary-section">
+      <div class="container">
+        <div class="row">
+          <div class="content">
+            <span class="section-number"> Sanctuary 01 </span>
+
+            <h2>The Confessional</h2>
+
+            <p class="lead">
+              A place where your unspoken thoughts finally have permission to
+              exist.
+            </p>
+
+            <p>
+              Some emotions stay locked inside because they feel too heavy, too
+              personal, or too difficult to explain. The Confessional offers a
+              calm, confidential environment where you can speak openly without
+              fear of judgment. Whether you're carrying guilt, grief, regret, or
+              simply need someone to truly listen, healing begins with being
+              heard.
+            </p>
+
+            <div class="features">
+              <div class="feature">✔ Emotional Release</div>
+
+              <div class="feature">✔ Safe & Confidential</div>
+
+              <div class="feature">✔ One-on-One Guidance</div>
+
+              <div class="feature">✔ Compassionate Listening</div>
+            </div>
+
+            <a href="#unheardBooking" class="service-btn">
+              Book This Sanctuary
+            </a>
+          </div>
+
+          <div class="image">
+            <img
+              src="images/1 confession/confess-1.jpg"
+              alt="The Confessional"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Tide Room -->
+    <section id="tide" class="sanctuary-section alt">
+      <div class="container">
+        <div class="row">
+          <div class="image">
+            <img src="images/2 tideroom/tideroom-1.jpg" alt="The Tide Room" />
+          </div>
+
+          <div class="content">
+            <span class="section-number"> Sanctuary 02 </span>
+
+            <h2>The Tide Room</h2>
+
+            <p class="lead">
+              Helping you find calm through life's emotional waves.
+            </p>
+
+            <p>
+              Life moves in tides. Some days feel peaceful, while others bring
+              stress, anxiety, uncertainty, or emotional exhaustion. The Tide
+              Room provides a supportive space to slow down, regain perspective,
+              and develop healthy ways to navigate life's challenges with
+              confidence and resilience.
+            </p>
+
+            <div class="features">
+              <div class="feature">✔ Stress Management</div>
+
+              <div class="feature">✔ Anxiety Support</div>
+
+              <div class="feature">✔ Emotional Balance</div>
+
+              <div class="feature">✔ Guided Healing</div>
+            </div>
+
+            <a href="#unheardBooking" class="service-btn">
+              Book This Sanctuary
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Root Room -->
+    <section id="root" class="sanctuary-section">
+      <div class="container">
+        <div class="row">
+          <div class="content">
+            <span class="section-number"> Sanctuary 03 </span>
+
+            <h2>The Root Room</h2>
+
+            <p class="lead">
+              Healing begins when we understand where it all started.
+            </p>
+
+            <p>
+              Many emotional struggles have deeper roots than we realize. The
+              Root Room helps you gently explore childhood experiences,
+              relationships, family dynamics, and recurring emotional patterns.
+              Together, we work toward lasting healing by addressing the
+              source—not just the symptoms.
+            </p>
+
+            <div class="features">
+              <div class="feature">✔ Childhood Healing</div>
+
+              <div class="feature">✔ Relationship Guidance</div>
+
+              <div class="feature">✔ Emotional Growth</div>
+
+              <div class="feature">✔ Long-Term Healing</div>
+            </div>
+
+            <a href="#unheardBooking" class="service-btn">
+              Book This Sanctuary
+            </a>
+          </div>
+
+          <div class="image">
+            <img src="images/3 rootroom/rootoom-1.jpg" alt="The Root Room" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Mirror Room -->
+    <section id="mirror" class="sanctuary-section alt">
+      <div class="container">
+        <div class="row">
+          <div class="image">
+            <img src="images/4 mirrorroom/mirror-1.jpg" alt="The Mirror Room" />
+          </div>
+
+          <div class="content">
+            <span class="section-number"> Sanctuary 04 </span>
+
+            <h2>The Mirror Room</h2>
+
+            <p class="lead">
+              Discover yourself with honesty, compassion, and confidence.
+            </p>
+
+            <p>
+              The Mirror Room is a space for self-discovery and personal growth.
+              Whether you're navigating identity, rebuilding confidence, or
+              seeking greater self-awareness, this sanctuary helps you better
+              understand who you are and embrace the person you're becoming.
+            </p>
+
+            <div class="features">
+              <div class="feature">✔ Self-Discovery</div>
+
+              <div class="feature">✔ Confidence Building</div>
+
+              <div class="feature">✔ Personal Growth</div>
+
+              <div class="feature">✔ Self-Acceptance</div>
+            </div>
+
+            <a href="#unheardBooking" class="service-btn">
+              Book This Sanctuary
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiet Corner -->
+    <section id="quiet" class="sanctuary-section">
+      <div class="container">
+        <div class="row">
+          <div class="content">
+            <span class="section-number"> Sanctuary 05 </span>
+
+            <h2>Quiet Corner</h2>
+
+            <p class="lead">
+              A peaceful place to pause, breathe, and simply be.
+            </p>
+
+            <p>
+              Sometimes healing doesn't begin with answers—it begins with
+              stillness. Quiet Corner offers a calm, comforting environment
+              where you can slow down, reflect, and reconnect with yourself.
+              Whether you need silence, mindful conversation, or gentle
+              emotional support, this sanctuary welcomes you exactly as you are.
+            </p>
+
+            <div class="features">
+              <div class="feature">✔ Mindful Reflection</div>
+
+              <div class="feature">✔ Emotional Rest</div>
+
+              <div class="feature">✔ Gentle Conversations</div>
+
+              <div class="feature">✔ Peaceful Environment</div>
+            </div>
+
+            <a href="#unheardBooking" class="service-btn">
+              Book This Sanctuary
+            </a>
+          </div>
+
+          <div class="image">
+            <img src="images/5 quietcorner/quiet-1.jpg" alt="Quiet Corner" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+     <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Main -->
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-about">
+            <img src="images/logo.png" class="footer-logo" alt="The Unheard" />
+
+            <p>
+              Embrace the power of healing to restore balance, reconnect with
+              yourself, and begin your journey toward emotional wellness.
+            </p>
+
+            <div class="footer-social-icons">
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Explore -->
+          <div class="footer-column">
+            <h3>Explore</h3>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html">About</a>
+              </li>
+
+              <li>
+                <a href="sanctuaries.html">Sanctuaries</a>
+              </li>
+
+              <li>
+                <a href="we-come-to-you.html">We Come To You</a>
+              </li>
+
+              <li>
+                <a href="organisations.html">Organisations</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="footer-column footer-hours">
+            <h3>Working Hours</h3>
+
+            <div class="footer-info-item">
+              <span class="footer-info-icon">
+                <i class="bi bi-clock"></i>
+              </span>
+
+              <p>Our doors are open 24/7 for your healing journey.</p>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <ul class="footer-contact-list">
+              <!-- Phone -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-telephone"></i>
+                </span>
+
+                <a href="tel:+919840221718"> +91 98402 21718 </a>
+              </li>
+
+              <!-- Email -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-envelope"></i>
+                </span>
+
+                <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+              </li>
+
+              <!-- WhatsApp -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-whatsapp"></i>
+                </span>
+
+                <a href="#"> WhatsApp Us </a>
+              </li>
+
+              <!-- Address -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </span>
+
+                <span class="footer-address"> Chennai, Tamil Nadu, India </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 The Unheld. All Rights Reserved.
+          </div>
+
+          <div class="footer-credit">
+            Designed &amp; Developed by
+            <a href="#" target="_blank" rel="noopener">
+              Dazzle Tech Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("siteMenuToggle");
+
+        const menu = document.getElementById("siteMobileMenu");
+
+        const menuClose = document.getElementById("siteMenuClose");
+
+        const backdrop = document.getElementById("siteMenuBackdrop");
+
+
+        if (!menuToggle || !menu || !menuClose || !backdrop) {
+          console.warn("Mobile navigation elements not found.");
+
+          return;
+        }
+
+
+        function openMenu() {
+          menu.classList.add("show");
+
+          backdrop.classList.add("show");
+
+          menuToggle.classList.add("active");
+
+          menuToggle.setAttribute("aria-expanded", "true");
+
+          menu.setAttribute("aria-hidden", "false");
+
+          menuToggle.setAttribute("aria-label", "Close navigation");
+
+          document.body.classList.add("site-menu-open");
+        }
+
+        function closeMenu() {
+          menu.classList.remove("show");
+
+          backdrop.classList.remove("show");
+
+          menuToggle.classList.remove("active");
+
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menu.setAttribute("aria-hidden", "true");
+
+          menuToggle.setAttribute("aria-label", "Open navigation");
+
+          document.body.classList.remove("site-menu-open");
+        }
+
+
+        menuToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          event.stopPropagation();
+
+          if (menu.classList.contains("show")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+
+        menuClose.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          closeMenu();
+        });
+
+        backdrop.addEventListener("click", function () {
+          closeMenu();
+        });
+
+
+        const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
+
+        menuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && menu.classList.contains("show")) {
+            closeMenu();
+          }
+        });
+        
+        window.addEventListener("resize", function () {
+          /*
+        When returning to desktop,
+        always close mobile menu.
+      */
+
+          if (window.innerWidth >= 992) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4037 @@
+/* =========================================================
+   WE COME TO YOU HERO
+========================================================= */
+
+.we-come-to-you-hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../images/hero/hero-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.we-come-to-you-hero-overlay {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: rgba(17, 32, 21, 0.6);
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.we-come-to-you-hero-content {
+  padding-top: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.we-come-to-you-hero-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+  font-family: var(--font-1), sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.we-come-to-you-label-icon {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 50%;
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.we-come-to-you-hero-title {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 20px auto 25px;
+
+  color: #fff;
+
+  font-family: var(--font-1), sans-serif;
+
+  font-size: clamp(48px, 6vw, 72px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.we-come-to-you-hero-description {
+  width: 100%;
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  color: #d1d1d1;
+
+  font-family: var(--font-2), sans-serif;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.we-come-to-you-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.we-come-to-you-btn {
+  min-width: 145px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 22px;
+
+  border: 1px solid #fff;
+
+  border-radius: 4px;
+
+  background: #fff;
+
+  color: #111;
+
+  font-family: var(--font-2), sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.we-come-to-you-btn:hover {
+  background: transparent;
+
+  color: #fff;
+}
+
+/* =========================================================
+   HERO HIGHLIGHTS
+========================================================= */
+
+.we-come-to-you-highlights {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 28px;
+
+  margin-top: 32px;
+}
+
+/* =========================================================
+   HIGHLIGHT ITEM
+========================================================= */
+
+.we-come-to-you-highlight {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: var(--font-2), sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================================================
+   HIGHLIGHT ICON
+========================================================= */
+
+.we-come-to-you-highlight-icon {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  color: var(--color-lighter);
+
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+  .we-come-to-you-hero-title {
+    max-width: 950px;
+    font-size: 60px;
+    line-height: 64px;
+  }
+
+  .we-come-to-you-hero-description {
+    max-width: 800px;
+  }
+
+  .we-come-to-you-hero-overlay {
+    padding-top: 150px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .we-come-to-you-hero {
+    min-height: auto;
+
+    background-position: center;
+  }
+
+  .we-come-to-you-hero-overlay {
+    min-height: auto;
+
+    padding: 150px 0 70px;
+  }
+
+  .we-come-to-you-hero-content {
+    max-width: 700px;
+
+    padding: 0 20px;
+  }
+
+  .we-come-to-you-hero-label {
+    font-size: 13px;
+  }
+
+  .we-come-to-you-hero-title {
+    max-width: 650px;
+    font-size: 42px;
+    line-height: 44px;
+    margin-bottom: 25px;
+  }
+
+  .we-come-to-you-hero-description {
+    max-width: 650px;
+    font-size: 15px;
+  }
+
+  .we-come-to-you-hero-actions {
+    margin-top: 30px;
+    gap: 12px;
+  }
+
+  .we-come-to-you-highlights {
+    gap: 20px;
+    margin-top: 28px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .we-come-to-you-hero {
+    min-height: auto;
+    background-position: center center;
+  }
+
+  .we-come-to-you-hero-overlay {
+    min-height: auto;
+    padding: 125px 0 55px;
+    background: rgba(0, 0, 0, 0.62);
+  }
+
+  .we-come-to-you-hero-content {
+    width: 100%;
+    padding: 0 15px;
+    align-items: start;
+  }
+
+  .we-come-to-you-hero-label {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .we-come-to-you-hero-title {
+    width: 100%;
+    margin: 18px 0 25px;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -0.8px;
+    align-items: start;
+    text-align: start;
+  }
+
+  .we-come-to-you-hero-description {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    align-items: start;
+    text-align: start;
+  }
+
+  .we-come-to-you-hero-actions {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 15px;
+  margin-top: 35px;
+  align-items: start;
+}
+
+  /* ---------- Highlights ---------- */
+
+  .we-come-to-you-highlights {
+    width: 100%;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .we-come-to-you-highlight {
+    width: 100%;
+    justify-content: start;
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .we-come-to-you-hero-overlay {
+    padding-top: 110px;
+  }
+
+  .we-come-to-you-hero-title {
+    font-size: 36px;
+  }
+
+  .we-come-to-you-hero-description {
+    font-size: 13px;
+  }
+
+  .we-come-to-you-highlight {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   WHY WE BUILT THIS
+========================================================= */
+
+.why-we-built {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #112015 0%, #173b2b 50%, #112015 100%);
+  color: #fff;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.why-we-built-header {
+  max-width: 850px;
+  text-align: left;
+}
+
+.why-we-built-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--color-lighter);
+  font-family: var(--font-1), sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.why-we-built-title {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-family: var(--font-1), sans-serif;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+}
+
+.why-we-built-title span {
+  color: var(--color-lighter);
+}
+
+/* =========================================================
+   EYEBROW DIVIDER
+========================================================= */
+
+.why-we-built-line {
+  width: 55px;
+
+  height: 2px;
+
+  margin: 25px 0;
+
+  background: var(--color-main);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.why-we-built-description {
+  max-width: 780px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-family: var(--font-2), sans-serif;
+
+  font-size: 14px;
+
+  line-height: 20px;
+}
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.why-we-built-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-top: 60px;
+}
+
+/* =========================================================
+   LIQUID GLASS CARD
+========================================================= */
+
+.why-we-built-card {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.035)
+  );
+
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+}
+
+/* =========================================================
+   GLASS REFLECTION
+========================================================= */
+
+.why-we-built-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+
+  left: -35%;
+
+  width: 55%;
+
+  height: 320%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+
+  transform: rotate(20deg);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   GREEN LIGHT GLOW
+========================================================= */
+
+.why-we-built-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -80px;
+
+  bottom: -90px;
+
+  width: 210px;
+
+  height: 210px;
+
+  border-radius: 50%;
+
+  background: rgba(92, 146, 105, 0.18);
+
+  filter: blur(55px);
+
+  opacity: 0;
+
+  transition: opacity 0.45s ease;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (hover: hover) {
+  .why-we-built-card:hover {
+    transform: translateY(-8px) scale(1.015);
+
+    border-color: rgba(153, 199, 163, 0.45);
+
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.17),
+      rgba(255, 255, 255, 0.05)
+    );
+
+    box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.22),
+      0 0 35px rgba(92, 146, 105, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  }
+
+  .why-we-built-card:hover::after {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   ACTIVE CARD
+========================================================= */
+
+.why-we-built-card.active {
+  border-color: rgba(153, 199, 163, 0.35);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(92, 146, 105, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.why-we-built-card.active::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.why-we-built-card-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: var(--color-lighter);
+
+  font-size: 18px;
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.why-we-built-card:hover .why-we-built-card-icon,
+.why-we-built-card.active .why-we-built-card-icon {
+  background: rgba(92, 146, 105, 0.2);
+
+  border-color: rgba(153, 199, 163, 0.45);
+
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.why-we-built-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 45px;
+}
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.why-we-built-card-number {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-family: var(--font-2), sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.why-we-built-card h3 {
+  margin: 0 0 12px;
+
+  color: #fff;
+
+  font-family: var(--font-1), sans-serif;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.why-we-built-card p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: var(--font-2), sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .why-we-built {
+    padding: 85px 0;
+  }
+
+  .why-we-built-header {
+    max-width: 750px;
+  }
+
+  .why-we-built-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 50px;
+  }
+
+  .why-we-built-card:last-child {
+    grid-column: span 2;
+
+    max-width: calc(50% - 9px);
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .why-we-built-card {
+    min-height: 300px;
+
+    padding: 26px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .why-we-built {
+    padding: 40px 0;
+  }
+
+  .why-we-built-header {
+    text-align: left;
+  }
+
+  .why-we-built-title {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+  .why-we-built-description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .why-we-built-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 42px;
+  }
+
+  .why-we-built-card:last-child {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  .why-we-built-card {
+    min-height: 270px;
+    padding: 24px;
+    border-radius: 17px;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
+  .why-we-built-card:focus,
+  .why-we-built-card:focus-visible,
+  .why-we-built-card.active {
+    transform: scale(1.025);
+    border-color: rgba(153, 199, 163, 0.55);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.055)
+    );
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.22),
+      0 0 35px rgba(92, 146, 105, 0.13),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+    outline: none;
+  }
+
+  .why-we-built-card:focus::after,
+  .why-we-built-card:focus-visible::after,
+  .why-we-built-card.active::after {
+    opacity: 1;
+  }
+
+  /* Slightly stronger mobile glow */
+
+  .why-we-built-card.active .why-we-built-card-icon {
+    transform: scale(1.06);
+
+    background: rgba(92, 146, 105, 0.22);
+  }
+
+  .why-we-built-card-content {
+    margin-top: 35px;
+  }
+
+  .why-we-built-card h3 {
+    font-size: 24px;
+  }
+
+  .why-we-built-card p {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .why-we-built-title {
+    font-size: 30px;
+  }
+
+  .why-we-built-card {
+    min-height: 250px;
+    padding: 21px;
+  }
+
+  .why-we-built-card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .why-we-built-card-content {
+    margin-top: 30px;
+  }
+
+  .why-we-built-card h3 {
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   OUR PROCESS
+========================================================= */
+
+.our-process {
+  position: relative;
+  padding: 60px 0;
+  background: #ffffff;
+  color: var(--heading-color);
+  overflow: hidden;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+.our-process-header {
+  max-width: 1400px;
+  text-align: center;
+}
+
+.our-process-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--color-main);
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.our-process-title {
+  margin: 0;
+  color: var(--heading-color);
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 70px;
+  letter-spacing: -1.5px;
+}
+
+.our-process-title span {
+  color: var(--color-main);
+}
+
+/* =========================================================
+   SECTION DESCRIPTION
+========================================================= */
+
+.our-process-description {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-color-1);
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.our-process-timeline {
+  position: relative;
+
+  max-width: 1050px;
+
+  margin-top: 70px;
+
+  padding-left: 78px;
+}
+
+/* =========================================================
+   TIMELINE TRACK
+========================================================= */
+
+.our-process-track {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 29px;
+
+  width: 1px;
+
+  background: rgba(17, 32, 21, 0.1);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   TIMELINE PROGRESS
+========================================================= */
+
+.our-process-progress {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 0;
+
+  background: var(--color-main);
+
+  transition: height 0.12s linear;
+}
+
+/* =========================================================
+   PROCESS STEP
+========================================================= */
+
+.our-process-step {
+  position: relative;
+
+  min-height: 300px;
+
+  padding-bottom: 60px;
+}
+
+.our-process-step:last-child {
+  min-height: auto;
+
+  padding-bottom: 0;
+}
+
+/* =========================================================
+   STEP NUMBER
+========================================================= */
+
+.our-process-number {
+  position: absolute;
+
+  top: 0;
+  left: -78px;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(92, 146, 105, 0.25);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: var(--color-main);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  z-index: 5;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* =========================================================
+   ACTIVE STEP NUMBER
+========================================================= */
+
+.our-process-step.is-visible .our-process-number {
+  background: var(--color-main);
+
+  border-color: var(--color-main);
+
+  color: #ffffff;
+
+  transform: scale(1.08);
+
+  box-shadow: 0 0 0 7px rgba(92, 146, 105, 0.1);
+}
+
+/* =========================================================
+   PROCESS CARD
+========================================================= */
+
+.our-process-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 950px;
+  padding: 32px 35px;
+  border: 1px solid rgba(17, 32, 21, 0.08);
+  border-radius: 14px;
+  background: #173b2b;
+  box-shadow: 0 12px 35px rgba(17, 32, 21, 0.06);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(45px) scale(0.97);
+  transition:
+    opacity 0.65s ease,
+    visibility 0.65s ease,
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.5s ease,
+    box-shadow 0.5s ease,
+    background 0.5s ease;
+}
+
+/* =========================================================
+   ACTIVE PROCESS CARD
+========================================================= */
+
+.our-process-step.is-visible .our-process-card {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0) scale(1);
+
+  border-color: rgba(92, 146, 105, 0.22);
+
+  background: #173b2b;
+
+  box-shadow: 0 22px 55px rgba(17, 32, 21, 0.1);
+}
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.our-process-card:hover {
+  border-color: rgba(92, 146, 105, 0.32);
+
+  box-shadow: 0 25px 60px rgba(17, 32, 21, 0.12);
+}
+
+/* =========================================================
+   STEP LABEL
+========================================================= */
+
+.our-process-step-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--color-main);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 2.5px;
+
+  line-height: 1.5;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   STEP TITLE
+========================================================= */
+
+.our-process-card h3 {
+  margin: 0 0 14px;
+
+  color: #fff;
+
+  font-family: var(--font-1), "Philosopher", sans-serif;
+
+  font-size: clamp(26px, 3vw, 36px);
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+/* =========================================================
+   STEP DESCRIPTION
+========================================================= */
+
+.our-process-card p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: var(--text-color-2);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   PROCESS NOTE
+========================================================= */
+
+.our-process-note {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  padding: 9px 14px;
+
+  border-radius: 6px;
+
+  background: rgba(92, 146, 105, 0.1);
+
+  color: var(--text-color-2);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+.our-process-note i {
+  flex-shrink: 0;
+
+  color: var(--color-main);
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .our-process {
+    padding: 40px 0;
+  }
+
+  /* Timeline */
+
+  .our-process-timeline {
+    margin-top: 55px;
+
+    padding-left: 70px;
+  }
+
+  .our-process-track {
+    left: 26px;
+  }
+
+  /* Number */
+
+  .our-process-number {
+    left: -70px;
+
+    width: 52px;
+    height: 52px;
+
+    font-size: 13px;
+  }
+
+  /* Step */
+
+  .our-process-step {
+    min-height: 320px;
+
+    padding-bottom: 55px;
+  }
+
+  /* Card */
+
+  .our-process-card {
+    padding: 28px 30px;
+  }
+
+  .our-process-card h3 {
+    font-size: 32px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .our-process {
+    padding: 40px 0;
+  }
+
+  /* Header */
+
+  .our-process-header {
+    text-align: left;
+  }
+
+  .our-process-eyebrow {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+  }
+
+  .our-process-title {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+
+  .our-process-description {
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: start;
+  }
+
+  /* Timeline */
+
+  .our-process-timeline {
+    margin-top: 48px;
+    padding-left: 58px;
+  }
+
+  .our-process-track {
+    left: 20px;
+  }
+
+  /* Step */
+
+  .our-process-step {
+    min-height: 340px;
+    padding-bottom: 45px;
+  }
+
+  .our-process-step:last-child {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  /* Number */
+
+  .our-process-number {
+    left: -58px;
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .our-process-step.is-visible .our-process-number {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 5px rgba(92, 146, 105, 0.1);
+  }
+
+  /* Card */
+
+  .our-process-card {
+    padding: 24px 20px;
+    border-radius: 14px;
+    transform: translateY(35px) scale(0.97);
+  }
+
+  .our-process-step.is-visible .our-process-card {
+    transform: translateY(0) scale(1);
+  }
+
+  /* Label */
+
+  .our-process-step-label {
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* Title */
+
+  .our-process-card h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.3px;
+  }
+
+  /* Description */
+
+  .our-process-card p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Note */
+
+  .our-process-note {
+    max-width: 100%;
+
+    margin-top: 14px;
+
+    padding: 8px 11px;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+  }
+
+  .our-process-note i {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .our-process {
+    padding: 60px 0;
+  }
+
+  /* Header */
+
+  .our-process-title {
+    font-size: 36px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .our-process-description {
+    font-size: 13px;
+  }
+
+  /* Timeline */
+
+  .our-process-timeline {
+    padding-left: 52px;
+
+    margin-top: 42px;
+  }
+
+  .our-process-track {
+    left: 17px;
+  }
+
+  /* Step */
+
+  .our-process-step {
+    min-height: 360px;
+
+    padding-bottom: 40px;
+  }
+
+  /* Number */
+
+  .our-process-number {
+    left: -52px;
+
+    width: 36px;
+    height: 36px;
+
+    font-size: 11px;
+  }
+
+  /* Card */
+
+  .our-process-card {
+    padding: 21px 17px;
+
+    border-radius: 12px;
+  }
+
+  /* Card content */
+
+  .our-process-card h3 {
+    font-size: 23px;
+  }
+
+  .our-process-card p {
+    font-size: 12.5px;
+  }
+
+  /* Note */
+
+  .our-process-note {
+    font-size: 10.5px;
+
+    padding: 7px 9px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .our-process-card,
+  .our-process-number {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   COVERAGE MAP
+========================================================= */
+
+.coverage-map {
+  position: relative;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #112015 0%, #173b2b 50%, #112015 100%);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================================================
+   SUBTLE BACKGROUND EFFECT
+========================================================= */
+
+.coverage-map::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(92, 146, 105, 0.12) 0%,
+    rgba(92, 146, 105, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.coverage-map::after {
+  content: "";
+  position: absolute;
+  bottom: -250px;
+  left: -200px;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(153, 199, 163, 0.07) 0%,
+    rgba(153, 199, 163, 0) 70%
+  );
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.coverage-map .container-xl {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.coverage-map-header {
+  max-width: 950px;
+  text-align: left;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.coverage-map-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--color-lighter);
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.coverage-map-title {
+  max-width: 950px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.coverage-map-title span {
+  color: var(--color-lighter);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.coverage-map-description {
+  max-width: 820px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   MAP WRAPPER
+========================================================= */
+
+.coverage-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-top: 60px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: #dfe7df;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================================
+   MAP CONTAINER
+========================================================= */
+
+.coverage-map-container {
+  width: 100%;
+  height: 100%;
+  background: #dfe7df;
+}
+
+/* =========================================================
+   LEAFLET MAP
+========================================================= */
+
+.coverage-map-container .leaflet-container {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-2), "Lato", sans-serif;
+}
+
+/* =========================================================
+   MAP ZOOM CONTROL
+========================================================= */
+
+.coverage-map-container .leaflet-control-zoom {
+  margin: 20px !important;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(17, 32, 21, 0.12) !important;
+
+  border-radius: 8px !important;
+
+  box-shadow: 0 8px 25px rgba(17, 32, 21, 0.15);
+}
+
+.coverage-map-container .leaflet-control-zoom a {
+  width: 34px !important;
+  height: 34px !important;
+
+  display: flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none !important;
+
+  background: rgba(255, 255, 255, 0.92) !important;
+
+  color: #173b2b !important;
+
+  font-size: 18px;
+}
+
+.coverage-map-container .leaflet-control-zoom a:hover {
+  background: #ffffff !important;
+
+  color: var(--color-main) !important;
+}
+
+/* =========================================================
+   MAP ATTRIBUTION
+========================================================= */
+
+.coverage-map-container .leaflet-control-attribution {
+  padding: 4px 8px;
+
+  border-radius: 5px 0 0 0;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #555;
+
+  font-size: 9px;
+}
+
+.coverage-map-container .leaflet-control-attribution a {
+  color: #173b2b;
+}
+
+/* =========================================================
+   MAP STATUS OVERLAY
+========================================================= */
+
+.coverage-map-overlay {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 500;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.coverage-map-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 30px;
+
+  background: rgba(17, 32, 21, 0.78);
+
+  backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
+
+  color: #ffffff;
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   STATUS DOT
+========================================================= */
+
+.coverage-status-dot {
+  position: relative;
+
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #4fb88b;
+
+  box-shadow: 0 0 0 4px rgba(79, 184, 139, 0.15);
+}
+
+/* Pulsing Dot */
+
+.coverage-status-dot::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -4px;
+
+  border: 1px solid rgba(79, 184, 139, 0.5);
+
+  border-radius: 50%;
+
+  animation: coveragePulse 2s infinite;
+}
+
+@keyframes coveragePulse {
+  0% {
+    opacity: 0.8;
+
+    transform: scale(0.8);
+  }
+
+  70% {
+    opacity: 0;
+
+    transform: scale(1.6);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: scale(1.6);
+  }
+}
+
+/* =========================================================
+   CUSTOM MAP MARKER
+========================================================= */
+
+.coverage-map-marker {
+  position: relative;
+
+  width: 42px !important;
+  height: 50px !important;
+
+  background: transparent !important;
+
+  border: none !important;
+}
+
+/* =========================================================
+   PIN
+========================================================= */
+
+.coverage-map-pin {
+  position: relative;
+
+  width: 42px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+/* Pin Shape */
+
+.coverage-map-pin::before {
+  content: "";
+
+  position: absolute;
+
+  top: 2px;
+  left: 7px;
+
+  width: 28px;
+  height: 28px;
+
+  border: 3px solid #ffffff;
+
+  border-radius: 50% 50% 50% 0;
+
+  background: var(--color-main);
+
+  box-shadow: 0 6px 18px rgba(17, 32, 21, 0.3);
+
+  transform: rotate(-45deg);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Pin Center */
+
+.coverage-map-pin::after {
+  content: "";
+
+  position: absolute;
+
+  top: 12px;
+  left: 17px;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+
+.coverage-map-marker:hover .coverage-map-pin::before {
+  background: var(--color-darker);
+
+  transform: rotate(-45deg) scale(1.12);
+}
+
+.coverage-map-marker:hover .coverage-map-pin::after {
+  transform: scale(1.15);
+}
+
+/* =========================================================
+   LOCATION TOOLTIP
+========================================================= */
+
+.coverage-leaflet-tooltip {
+  padding: 7px 11px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 7px !important;
+  background: rgba(17, 32, 21, 0.94) !important;
+  color: #ffffff !important;
+  font-family: var(--font-2), "Lato", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.coverage-leaflet-tooltip::before {
+  border-top-color: rgba(17, 32, 21, 0.94) !important;
+}
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.coverage-map-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 30px;
+  padding: 25px 28px;
+  border: 1px solid rgba(153, 199, 163, 0.18);
+  border-radius: 14px;
+  background: rgba(92, 146, 105, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* =========================================================
+   NOTE ICON
+========================================================= */
+
+.coverage-map-note-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(153, 199, 163, 0.25);
+  border-radius: 50%;
+  background: rgba(92, 146, 105, 0.12);
+  color: var(--color-lighter);
+  font-size: 13px;
+}
+
+/* =========================================================
+   NOTE TEXT
+========================================================= */
+
+.coverage-map-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.coverage-map-note strong {
+  color: #ffffff;
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .coverage-map {
+    padding: 85px 0;
+  }
+
+  /* Header */
+
+  .coverage-map-header {
+    max-width: 750px;
+  }
+
+  /* Map */
+
+  .coverage-map-wrapper {
+    height: 540px;
+
+    margin-top: 50px;
+
+    border-radius: 16px;
+  }
+
+  /* Note */
+
+  .coverage-map-note {
+    padding: 22px 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .coverage-map {
+    padding: 40px 0;
+  }
+
+  /* Header */
+
+  .coverage-map-eyebrow {
+    margin-bottom: 12px;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .coverage-map-title {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+
+  .coverage-map-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Map */
+
+  .coverage-map-wrapper {
+    height: 470px;
+    margin-top: 42px;
+    border-radius: 14px;
+  }
+
+  /* Status */
+
+  .coverage-map-overlay {
+    top: 12px;
+    left: 12px;
+  }
+
+  .coverage-map-status {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  /* Zoom */
+
+  .coverage-map-container .leaflet-control-zoom {
+    margin: 12px !important;
+  }
+
+  .coverage-map-container .leaflet-control-zoom a {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 15px;
+  }
+
+  /* Hide tooltip on mobile */
+
+  .coverage-leaflet-tooltip {
+    display: none;
+  }
+
+  /* Bottom Note */
+
+  .coverage-map-note {
+    gap: 10px;
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .coverage-map-note-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .coverage-map-note p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .coverage-map-note strong {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .coverage-map {
+    padding: 60px 0;
+  }
+
+  .coverage-map-title {
+    font-size: 36px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .coverage-map-description {
+    font-size: 13px;
+  }
+
+  .coverage-map-wrapper {
+    height: 420px;
+
+    margin-top: 36px;
+  }
+
+  .coverage-map-note {
+    padding: 16px;
+  }
+
+  .coverage-map-note p {
+    font-size: 11.5px;
+  }
+
+  .coverage-map-note strong {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .coverage-status-dot::after {
+    animation: none;
+  }
+
+  .coverage-map-pin::before,
+  .coverage-map-pin::after {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   DURING YOUR VISIT
+========================================================= */
+
+.during-visit {
+  position: relative;
+  padding: 60px 0;
+  background: #ffffff;
+  color: var(--heading-color);
+  overflow: hidden;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.during-visit-header {
+  max-width: 850px;
+  text-align: left;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.during-visit-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--color-main);
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.during-visit-title {
+  max-width: 700px;
+  margin: 0;
+  color: var(--heading-color);
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 70px;
+  letter-spacing: -1.5px;
+}
+
+.during-visit-title span {
+  color: var(--color-main);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.during-visit-description {
+  max-width: 800px;
+  margin-top: 20px;
+  color: var(--text-color-1);
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.during-visit-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 65px;
+}
+
+/* =========================================================
+   VIEWPORT
+========================================================= */
+
+.during-visit-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.during-visit-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.during-visit-card {
+  position: relative;
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-height: 300px;
+  padding: 32px 30px;
+  border: 1px solid rgba(17, 32, 21, 0.08);
+  border-radius: 16px;
+  background: linear-gradient(150deg, #ffffff, #99c7a3);
+  box-shadow: 0 10px 30px rgba(17, 32, 21, 0.045);
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.during-visit-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(92, 146, 105, 0.25);
+
+  box-shadow: 0 22px 50px rgba(17, 32, 21, 0.1);
+}
+
+/* =========================================================
+   CARD TOP ACCENT
+========================================================= */
+
+.during-visit-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 30px;
+
+  width: 40px;
+  height: 2px;
+
+  background: var(--color-main);
+
+  border-radius: 0 0 4px 4px;
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.during-visit-card-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border: 1px solid rgba(92, 146, 105, 0.18);
+
+  border-radius: 50%;
+
+  background: rgba(92, 146, 105, 0.08);
+
+  color: var(--color-main);
+
+  font-size: 19px;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.during-visit-card:hover .during-visit-card-icon {
+  background: var(--color-main);
+
+  color: #ffffff;
+
+  transform: rotate(-5deg) scale(1.05);
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.during-visit-card h3 {
+  margin: 0 0 13px;
+
+  color: var(--heading-color);
+
+  font-family: var(--font-1), "Philosopher", sans-serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.3px;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.during-visit-card p {
+  margin: 0;
+
+  color: var(--text-color-1);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CAROUSEL ARROWS
+========================================================= */
+
+.during-visit-arrow {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(17, 32, 21, 0.15);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: var(--heading-color);
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   ARROW HOVER
+========================================================= */
+
+.during-visit-arrow:hover {
+  border-color: var(--color-main);
+
+  background: var(--color-main);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(92, 146, 105, 0.2);
+}
+
+/* =========================================================
+   ARROW ACTIVE
+========================================================= */
+
+.during-visit-arrow:active {
+  transform: scale(0.94);
+}
+
+/* =========================================================
+   CAROUSEL CONTROLS
+========================================================= */
+
+.during-visit-controls {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 30px;
+}
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.during-visit-dots {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.during-visit-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(17, 32, 21, 0.15);
+
+  cursor: pointer;
+
+  transition:
+    width 0.35s ease,
+    background 0.35s ease;
+}
+
+.during-visit-dot.active {
+  width: 25px;
+
+  border-radius: 10px;
+
+  background: var(--color-main);
+}
+
+/* =========================================================
+   COUNTER
+========================================================= */
+
+.during-visit-counter {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: rgba(17, 32, 21, 0.45);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+.during-visit-current {
+  color: var(--color-main);
+}
+
+.during-visit-counter-line {
+  width: 22px;
+
+  height: 1px;
+
+  background: rgba(17, 32, 21, 0.2);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .during-visit {
+    padding: 85px 0;
+  }
+
+  .during-visit-carousel {
+    margin-top: 55px;
+
+    gap: 15px;
+  }
+
+  .during-visit-track {
+    gap: 16px;
+  }
+
+  .during-visit-card {
+    flex-basis: calc((100% - 16px) / 2);
+
+    min-height: 285px;
+
+    padding: 28px 25px;
+  }
+
+  .during-visit-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .during-visit-card h3 {
+    font-size: 25px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .during-visit {
+    padding: 40px 0;
+  }
+
+  /* Header */
+
+  .during-visit-eyebrow {
+    margin-bottom: 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 16px;
+  }
+
+  .during-visit-title {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+  .during-visit-description {
+    max-width: 380px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Carousel */
+
+  .during-visit-carousel {
+    margin-top: 42px;
+    gap: 10px;
+  }
+
+  .during-visit-track {
+    gap: 12px;
+  }
+
+  .during-visit-card {
+    flex-basis: 100%;
+    min-height: 285px;
+    padding: 27px 23px;
+    border-radius: 14px;
+  }
+
+  .during-visit-card-icon {
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 22px;
+
+    font-size: 18px;
+  }
+
+  .during-visit-card h3 {
+    font-size: 25px;
+  }
+
+  .during-visit-card p {
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  /* Arrows */
+
+  .during-visit-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 12px;
+  }
+
+  /* Controls */
+
+  .during-visit-controls {
+    margin-top: 22px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .during-visit {
+    padding: 60px 0;
+  }
+
+  .during-visit-title {
+    font-size: 36px;
+  }
+
+  .during-visit-description {
+    font-size: 13px;
+  }
+
+  .during-visit-carousel {
+    gap: 7px;
+
+    margin-top: 36px;
+  }
+
+  .during-visit-track {
+    gap: 10px;
+  }
+
+  .during-visit-card {
+    min-height: 280px;
+
+    padding: 24px 20px;
+  }
+
+  .during-visit-card h3 {
+    font-size: 23px;
+  }
+
+  .during-visit-card p {
+    font-size: 12.5px;
+  }
+
+  .during-visit-arrow {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .during-visit-track {
+    transition: none;
+  }
+
+  .during-visit-card,
+  .during-visit-card-icon,
+  .during-visit-arrow {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   PRICING SECTION
+========================================================= */
+.unheard-pricing {
+  position: relative;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #112015 0%, #173b2b 50%, #112015 100%);
+  color: var(--heading-color);
+  overflow: hidden;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.unheard-pricing-header {
+  text-align: left;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.unheard-pricing-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--color-lighter);
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.unheard-pricing-title {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.unheard-pricing-title span {
+  color: var(--color-main);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.unheard-pricing-description {
+  max-width: 800px;
+  margin-top: 20px;
+  color: var(--text-color-2);
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   PRICING GRID
+========================================================= */
+
+.unheard-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+
+  gap: 22px;
+
+  margin-top: 65px;
+}
+
+/* =========================================================
+   PRICING CARD
+========================================================= */
+
+.unheard-pricing-card {
+  position: relative;
+
+  min-height: 330px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(17, 32, 21, 0.1);
+  border-radius: 18px;
+
+  background: linear-gradient(145deg, #ffffff 0%, #f7faf7 100%);
+
+  box-shadow: 0 12px 35px rgba(17, 32, 21, 0.055);
+
+  transition:
+    min-height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* =========================================================
+   CARD TOP ACCENT
+========================================================= */
+
+.unheard-pricing-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 32px;
+
+  width: 48px;
+  height: 3px;
+
+  border-radius: 0 0 5px 5px;
+
+  background: var(--color-main);
+
+  opacity: 0.75;
+
+  transition:
+    width 0.45s ease,
+    opacity 0.35s ease;
+}
+
+/* =========================================================
+   CARD INNER
+========================================================= */
+
+.unheard-pricing-card-inner {
+  position: relative;
+  z-index: 2;
+
+  padding: 35px 32px;
+}
+
+.unheard-pricing-summary {
+  display: flex;
+  flex-direction: column;
+
+  flex: none;
+}
+
+/* =========================================================
+   CARD SUBTITLE
+========================================================= */
+
+.unheard-pricing-card-subtitle {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--color-main);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.unheard-pricing-card-title {
+  max-width: 270px;
+
+  margin: 0;
+
+  color: var(--heading-color);
+
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.unheard-pricing-price {
+  display: flex;
+  align-items: baseline;
+
+  gap: 6px;
+
+  margin-top: 28px;
+}
+
+/* Price */
+
+.unheard-price {
+  color: var(--heading-color);
+
+  font-family: var(--font-1), "Philosopher", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* /month */
+
+.unheard-price-period {
+  color: var(--text-color-1);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 13px;
+}
+
+/* =========================================================
+   DETAILS
+   Desktop:
+   Hidden initially
+========================================================= */
+
+.unheard-pricing-details {
+  max-height: 0;
+
+  opacity: 0;
+
+  overflow: hidden;
+
+  transform: translateY(12px);
+
+  transition:
+    max-height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.unheard-pricing-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 28px 0 20px;
+
+  background: rgba(17, 32, 21, 0.1);
+}
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.unheard-pricing-features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+/* Feature */
+
+.unheard-pricing-features li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: var(--text-color-1);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* Tick */
+
+.unheard-pricing-features li i {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1px;
+
+  border-radius: 50%;
+
+  background: rgba(92, 146, 105, 0.12);
+
+  color: var(--color-main);
+
+  font-size: 8px;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.unheard-pricing-btn {
+  width: 100%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 25px;
+  padding: 12px 18px;
+
+  border: 1px solid var(--color-main);
+  border-radius: 5px;
+
+  background: var(--color-main);
+
+  color: #ffffff;
+
+  font-family: var(--font-2), "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Button icon */
+
+.unheard-pricing-btn i {
+  font-size: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+/* Button hover */
+
+.unheard-pricing-btn:hover {
+  background: var(--color-darker);
+
+  border-color: var(--color-darker);
+
+  color: #ffffff;
+}
+
+.unheard-pricing-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+@media (min-width: 992px) {
+  .unheard-pricing-card:hover {
+    /*
+      Don't use a fixed huge height.
+      Content controls the expanded height.
+    */
+
+    min-height: 0;
+
+    transform: translateY(-8px);
+
+    border-color: rgba(92, 146, 105, 0.28);
+
+    box-shadow: 0 25px 60px rgba(17, 32, 21, 0.12);
+  }
+
+  /* Accent expands */
+
+  .unheard-pricing-card:hover::before {
+    width: 80px;
+
+    opacity: 1;
+  }
+
+  /* Reveal content */
+
+  .unheard-pricing-card:hover .unheard-pricing-details {
+    max-height: 400px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   FEATURED CARD
+========================================================= */
+
+.unheard-pricing-featured {
+  border-color: rgba(92, 146, 105, 0.25);
+
+  background: linear-gradient(145deg, #f5faf6 0%, #ffffff 100%);
+}
+
+/* =========================================================
+   FEATURED BADGE
+========================================================= */
+
+.unheard-pricing-badge {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 5;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: rgba(92, 146, 105, 0.1);
+
+  color: var(--color-main);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .unheard-pricing {
+    padding: 85px 0;
+  }
+
+  /* -----------------------------------------
+     GRID
+  ----------------------------------------- */
+
+  .unheard-pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 55px;
+  }
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .unheard-pricing-card {
+    min-height: auto;
+
+    overflow: visible;
+  }
+
+  .unheard-pricing-card-inner {
+    padding: 30px 26px;
+  }
+
+  /* -----------------------------------------
+     ALWAYS SHOW DETAILS
+  ----------------------------------------- */
+
+  .unheard-pricing-details {
+    max-height: none;
+
+    opacity: 1;
+
+    overflow: visible;
+
+    transform: none;
+  }
+
+  /* -----------------------------------------
+     PRICE
+  ----------------------------------------- */
+
+  .unheard-pricing-price {
+    margin-top: 28px;
+  }
+
+  /* -----------------------------------------
+     TITLE
+  ----------------------------------------- */
+
+  .unheard-pricing-card-title {
+    font-size: 28px;
+  }
+
+  /* -----------------------------------------
+     PRICE
+  ----------------------------------------- */
+
+  .unheard-price {
+    font-size: 36px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .unheard-pricing {
+    padding: 40px 0;
+  }
+
+  /* =====================================================
+     HEADER
+  ===================================================== */
+
+  .unheard-pricing-eyebrow {
+    margin-bottom: 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .unheard-pricing-title {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+  .unheard-pricing-line {
+    width: 45px;
+    margin: 21px 0;
+  }
+
+  .unheard-pricing-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* =====================================================
+     GRID
+  ===================================================== */
+
+  .unheard-pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 42px;
+  }
+
+  /* =====================================================
+     CARD
+  ===================================================== */
+
+  .unheard-pricing-card {
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .unheard-pricing-card-inner {
+    padding: 28px 23px;
+  }
+
+  /* =====================================================
+     SUBTITLE
+  ===================================================== */
+
+  .unheard-pricing-card-subtitle {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  /* =====================================================
+     TITLE
+  ===================================================== */
+
+  .unheard-pricing-card-title {
+    max-width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  /* =====================================================
+     PRICE
+  ===================================================== */
+
+  .unheard-pricing-price {
+    margin-top: 26px;
+  }
+
+  .unheard-price {
+    font-size: 36px;
+  }
+
+  /* =====================================================
+     DETAILS
+  ===================================================== */
+
+  .unheard-pricing-details {
+    /*
+      No animation on mobile.
+      Everything remains visible.
+    */
+
+    max-height: none;
+
+    opacity: 1;
+
+    overflow: visible;
+
+    transform: none;
+
+    transition: none;
+  }
+
+  /* =====================================================
+     DIVIDER
+  ===================================================== */
+
+  .unheard-pricing-divider {
+    margin: 25px 0 20px;
+  }
+
+  /* =====================================================
+     FEATURES
+  ===================================================== */
+
+  .unheard-pricing-features {
+    gap: 11px;
+  }
+
+  .unheard-pricing-features li {
+    font-size: 14px;
+  }
+
+  /* =====================================================
+     BUTTON
+  ===================================================== */
+
+  .unheard-pricing-btn {
+    min-height: 45px;
+    margin-top: 23px;
+  }
+
+  /* =====================================================
+     REMOVE DESKTOP HOVER EFFECT
+  ===================================================== */
+
+  .unheard-pricing-card:hover {
+    min-height: auto;
+    transform: none;
+    box-shadow: 0 12px 35px rgba(17, 32, 21, 0.055);
+  }
+
+  .unheard-pricing-card:hover::before {
+    width: 48px;
+    opacity: 0.75;
+  }
+
+  /* =====================================================
+     FEATURED BADGE
+  ===================================================== */
+
+  .unheard-pricing-badge {
+    top: 17px;
+    right: 17px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .unheard-pricing {
+    padding: 60px 0;
+  }
+
+  .unheard-pricing-title {
+    font-size: 36px;
+  }
+
+  .unheard-pricing-description {
+    font-size: 13px;
+  }
+
+  .unheard-pricing-grid {
+    margin-top: 36px;
+  }
+
+  .unheard-pricing-card-inner {
+    padding: 25px 20px;
+  }
+
+  .unheard-pricing-card-title {
+    font-size: 24px;
+  }
+
+  .unheard-pricing-price {
+    margin-top: 24px;
+  }
+
+  .unheard-price {
+    font-size: 33px;
+  }
+
+  .unheard-pricing-features li {
+    font-size: 12px;
+  }
+
+  .unheard-pricing-btn {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .unheard-pricing-card,
+  .unheard-pricing-details,
+  .unheard-pricing-btn,
+  .unheard-pricing-btn i {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   FAQ SECTION
+========================================================= */
+
+.unheard-faq {
+  position: relative;
+  padding: 60px 0;
+  background: #ffffff;
+  color: var(--heading-color);
+  overflow: hidden;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.unheard-faq-header {
+  max-width: 850px;
+  text-align: left;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.unheard-faq-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: var(--color-main);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  line-height: 1.5;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.unheard-faq-title {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: var(--heading-color);
+
+  font-family: var(--font-1), "Philosopher", sans-serif;
+
+  font-size: clamp(44px, 5vw, 68px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+}
+
+.unheard-faq-title span {
+  color: var(--color-main);
+}
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.unheard-faq-line {
+  width: 58px;
+
+  height: 2px;
+
+  margin: 25px 0;
+
+  background: var(--color-main);
+}
+
+/* =========================================================
+   FAQ LIST
+========================================================= */
+
+.unheard-faq-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  max-width: 1050px;
+
+  margin-top: 60px;
+}
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.unheard-faq-item {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(92, 146, 105, 0.16);
+
+  border-radius: 15px;
+
+  /*
+    Liquid glass
+  */
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(245, 250, 246, 0.72)
+  );
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 12px 35px rgba(17, 32, 21, 0.055);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* =========================================================
+   GLASS HIGHLIGHT
+========================================================= */
+
+.unheard-faq-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+
+  opacity: 0.8;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.unheard-faq-item:hover {
+  border-color: rgba(92, 146, 105, 0.3);
+
+  box-shadow: 0 18px 45px rgba(17, 32, 21, 0.09);
+}
+
+/* =========================================================
+   QUESTION BUTTON
+========================================================= */
+
+.unheard-faq-question {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 45px 1fr 45px;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 24px 26px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--heading-color);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-family: var(--font-2), "Lato", sans-serif;
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.unheard-faq-number {
+  color: rgba(92, 146, 105, 0.65);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   QUESTION TEXT
+========================================================= */
+
+.unheard-faq-question-text {
+  color: var(--heading-color);
+
+  font-family: var(--font-1), "Philosopher", sans-serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================================================
+   PLUS ICON WRAPPER
+========================================================= */
+
+.unheard-faq-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  justify-self: end;
+
+  border: 1px solid rgba(92, 146, 105, 0.2);
+
+  border-radius: 50%;
+
+  background: rgba(92, 146, 105, 0.06);
+
+  color: var(--color-main);
+
+  font-size: 12px;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =========================================================
+   ANSWER
+========================================================= */
+
+.unheard-faq-answer {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+}
+
+/* =========================================================
+   ANSWER INNER
+========================================================= */
+
+.unheard-faq-answer-inner {
+  min-height: 0;
+
+  overflow: hidden;
+
+  padding: 0 89px;
+
+  transition: padding 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   ANSWER TEXT
+========================================================= */
+
+.unheard-faq-answer p {
+  max-width: 800px;
+
+  margin: 0;
+
+  padding-bottom: 25px;
+
+  color: var(--text-color-1);
+
+  font-family: var(--font-2), "Lato", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   ACTIVE FAQ
+========================================================= */
+
+.unheard-faq-item.active {
+  border-color: rgba(92, 146, 105, 0.35);
+
+  background: linear-gradient(
+    135deg,
+    rgba(245, 250, 246, 0.95),
+    rgba(235, 245, 238, 0.82)
+  );
+
+  box-shadow: 0 20px 50px rgba(17, 32, 21, 0.1);
+}
+
+/* Active Question */
+
+.unheard-faq-item.active .unheard-faq-question-text {
+  color: var(--color-main);
+}
+
+/* Active Number */
+
+.unheard-faq-item.active .unheard-faq-number {
+  color: var(--color-main);
+}
+
+/* Active Icon */
+
+.unheard-faq-item.active .unheard-faq-icon {
+  transform: rotate(45deg);
+
+  background: var(--color-main);
+
+  border-color: var(--color-main);
+
+  color: #ffffff;
+}
+
+/* Active Answer */
+
+.unheard-faq-item.active .unheard-faq-answer {
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+}
+
+/* Active Answer Padding */
+
+.unheard-faq-item.active .unheard-faq-answer-inner {
+  padding-bottom: 0;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .unheard-faq {
+    padding: 85px 0;
+  }
+
+  .unheard-faq-list {
+    margin-top: 50px;
+  }
+
+  .unheard-faq-question {
+    grid-template-columns: 38px 1fr 42px;
+
+    gap: 15px;
+
+    padding: 22px;
+  }
+
+  .unheard-faq-question-text {
+    font-size: 21px;
+  }
+
+  .unheard-faq-answer-inner {
+    padding-left: 75px;
+
+    padding-right: 75px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .unheard-faq {
+    padding: 40px 0;
+  }
+
+  /* Header */
+
+  .unheard-faq-eyebrow {
+    margin-bottom: 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 14px;
+  }
+
+  .unheard-faq-title {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -1px;
+  }
+
+  .unheard-faq-line {
+    width: 45px;
+    margin: 15px 0;
+  }
+
+  .unheard-faq-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* List */
+
+  .unheard-faq-list {
+    gap: 11px;
+    margin-top: 40px;
+  }
+
+  /* Card */
+
+  .unheard-faq-item {
+    border-radius: 13px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* Question */
+
+  .unheard-faq-question {
+    grid-template-columns: 30px 1fr 36px;
+    gap: 10px;
+    padding: 18px 16px;
+  }
+
+  /* Number */
+
+  .unheard-faq-number {
+    font-size: 9px;
+  }
+
+  /* Question */
+
+  .unheard-faq-question-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Icon */
+
+  .unheard-faq-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+  }
+
+  /* Answer */
+
+  .unheard-faq-answer-inner {
+    padding-left: 56px;
+    padding-right: 16px;
+  }
+
+  .unheard-faq-answer p {
+    padding-bottom: 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .unheard-faq {
+    padding: 60px 0;
+  }
+
+  .unheard-faq-title {
+    font-size: 36px;
+  }
+
+  .unheard-faq-description {
+    font-size: 13px;
+  }
+
+  .unheard-faq-list {
+    margin-top: 35px;
+  }
+
+  .unheard-faq-question {
+    grid-template-columns: 25px 1fr 32px;
+
+    gap: 8px;
+
+    padding: 16px 13px;
+  }
+
+  .unheard-faq-question-text {
+    font-size: 14px;
+  }
+
+  .unheard-faq-icon {
+    width: 29px;
+    height: 29px;
+
+    font-size: 9px;
+  }
+
+  .unheard-faq-answer-inner {
+    padding-left: 46px;
+
+    padding-right: 13px;
+  }
+
+  .unheard-faq-answer p {
+    font-size: 12px;
+
+    line-height: 20px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .unheard-faq-item,
+  .unheard-faq-icon,
+  .unheard-faq-answer,
+  .unheard-faq-answer-inner {
+    transition: none;
+  }
+}

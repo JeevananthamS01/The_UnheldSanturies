@@ -1,0 +1,2048 @@
+<!doctype html>
+<html lang="en">
+  <!-- Mirrored from wivana-html.zaderonstudio.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2026 11:07:54 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We Come To You - Unheld</title>
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/css/fontawesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/come-to-you.css" />
+    <link rel="stylesheet" href="css/border.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+
+    <style>
+      :root {
+        --primary: #17352d;
+        --secondary: #21473d;
+        --accent: #c4a86d;
+        --cream: #f8f5ef;
+        --white: #ffffff;
+        --text: #d8d8d8;
+        --border: rgba(255, 255, 255, 0.08);
+        --transition: 0.4s ease;
+      }
+
+      /* Custom Scrollbar */
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #11261f;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+     <!-- Header -->
+    <header class="site-header">
+      <div class="header-top d-none d-lg-block">
+        <div class="container-xl header-top-inner">
+          <!-- Social -->
+          <div class="header-socials">
+            <a href="#" class="header-social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Optional Alert -->
+          <div id="header-alert"></div>
+
+          <!-- Contact -->
+          <div class="header-contact">
+            <div class="header-contact-item">
+              <i class="fa-regular fa-envelope"></i>
+
+              <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+            </div>
+
+            <div class="header-contact-item">
+              <i class="fa-solid fa-phone"></i>
+
+              <a href="tel:+919840221718"> +91 98402 21718 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-dark site-navbar">
+        <div class="container-xl navbar-container">
+          <a class="navbar-brand site-logo" href="index.html">
+            <img
+              src="images/logo.png"
+              alt="The Unheard"
+              width="166"
+              height="41"
+            />
+          </a>
+
+          <div class="site-navigation">
+            <!-- Desktop Navigation -->
+            <ul class="navbar-nav site-nav-list">
+              <li class="nav-item">
+                <a class="nav-link " href="index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="sanctuaries.html"> Sanctuaries </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="we-come-to-you.html">
+                  We Come To You
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="organisations.html">
+                  For Organisations
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="header-action">
+            <a href="index.html#unheardBooking" class="btn-light"> Make Appointment </a>
+          </div>
+
+          <button
+            type="button"
+            class="site-menu-toggle"
+            id="siteMenuToggle"
+            aria-label="Open navigation"
+            aria-controls="siteMobileMenu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="site-menu-backdrop" id="siteMenuBackdrop"></div>
+
+      <aside class="site-mobile-menu" id="siteMobileMenu" aria-hidden="true">
+        <!-- Menu Header -->
+
+        <div class="site-mobile-menu-header">
+          <span class="site-mobile-title"> MENU </span>
+
+          <button
+            type="button"
+            class="site-menu-close"
+            id="siteMenuClose"
+            aria-label="Close navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Menu Body -->
+
+        <div class="site-mobile-menu-body">
+          <ul class="site-mobile-nav-list">
+            <li>
+              <a href="index.html" > Home </a>
+            </li>
+
+            <li>
+              <a href="about.html"> About </a>
+            </li>
+
+            <li>
+              <a href="sanctuaries.html"> Sanctuaries </a>
+            </li>
+
+            <li>
+              <a href="we-come-to-you.html" class="active"> We Come To You </a>
+            </li>
+
+            <li>
+              <a href="organisations.html"> For Organisations </a>
+            </li>
+
+          </ul>
+
+          <!-- Mobile Appointment -->
+
+          <div class="mobile-menu-action">
+            <a href="index.html#unheardBooking" class="mobile-menu-button">
+              Make Appointment
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- We come to you -->
+    <section class="we-come-to-you-hero" id="weComeToYouHero">
+      <div class="we-come-to-you-hero-overlay">
+        <div class="container-xl">
+          <div class="we-come-to-you-hero-content">
+            <!-- Label -->
+            <div class="we-come-to-you-hero-label">
+              <span class="we-come-to-you-label-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+
+              <span>
+                UNHELD - Tamil Nadu Outreach — Home &amp; Office Visits
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="we-come-to-you-hero-title">
+              You don't have to come to us.
+              <br />
+              We'll find you.
+            </h1>
+
+            <!-- Description -->
+            <p class="we-come-to-you-hero-description">
+              Wherever you are in Tamil Nadu — your home, your office, a private
+              room — we bring a licensed counselor to you. Because healing
+              shouldn't stop at city limits, and stigma shouldn't block your
+              front door.
+            </p>
+
+            <!-- Buttons -->
+            <div class="we-come-to-you-hero-actions">
+              <a href="" class="btn-light">
+                Book a Home Visit
+              </a>
+
+              <a class="btn-light"
+                  href="https://wa.me/919840221718"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
+
+              <a href="#our-process" class="btn-light">
+                How It's Works
+              </a>
+            </div>
+
+            <!-- Highlights -->
+            <div class="we-come-to-you-highlights">
+              <div class="we-come-to-you-highlight">
+                <span class="we-come-to-you-highlight-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+
+                <span> All districts across Tamil Nadu </span>
+              </div>
+
+              <div class="we-come-to-you-highlight">
+                <span class="we-come-to-you-highlight-icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+
+                <span> Fully confidential, anonymous available </span>
+              </div>
+
+              <div class="we-come-to-you-highlight">
+                <span class="we-come-to-you-highlight-icon">
+                  <i class="fa-solid fa-house"></i>
+                </span>
+
+                <span> Your space, your comfort </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Why We Built This -->
+    <section class="why-we-built" id="whyWeBuilt">
+      <div class="container-xl">
+        <!-- Section Intro -->
+        <div class="why-we-built-header">
+          <span class="why-we-built-eyebrow"> WHY WE BUILT THIS </span>
+
+          <h2 class="why-we-built-title">
+            In smaller towns, walking into a
+            <span>counseling center isn't easy.</span>
+          </h2>
+
+          <div class="why-we-built-line"></div>
+
+          <p class="why-we-built-description">
+            In Chennai, anonymity is possible. In Tirunelveli, Madurai, Vellore,
+            or Thanjavur — everyone knows everyone. Being seen entering a
+            counseling space can feel more frightening than the pain you carry.
+            So we remove the walk entirely.
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="why-we-built-grid">
+          <!-- Card 01 -->
+          <article class="why-we-built-card active">
+            <div class="why-we-built-card-icon">
+              <i class="fa-solid fa-door-open"></i>
+            </div>
+
+            <div class="why-we-built-card-content">
+              <span class="why-we-built-card-number"> 01 </span>
+
+              <h3>Stigma is louder in smaller towns</h3>
+
+              <p>
+                In close-knit communities, being seen entering a counseling
+                space can feel more frightening than the pain itself. We arrive
+                quietly, in plain clothes, on your terms.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="why-we-built-card">
+            <div class="why-we-built-card-icon">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <div class="why-we-built-card-content">
+              <span class="why-we-built-card-number"> 02 </span>
+
+              <h3>Distance shouldn't be a barrier</h3>
+
+              <p>
+                Good counselors cluster in cities. Someone in Krishnagiri or
+                Nagapattinam deserves the same care as someone in Nungambakkam.
+                We close that gap.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="why-we-built-card">
+            <div class="why-we-built-card-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+
+            <div class="why-we-built-card-content">
+              <span class="why-we-built-card-number"> 03 </span>
+
+              <h3>You heal better where you feel safe</h3>
+
+              <p>
+                Research shows people open up more in familiar spaces. Your
+                home, your scent, your chair — these lower your walls before the
+                session even begins.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="our-process" id="our-process">
+      <div class="container-xl">
+        <!-- Section Header -->
+        <div class="our-process-header">
+          <span class="our-process-eyebrow"> OUR PROCESS </span>
+
+          <h2 class="our-process-title">
+            Three steps.
+            <span>That's all.</span>
+          </h2>
+
+          <div class="our-process-line"></div>
+
+          <p class="our-process-description">
+            We've stripped away every unnecessary barrier. No long forms, no
+            week-long waits. Three honest moments between you and healing.
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="our-process-timeline">
+          <div class="our-process-track">
+            <span class="our-process-progress"></span>
+          </div>
+
+          <!-- STEP 01 -->
+          <article class="our-process-step">
+            <div class="our-process-number">01</div>
+
+            <div class="our-process-card">
+              <span class="our-process-step-label">
+                TELL US WHERE YOU ARE
+              </span>
+
+              <h3>Share your district — nothing more</h3>
+
+              <p>
+                You don't need to give your full address yet. Just tell us which
+                district or city you're in. We'll confirm availability within 4
+                hours. No name required at this stage — a WhatsApp message is
+                enough.
+              </p>
+
+              <div class="our-process-note">
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>
+                  "I'm in [district], I need a home visit — that's it."
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- STEP 02 -->
+          <article class="our-process-step">
+            <div class="our-process-number">02</div>
+
+            <div class="our-process-card">
+              <span class="our-process-step-label">
+                WE MATCH THE RIGHT COUNSELOR
+              </span>
+
+              <h3>Matched to your specific need, not a generic list</h3>
+
+              <p>
+                Based on what brought you to us — guilt, grief, parenting
+                struggles, secrets — we match you with a counselor from our
+                network who specialises in exactly that. You'll receive their
+                brief profile before the visit.
+              </p>
+
+              <div class="our-process-note">
+                <i class="fa-regular fa-clock"></i>
+
+                <span> Matching happens within 24 hours of inquiry. </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- STEP 03 -->
+          <article class="our-process-step">
+            <div class="our-process-number">03</div>
+
+            <div class="our-process-card">
+              <span class="our-process-step-label"> THEY COME TO YOU </span>
+
+              <h3>Your space. Your comfort. Your pace.</h3>
+
+              <p>
+                Your counselor arrives wherever you choose — home, office, a
+                quiet room. No waiting room, no white walls, no commute. You're
+                already in the safest place you know, and now it has a counselor
+                in it.
+              </p>
+
+              <div class="our-process-note">
+                <i class="fa-solid fa-lock"></i>
+
+                <span>
+                  Everything said in your session stays there. Always.
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage Map -->
+    <section class="coverage-map" id="coverageMap">
+      <div class="container-xl">
+
+        <div class="coverage-map-header">
+          <span class="coverage-map-eyebrow"> COVERAGE MAP </span>
+
+          <h2 class="coverage-map-title">
+            We currently serve
+            <span>these districts.</span>
+          </h2>
+
+          <div class="coverage-map-line"></div>
+
+          <p class="coverage-map-description">
+            Our counselor network spans across Tamil Nadu. If your district
+            isn't listed, reach out — we're expanding every month.
+          </p>
+        </div>
+
+        <div class="coverage-map-wrapper">
+          <div id="tamilNaduMap" class="coverage-map-container"></div>
+
+          <!-- Map Status -->
+          <div class="coverage-map-overlay">
+            <div class="coverage-map-status">
+              <span class="coverage-status-dot"></span>
+
+              <span> Currently serving Tamil Nadu </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coverage-map-note">
+          <span class="coverage-map-note-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </span>
+
+          <p>
+            <strong>Not in the list?</strong>
+            Reach out anyway. Message us your district on WhatsApp — if there's
+            a counselor near you in our network, we'll connect you within 48
+            hours. If not, you're on the waitlist and we'll notify you the
+            moment we have coverage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- During Your Visit -->
+    <section class="during-visit" id="duringYourVisit">
+      <div class="container-xl">
+        <div class="during-visit-header">
+          <span class="during-visit-eyebrow"> DURING YOUR VISIT </span>
+
+          <h2 class="during-visit-title">
+            What a home visit
+            <span>actually looks like</span>
+          </h2>
+
+          <div class="during-visit-line"></div>
+
+          <p class="during-visit-description">
+            We know the unknown is scary. So here's exactly what happens — from
+            the moment our counselor arrives to the moment they leave.
+          </p>
+        </div>
+
+        <div class="during-visit-carousel">
+          <!-- Previous -->
+          <button
+            type="button"
+            class="during-visit-arrow during-visit-prev"
+            aria-label="Previous"
+          >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+
+          <!-- Viewport -->
+          <div class="during-visit-viewport">
+            <div class="during-visit-track">
+
+              <article class="during-visit-card">
+                <div class="during-visit-card-icon">
+                  <i class="fa-solid fa-door-open"></i>
+                </div>
+
+                <h3>Arrival — no fanfare</h3>
+
+                <p>
+                  Your counselor arrives in plain clothes with no visible
+                  branding. To any neighbour, it looks like a friend visiting —
+                  nothing more.
+                </p>
+              </article>
+
+              <article class="during-visit-card">
+                <div class="during-visit-card-icon">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+
+                <h3>Setting the space together</h3>
+
+                <p>
+                  The first 10 minutes are for comfort, not questions. Your
+                  counselor asks where you feel easiest — sofa, balcony, garden
+                  — and sets up there.
+                </p>
+              </article>
+
+              <article class="during-visit-card">
+                <div class="during-visit-card-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>The session — at your pace</h3>
+
+                <p>
+                  Sessions run 50–60 minutes. You lead. Nothing is extracted
+                  from you — only offered by you, when you're ready.
+                </p>
+              </article>
+
+              <article class="during-visit-card">
+                <div class="during-visit-card-icon">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Notes stay with you</h3>
+
+                <p>
+                  Any notes your counselor makes are shared with you after the
+                  session — never filed anywhere without your consent. You own
+                  your record entirely.
+                </p>
+              </article>
+
+              <article class="during-visit-card">
+                <div class="during-visit-card-icon">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+
+                <h3>Follow-up on your terms</h3>
+
+                <p>
+                  After the session, next steps are suggested — another visit, a
+                  sanctuary session, or online follow-up. All optional. No
+                  pressure, ever.
+                </p>
+              </article>
+
+              <article class="during-visit-card">
+                <div class="during-visit-card-icon">
+                  <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <h3>48 hours later</h3>
+
+                <p>
+                  You'll receive one short check-in message. No obligation to
+                  respond. Because healing doesn't end when the session does.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Next -->
+          <button
+            type="button"
+            class="during-visit-arrow during-visit-next"
+            aria-label="Next"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+
+        <div class="during-visit-controls">
+          <div class="during-visit-dots"></div>
+
+          <div class="during-visit-counter">
+            <span class="during-visit-current">01</span>
+            <span class="during-visit-counter-line"></span>
+            <span>06</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="unheard-pricing" id="pricing">
+      <div class="container-xl">
+        <div class="unheard-pricing-header">
+          <span class="unheard-pricing-eyebrow"> SIMPLE & TRANSPARENT </span>
+
+          <h2 class="unheard-pricing-title">
+            Choose the space
+            <span>that feels right.</span>
+          </h2>
+
+          <div class="unheard-pricing-line"></div>
+
+          <p class="unheard-pricing-description">
+            Every journey is different. Choose the kind of support that works
+            for where you are right now — with no pressure to commit to more
+            than you need.
+          </p>
+        </div>
+
+        <div class="unheard-pricing-grid">
+          <article class="unheard-pricing-card">
+            <div class="unheard-pricing-card-inner">
+              <!-- Always Visible -->
+              <div class="unheard-pricing-summary">
+                <span class="unheard-pricing-card-subtitle">
+                  Single Session
+                </span>
+
+                <h3 class="unheard-pricing-card-title">Chennai & Suburbs</h3>
+
+                <div class="unheard-pricing-price">
+                  <span class="unheard-price"> ₹1,800 </span>
+
+                  <span class="unheard-price-period"> / session </span>
+                </div>
+              </div>
+
+              <!-- Hidden on Desktop Until Hover -->
+              <div class="unheard-pricing-details">
+                <div class="unheard-pricing-divider"></div>
+
+                <ul class="unheard-pricing-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>60-minute counseling session</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Specialist matched to your need</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Session notes returned to you</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>48-hour follow-up message</span>
+                  </li>
+                </ul>
+
+                <a href="sanctuaries.html#unheardBooking" class="unheard-pricing-btn">
+                  Book A Session
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="unheard-pricing-card unheard-pricing-featured">
+            <span class="unheard-pricing-badge"> MOST CHOSEN </span>
+
+            <div class="unheard-pricing-card-inner">
+              <!-- Always Visible -->
+              <div class="unheard-pricing-summary">
+                <span class="unheard-pricing-card-subtitle">
+                  Rest of Tamil Nadu
+                </span>
+
+                <h3 class="unheard-pricing-card-title">Healing Sessions</h3>
+
+                <div class="unheard-pricing-price">
+                  <span class="unheard-price"> ₹2,500 </span>
+
+                  <span class="unheard-price-period"> / session </span>
+                </div>
+              </div>
+
+              <!-- Hidden on Desktop Until Hover -->
+              <div class="unheard-pricing-details">
+                <div class="unheard-pricing-divider"></div>
+
+                <ul class="unheard-pricing-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>60-minute counseling session</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Travel included up to 200 km</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Specialist matched to your need</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Session notes returned to you</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>48-hour follow-up message</span>
+                  </li>
+                </ul>
+
+                <a href="sanctuaries.html#unheardBooking" class="unheard-pricing-btn">
+                  Book A Session
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="unheard-pricing-card">
+            <div class="unheard-pricing-card-inner">
+              <!-- Always Visible -->
+              <div class="unheard-pricing-summary">
+                <span class="unheard-pricing-card-subtitle">
+                  Ongoing Support
+                </span>
+
+                <h3 class="unheard-pricing-card-title">
+                  Monthly Home Visit Plan
+                </h3>
+
+                <div class="unheard-pricing-price">
+                  <span class="unheard-price"> ₹8,000 </span>
+
+                  <span class="unheard-price-period"> / month </span>
+                </div>
+              </div>
+
+              <!-- Hidden on Desktop Until Hover -->
+              <div class="unheard-pricing-details">
+                <div class="unheard-pricing-divider"></div>
+
+                <ul class="unheard-pricing-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>4 home visits per month</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Same counselor every time</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Priority scheduling</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Unlimited WhatsApp check-ins</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Monthly progress summary (yours)</span>
+                  </li>
+                </ul>
+
+                <a href="sanctuaries.html#unheardBooking" class="unheard-pricing-btn">
+                  Get Started
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faq Section -->
+    <section class="unheard-faq" id="faq">
+      <div class="container-xl">
+
+        <div class="unheard-faq-header">
+          <span class="unheard-faq-eyebrow"> FREQUENTLY ASKED QUESTIONS </span>
+
+          <h2 class="unheard-faq-title">
+            Things people
+            <span>always ask</span>
+          </h2>
+
+          <div class="unheard-faq-line"></div>
+        </div>
+
+        <div class="unheard-faq-list">
+          <!-- FAQ 01 -->
+
+          <div class="unheard-faq-item">
+            <button
+              type="button"
+              class="unheard-faq-question"
+              aria-expanded="false"
+            >
+              <span class="unheard-faq-number"> 01 </span>
+
+              <span class="unheard-faq-question-text">
+                Do I have to share my name?
+              </span>
+
+              <span class="unheard-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="unheard-faq-answer">
+              <div class="unheard-faq-answer-inner">
+                <p>
+                  Your counselor arrives in plain clothes with no visible
+                  identification or branding — no company vehicle, no uniform,
+                  no paperwork at the door. To any neighbour, it looks like a
+                  personal visitor. Nothing more.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 02 -->
+
+          <div class="unheard-faq-item">
+            <button
+              type="button"
+              class="unheard-faq-question"
+              aria-expanded="false"
+            >
+              <span class="unheard-faq-number"> 02 </span>
+
+              <span class="unheard-faq-question-text">
+                What happens during my first session?
+              </span>
+
+              <span class="unheard-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="unheard-faq-answer">
+              <div class="unheard-faq-answer-inner">
+                <p>
+                  Absolutely. We come to wherever you feel safest — your
+                  workplace office after hours, a private room at a friend's
+                  home, a quiet café. You choose, we come.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 03 -->
+
+          <div class="unheard-faq-item">
+            <button
+              type="button"
+              class="unheard-faq-question"
+              aria-expanded="false"
+            >
+              <span class="unheard-faq-number"> 03 </span>
+
+              <span class="unheard-faq-question-text">
+                Is everything I say confidential?
+              </span>
+
+              <span class="unheard-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="unheard-faq-answer">
+              <div class="unheard-faq-answer-inner">
+                <p>
+                  No. Your first inquiry can be completely anonymous. We only
+                  need a location and a time to begin matching. You share only
+                  what you're comfortable sharing — nothing more is ever
+                  required.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 04 -->
+
+          <div class="unheard-faq-item">
+            <button
+              type="button"
+              class="unheard-faq-question"
+              aria-expanded="false"
+            >
+              <span class="unheard-faq-number"> 04 </span>
+
+              <span class="unheard-faq-question-text">
+                Can I choose what I want to talk about?
+              </span>
+
+              <span class="unheard-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="unheard-faq-answer">
+              <div class="unheard-faq-answer-inner">
+                <p>
+                  Reach out anyway. Our network grows every month and we may
+                  already have someone near you. If not, we add you to the
+                  waitlist and notify you the moment we have coverage in your
+                  area.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 05 -->
+
+          <div class="unheard-faq-item">
+            <button
+              type="button"
+              class="unheard-faq-question"
+              aria-expanded="false"
+            >
+              <span class="unheard-faq-number"> 05 </span>
+
+              <span class="unheard-faq-question-text">
+                What if I don't know whether counseling is right for me?
+              </span>
+
+              <span class="unheard-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="unheard-faq-answer">
+              <div class="unheard-faq-answer-inner">
+                <p>
+                  The quality is identical — same licensed counselors, same
+                  ethical standards. The difference is the environment. You're
+                  in a space you already feel safe in, which research shows
+                  leads to deeper, faster opening up. Many find home visits
+                  significantly more effective.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Main -->
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-about">
+            <img src="images/logo.png" class="footer-logo" alt="The Unheard" />
+
+            <p>
+              Embrace the power of healing to restore balance, reconnect with
+              yourself, and begin your journey toward emotional wellness.
+            </p>
+
+            <div class="footer-social-icons">
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Explore -->
+          <div class="footer-column">
+            <h3>Explore</h3>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html">About</a>
+              </li>
+
+              <li>
+                <a href="sanctuaries.html">Sanctuaries</a>
+              </li>
+
+              <li>
+                <a href="we-come-to-you.html">We Come To You</a>
+              </li>
+
+              <li>
+                <a href="organisations.html">Organisations</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="footer-column footer-hours">
+            <h3>Working Hours</h3>
+
+            <div class="footer-info-item">
+              <span class="footer-info-icon">
+                <i class="bi bi-clock"></i>
+              </span>
+
+              <p>Our doors are open 24/7 for your healing journey.</p>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <ul class="footer-contact-list">
+              <!-- Phone -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-telephone"></i>
+                </span>
+
+                <a href="tel:+919840221718"> +91 98402 21718 </a>
+              </li>
+
+              <!-- Email -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-envelope"></i>
+                </span>
+
+                <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+              </li>
+
+              <!-- WhatsApp -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-whatsapp"></i>
+                </span>
+
+                <a href="#"> WhatsApp Us </a>
+              </li>
+
+              <!-- Address -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </span>
+
+                <span class="footer-address"> Chennai, Tamil Nadu, India </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 The Unheld. All Rights Reserved.
+          </div>
+
+          <div class="footer-credit">
+            Designed &amp; Developed by
+            <a href="#" target="_blank" rel="noopener">
+              Dazzle Tech Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* =====================================================
+     CHECK MAP
+  ===================================================== */
+
+        const mapElement = document.getElementById("tamilNaduMap");
+
+        if (!mapElement || typeof L === "undefined") {
+          return;
+        }
+
+        /* =====================================================
+     TAMIL NADU MAP
+  ===================================================== */
+
+        const map = L.map("tamilNaduMap", {
+          center: [10.8505, 78.7047],
+
+          zoom: 7,
+
+          zoomControl: true,
+
+          attributionControl: true,
+
+          scrollWheelZoom: false,
+
+          doubleClickZoom: true,
+
+          dragging: true,
+
+          touchZoom: true,
+
+          boxZoom: false,
+
+          keyboard: false,
+        });
+
+        /* =====================================================
+     OPENSTREETMAP
+  ===================================================== */
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 18,
+
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+        }).addTo(map);
+
+        /* =====================================================
+     LOCATIONS
+  ===================================================== */
+
+        const locations = [
+          {
+            name: "Chennai",
+            lat: 13.0827,
+            lng: 80.2707,
+          },
+
+          {
+            name: "Coimbatore",
+            lat: 11.0168,
+            lng: 76.9558,
+          },
+
+          {
+            name: "Madurai",
+            lat: 9.9252,
+            lng: 78.1198,
+          },
+
+          {
+            name: "Tirunelveli",
+            lat: 8.7139,
+            lng: 77.7567,
+          },
+
+          {
+            name: "Salem",
+            lat: 11.6643,
+            lng: 78.146,
+          },
+
+          {
+            name: "Tiruchirappalli",
+            lat: 10.7905,
+            lng: 78.7047,
+          },
+
+          {
+            name: "Vellore",
+            lat: 12.9165,
+            lng: 79.1325,
+          },
+
+          {
+            name: "Erode",
+            lat: 11.341,
+            lng: 77.7172,
+          },
+
+          {
+            name: "Thanjavur",
+            lat: 10.7867,
+            lng: 79.1378,
+          },
+
+          {
+            name: "Tiruppur",
+            lat: 11.1085,
+            lng: 77.3411,
+          },
+
+          {
+            name: "Kanchipuram",
+            lat: 12.8342,
+            lng: 79.7036,
+          },
+
+          {
+            name: "Dindigul",
+            lat: 10.3673,
+            lng: 77.9803,
+          },
+
+          {
+            name: "Cuddalore",
+            lat: 11.748,
+            lng: 79.7714,
+          },
+
+          {
+            name: "Nagapattinam",
+            lat: 10.7672,
+            lng: 79.8449,
+          },
+
+          {
+            name: "Krishnagiri",
+            lat: 12.5186,
+            lng: 78.2137,
+          },
+
+          {
+            name: "Nagercoil",
+            lat: 8.1833,
+            lng: 77.4119,
+          },
+
+          {
+            name: "Ramanathapuram",
+            lat: 9.3639,
+            lng: 78.8395,
+          },
+
+          {
+            name: "Thoothukudi",
+            lat: 8.7642,
+            lng: 78.1348,
+          },
+
+          {
+            name: "Villupuram",
+            lat: 11.9401,
+            lng: 79.4861,
+          },
+
+          {
+            name: "Sivaganga",
+            lat: 9.8433,
+            lng: 78.4809,
+          },
+
+          {
+            name: "Pudukkottai",
+            lat: 10.3833,
+            lng: 78.8001,
+          },
+
+          {
+            name: "The Nilgiris",
+            lat: 11.4102,
+            lng: 76.695,
+          },
+
+          {
+            name: "Dharmapuri",
+            lat: 12.1211,
+            lng: 78.1582,
+          },
+
+          {
+            name: "Namakkal",
+            lat: 11.2194,
+            lng: 78.1677,
+          },
+        ];
+
+        /* =====================================================
+     CUSTOM PIN
+  ===================================================== */
+
+        const pinIcon = L.divIcon({
+          className: "coverage-map-marker",
+
+          html: `
+        <div class="coverage-map-pin"></div>
+      `,
+
+          iconSize: [42, 50],
+
+          iconAnchor: [21, 50],
+
+          popupAnchor: [0, -45],
+        });
+
+        /* =====================================================
+     ADD LOCATION MARKERS
+  ===================================================== */
+
+        const markers = [];
+
+        locations.forEach(function (location) {
+          const marker = L.marker([location.lat, location.lng], {
+            icon: pinIcon,
+          });
+
+          marker.addTo(map);
+
+          /* =========================
+         LOCATION NAME
+      ========================== */
+
+          marker.bindTooltip(location.name, {
+            direction: "top",
+
+            offset: [0, -40],
+
+            className: "coverage-leaflet-tooltip",
+
+            permanent: false,
+
+            opacity: 1,
+          });
+
+          markers.push(marker);
+        });
+
+        /* =====================================================
+     FIT MAP TO LOCATIONS
+  ===================================================== */
+
+        if (markers.length) {
+          const bounds = L.latLngBounds(
+            locations.map(function (location) {
+              return [location.lat, location.lng];
+            }),
+          );
+
+          map.fitBounds(bounds, {
+            padding: [50, 50],
+
+            maxZoom: 8,
+          });
+        }
+
+        /* =====================================================
+     MAP RESIZE
+  ===================================================== */
+
+        function refreshMap() {
+          map.invalidateSize();
+        }
+
+        setTimeout(refreshMap, 300);
+
+        setTimeout(refreshMap, 800);
+
+        window.addEventListener("resize", function () {
+          setTimeout(refreshMap, 150);
+        });
+
+        /* =====================================================
+     MOBILE TOUCH BEHAVIOR
+  ===================================================== */
+
+        function updateMobileMap() {
+          if (window.innerWidth <= 767) {
+            map.options.scrollWheelZoom = false;
+
+            map.options.doubleClickZoom = false;
+          } else {
+            map.options.scrollWheelZoom = false;
+
+            map.options.doubleClickZoom = true;
+          }
+        }
+
+        updateMobileMap();
+
+        window.addEventListener("resize", updateMobileMap);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const section = document.querySelector("#our-process");
+
+        if (!section) return;
+
+        const steps = [...section.querySelectorAll(".our-process-step")];
+
+        const progress = section.querySelector(".our-process-progress");
+
+        /* =====================================================
+     REVEAL / HIDE STEPS
+  ===================================================== */
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              } else {
+                /*
+            When the user scrolls back up,
+            the card hides again.
+          */
+
+                entry.target.classList.remove("is-visible");
+              }
+            });
+          },
+          {
+            threshold: 0.35,
+
+            rootMargin: "0px 0px -15% 0px",
+          },
+        );
+
+        steps.forEach((step) => {
+          observer.observe(step);
+        });
+
+        /* =====================================================
+     TIMELINE PROGRESS
+  ===================================================== */
+
+        function updateProgress() {
+          const timeline = section.querySelector(".our-process-timeline");
+
+          if (!timeline || !progress) return;
+
+          const rect = timeline.getBoundingClientRect();
+
+          const viewportHeight = window.innerHeight;
+
+          const triggerPoint = viewportHeight * 0.55;
+
+          const distance = triggerPoint - rect.top;
+
+          const totalHeight = timeline.offsetHeight;
+
+          const percentage = Math.max(
+            0,
+            Math.min(100, (distance / totalHeight) * 100),
+          );
+
+          progress.style.height = percentage + "%";
+        }
+
+        window.addEventListener("scroll", updateProgress, {
+          passive: true,
+        });
+
+        window.addEventListener("resize", updateProgress);
+
+        updateProgress();
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".during-visit-carousel");
+        if (!carousel) return;
+
+        const viewport = carousel.querySelector(".during-visit-viewport");
+
+        const track = carousel.querySelector(".during-visit-track");
+
+        const cards = [...track.querySelectorAll(".during-visit-card")];
+
+        const prevButton = carousel.querySelector(".during-visit-prev");
+
+        const nextButton = carousel.querySelector(".during-visit-next");
+
+        const dotsContainer = document.querySelector(".during-visit-dots");
+
+        const currentCounter = document.querySelector(".during-visit-current");
+
+        if (!viewport || !track || !cards.length) {
+          return;
+        }
+
+        /* =====================================================
+     SETTINGS
+  ===================================================== */
+
+        let currentIndex = 0;
+
+        let visibleCards = 3;
+
+        let autoPlay;
+
+        const AUTO_DELAY = 3500;
+
+        /* =====================================================
+     GET VISIBLE CARDS
+  ===================================================== */
+
+        function getVisibleCards() {
+          if (window.innerWidth <= 767) {
+            return 1;
+          }
+
+          if (window.innerWidth <= 991) {
+            return 2;
+          }
+
+          return 3;
+        }
+
+        /* =====================================================
+     MAX INDEX
+  ===================================================== */
+
+        function getMaxIndex() {
+          return Math.max(0, cards.length - visibleCards);
+        }
+
+        /* =====================================================
+     CREATE DOTS
+  ===================================================== */
+
+        function createDots() {
+          if (!dotsContainer) {
+            return;
+          }
+
+          dotsContainer.innerHTML = "";
+
+          const total = getMaxIndex() + 1;
+
+          for (let i = 0; i < total; i++) {
+            const dot = document.createElement("button");
+
+            dot.type = "button";
+
+            dot.className = "during-visit-dot";
+
+            dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+
+            dot.addEventListener("click", function () {
+              currentIndex = i;
+
+              updateCarousel();
+
+              restartAutoPlay();
+            });
+
+            dotsContainer.appendChild(dot);
+          }
+        }
+
+        /* =====================================================
+     GET CARD WIDTH
+  ===================================================== */
+
+        function getCardWidth() {
+          if (!cards.length) {
+            return 0;
+          }
+
+          const card = cards[0];
+
+          const cardWidth = card.offsetWidth;
+
+          const styles = window.getComputedStyle(track);
+
+          const gap = parseFloat(styles.columnGap || styles.gap || 0);
+
+          return cardWidth + gap;
+        }
+
+        /* =====================================================
+     UPDATE CAROUSEL
+  ===================================================== */
+
+        function updateCarousel() {
+          visibleCards = getVisibleCards();
+
+          const maxIndex = getMaxIndex();
+
+          if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+          }
+
+          const cardWidth = getCardWidth();
+
+          const translateX = currentIndex * cardWidth;
+
+          track.style.transform = `translateX(-${translateX}px)`;
+
+          updateDots();
+
+          updateCounter();
+        }
+
+        /* =====================================================
+     UPDATE DOTS
+  ===================================================== */
+
+        function updateDots() {
+          if (!dotsContainer) {
+            return;
+          }
+
+          const dots = dotsContainer.querySelectorAll(".during-visit-dot");
+
+          dots.forEach(function (dot, index) {
+            dot.classList.toggle("active", index === currentIndex);
+          });
+        }
+
+        /* =====================================================
+     UPDATE COUNTER
+  ===================================================== */
+
+        function updateCounter() {
+          if (!currentCounter) {
+            return;
+          }
+
+          const displayNumber = String(currentIndex + 1).padStart(2, "0");
+
+          currentCounter.textContent = displayNumber;
+        }
+
+        /* =====================================================
+     NEXT
+  ===================================================== */
+
+        function nextSlide() {
+          const maxIndex = getMaxIndex();
+
+          if (currentIndex >= maxIndex) {
+            /*
+        Smoothly return to first position.
+      */
+
+            currentIndex = 0;
+          } else {
+            currentIndex++;
+          }
+
+          updateCarousel();
+        }
+
+        /* =====================================================
+     PREVIOUS
+  ===================================================== */
+
+        function previousSlide() {
+          const maxIndex = getMaxIndex();
+
+          if (currentIndex <= 0) {
+            currentIndex = maxIndex;
+          } else {
+            currentIndex--;
+          }
+
+          updateCarousel();
+        }
+
+        /* =====================================================
+     BUTTON EVENTS
+  ===================================================== */
+
+        nextButton.addEventListener("click", function () {
+          nextSlide();
+
+          restartAutoPlay();
+        });
+
+        prevButton.addEventListener("click", function () {
+          previousSlide();
+
+          restartAutoPlay();
+        });
+
+        /* =====================================================
+     AUTO PLAY
+  ===================================================== */
+
+        function startAutoPlay() {
+          stopAutoPlay();
+
+          autoPlay = setInterval(function () {
+            nextSlide();
+          }, AUTO_DELAY);
+        }
+
+        function stopAutoPlay() {
+          if (autoPlay) {
+            clearInterval(autoPlay);
+
+            autoPlay = null;
+          }
+        }
+
+        function restartAutoPlay() {
+          stopAutoPlay();
+
+          startAutoPlay();
+        }
+
+        /* =====================================================
+     PAUSE ON HOVER
+  ===================================================== */
+
+        carousel.addEventListener("mouseenter", function () {
+          stopAutoPlay();
+        });
+
+        carousel.addEventListener("mouseleave", function () {
+          startAutoPlay();
+        });
+
+        /* =====================================================
+     TOUCH / SWIPE
+  ===================================================== */
+
+        let touchStartX = 0;
+
+        let touchEndX = 0;
+
+        viewport.addEventListener(
+          "touchstart",
+          function (event) {
+            touchStartX = event.changedTouches[0].screenX;
+
+            stopAutoPlay();
+          },
+          {
+            passive: true,
+          },
+        );
+
+        viewport.addEventListener(
+          "touchend",
+          function (event) {
+            touchEndX = event.changedTouches[0].screenX;
+
+            const difference = touchStartX - touchEndX;
+
+            const swipeDistance = 45;
+
+            if (Math.abs(difference) > swipeDistance) {
+              if (difference > 0) {
+                nextSlide();
+              } else {
+                previousSlide();
+              }
+            }
+
+            startAutoPlay();
+          },
+          {
+            passive: true,
+          },
+        );
+
+        /* =====================================================
+     RESPONSIVE RESIZE
+  ===================================================== */
+
+        let resizeTimer;
+
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+
+          resizeTimer = setTimeout(function () {
+            visibleCards = getVisibleCards();
+
+            createDots();
+
+            updateCarousel();
+          }, 150);
+        });
+
+        /* =====================================================
+     INITIALIZE
+  ===================================================== */
+
+        visibleCards = getVisibleCards();
+
+        createDots();
+
+        updateCarousel();
+
+        startAutoPlay();
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".unheard-faq-item");
+
+        if (!faqItems.length) {
+          return;
+        }
+
+        faqItems.forEach(function (item) {
+          const button = item.querySelector(".unheard-faq-question");
+
+          if (!button) {
+            return;
+          }
+
+          button.addEventListener("click", function () {
+            const isActive = item.classList.contains("active");
+
+            /*
+             * Close all other FAQ items
+             */
+
+            faqItems.forEach(function (otherItem) {
+              otherItem.classList.remove("active");
+
+              const otherButton = otherItem.querySelector(
+                ".unheard-faq-question",
+              );
+
+              if (otherButton) {
+                otherButton.setAttribute("aria-expanded", "false");
+              }
+            });
+
+            /*
+             * Open clicked item
+             */
+
+            if (!isActive) {
+              item.classList.add("active");
+
+              button.setAttribute("aria-expanded", "true");
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("siteMenuToggle");
+
+        const menu = document.getElementById("siteMobileMenu");
+
+        const menuClose = document.getElementById("siteMenuClose");
+
+        const backdrop = document.getElementById("siteMenuBackdrop");
+
+
+        if (!menuToggle || !menu || !menuClose || !backdrop) {
+          console.warn("Mobile navigation elements not found.");
+
+          return;
+        }
+
+
+        function openMenu() {
+          menu.classList.add("show");
+
+          backdrop.classList.add("show");
+
+          menuToggle.classList.add("active");
+
+          menuToggle.setAttribute("aria-expanded", "true");
+
+          menu.setAttribute("aria-hidden", "false");
+
+          menuToggle.setAttribute("aria-label", "Close navigation");
+
+          document.body.classList.add("site-menu-open");
+        }
+
+        function closeMenu() {
+          menu.classList.remove("show");
+
+          backdrop.classList.remove("show");
+
+          menuToggle.classList.remove("active");
+
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menu.setAttribute("aria-hidden", "true");
+
+          menuToggle.setAttribute("aria-label", "Open navigation");
+
+          document.body.classList.remove("site-menu-open");
+        }
+
+
+        menuToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          event.stopPropagation();
+
+          if (menu.classList.contains("show")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+
+        menuClose.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          closeMenu();
+        });
+
+        backdrop.addEventListener("click", function () {
+          closeMenu();
+        });
+
+
+        const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
+
+        menuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && menu.classList.contains("show")) {
+            closeMenu();
+          }
+        });
+        
+        window.addEventListener("resize", function () {
+          /*
+        When returning to desktop,
+        always close mobile menu.
+      */
+
+          if (window.innerWidth >= 992) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+  <!-- Mirrored from wivana-html.zaderonstudio.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2026 11:08:08 GMT -->
+</html>

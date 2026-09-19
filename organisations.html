@@ -1,0 +1,1979 @@
+<!doctype html>
+<html lang="en">
+  <!-- Mirrored from wivana-html.zaderonstudio.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2026 11:07:54 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Organisations - Unheld</title>
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/css/fontawesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/organisations.css" />
+    <link rel="stylesheet" href="css/border.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+
+    <style>
+      :root {
+        --primary: #17352d;
+        --secondary: #21473d;
+        --accent: #c4a86d;
+        --cream: #f8f5ef;
+        --white: #ffffff;
+        --text: #d8d8d8;
+        --border: rgba(255, 255, 255, 0.08);
+        --transition: 0.4s ease;
+      }
+
+      /* Custom Scrollbar */
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #11261f;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+     <!-- Header -->
+    <header class="site-header">
+      <div class="header-top d-none d-lg-block">
+        <div class="container-xl header-top-inner">
+          <!-- Social -->
+          <div class="header-socials">
+            <a href="#" class="header-social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="header-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Optional Alert -->
+          <div id="header-alert"></div>
+
+          <!-- Contact -->
+          <div class="header-contact">
+            <div class="header-contact-item">
+              <i class="fa-regular fa-envelope"></i>
+
+              <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+            </div>
+
+            <div class="header-contact-item">
+              <i class="fa-solid fa-phone"></i>
+
+              <a href="tel:+919840221718"> +91 98402 21718 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-dark site-navbar">
+        <div class="container-xl navbar-container">
+          <a class="navbar-brand site-logo" href="index.html">
+            <img
+              src="images/logo.png"
+              alt="The Unheard"
+              width="166"
+              height="41"
+            />
+          </a>
+
+          <div class="site-navigation">
+            <!-- Desktop Navigation -->
+            <ul class="navbar-nav site-nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="sanctuaries.html"> Sanctuaries </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="we-come-to-you.html">
+                  We Come To You
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="organisations.html">
+                  For Organisations
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header-action">
+            <a href="index.html#unheardBooking" class="btn-light"> Make Appointment </a>
+          </div>
+
+          <button
+            type="button"
+            class="site-menu-toggle"
+            id="siteMenuToggle"
+            aria-label="Open navigation"
+            aria-controls="siteMobileMenu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="site-menu-backdrop" id="siteMenuBackdrop"></div>
+
+      <aside class="site-mobile-menu" id="siteMobileMenu" aria-hidden="true">
+        <!-- Menu Header -->
+
+        <div class="site-mobile-menu-header">
+          <span class="site-mobile-title"> MENU </span>
+
+          <button
+            type="button"
+            class="site-menu-close"
+            id="siteMenuClose"
+            aria-label="Close navigation"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Menu Body -->
+
+        <div class="site-mobile-menu-body">
+          <ul class="site-mobile-nav-list">
+            <li>
+              <a href="index.html" > Home </a>
+            </li>
+
+            <li>
+              <a href="about.html"> About </a>
+            </li>
+
+            <li>
+              <a href="sanctuaries.html"> Sanctuaries </a>
+            </li>
+
+            <li>
+              <a href="we-come-to-you.html"> We Come To You </a>
+            </li>
+
+            <li>
+              <a href="organisations.html" class="active"> For Organisations </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Appointment -->
+
+          <div class="mobile-menu-action">
+            <a href="index.html#unheardBooking" class="mobile-menu-button">
+              Make Appointment
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Organisations Hero -->
+    <section class="organisations-hero" id="organisationsHero">
+      <div class="organisations-hero-overlay">
+        <div class="container-xl">
+          <div class="organisations-hero-content">
+            <!-- Label -->
+            <div class="organisations-hero-label">
+              <span class="organisations-label-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+
+              <span>
+                UNHELD - Corporate & School Counseling · Tamil Nadu
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="organisations-hero-title">
+              Your people are carrying more than their workload. We help them
+              set it down.
+            </h1>
+
+            <!-- Description -->
+            <p class="organisations-hero-description">
+              The Unheld brings India's first guilt-aware, shame-sensitive
+              counseling service to your workplace and school. We handle the
+              emotions other wellness programmes are afraid to name.
+            </p>
+
+            <!-- Buttons -->
+            <div class="organisations-hero-actions">
+              <a href="#organisations-enquiry" class="btn-light">
+                Enquire For Your Organisation
+              </a>
+
+              <a href="#organisations-enquiry" class="btn-light">
+                Enquire For Your School/College
+              </a>
+
+              <a class="btn-light"
+                  href="https://wa.me/919840221718"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </a>
+            </div>
+
+            <div class="organisations-counters">
+              <!-- Counter 01 -->
+
+              <div class="organisations-counter">
+                <div class="organisations-counter-value">
+                  <strong>76%</strong>
+                </div>
+
+                <p>
+                  of employees never disclose mental health struggles at work
+                </p>
+              </div>
+
+              <!-- Counter 02 -->
+
+              <div class="organisations-counter">
+                <div class="organisations-counter-value">
+                  <strong>1 in 4</strong>
+                </div>
+
+                <p>students experience clinically significant anxiety</p>
+              </div>
+
+              <!-- Counter 03 -->
+
+              <div class="organisations-counter">
+                <div class="organisations-counter-value">
+                  <strong>₹0</strong>
+                </div>
+
+                <p>
+                  spent on guilt or shame counseling by most Indian corporates
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organisation - Context -->
+    <section class="organisations-context" id="organisationsContext">
+      <div class="container-xl">
+        <div class="organisations-context-header">
+          <span class="organisations-context-eyebrow">
+            Choose Your Context
+          </span>
+
+          <h2 class="organisations-context-title">
+            We serve
+            <span>two kinds of organisations.</span>
+          </h2>
+
+          <div class="organisations-context-line"></div>
+        </div>
+
+        <div class="organisations-context-tabs">
+          <button
+            type="button"
+            class="organisations-context-tab active"
+            data-context-tab="corporate"
+          >
+            Corporate
+          </button>
+
+          <button
+            type="button"
+            class="organisations-context-tab"
+            data-context-tab="school"
+          >
+            School & College
+          </button>
+        </div>
+
+        <div
+          class="organisations-context-panel active"
+          data-context-panel="corporate"
+        >
+          <!-- Intro -->
+
+          <div class="organisations-context-intro">
+            <p>
+              "Most corporate wellness programmes talk about stress. We go
+              deeper — guilt over missed deadlines, shame around performance,
+              the quiet inferiority of watching colleagues rise. We handle what
+              others don't name."
+            </p>
+          </div>
+
+          <div class="organisations-context-cards">
+            <!-- Card 01 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+
+              <h3>Individual employee sessions</h3>
+
+              <p>
+                One-on-one counseling at the workplace — during lunch hours,
+                before shifts, or after hours. Anonymous, confidential, no HR
+                involvement without consent.
+              </p>
+            </article>
+
+            <!-- Card 02 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <h3>Burnout & guilt programme</h3>
+
+              <p>
+                A structured 4-session programme for employees experiencing
+                performance guilt, overwork shame, or emotional numbness. Our
+                signature offering for corporates.
+              </p>
+            </article>
+
+            <!-- Card 03 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+
+              <h3>Team wellness workshops</h3>
+
+              <p>
+                2–3 hour group sessions on emotional intelligence, workplace
+                communication, and releasing performance pressure. Interactive,
+                not lecture-based.
+              </p>
+            </article>
+
+            <!-- Card 04 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-fire-flame-simple"></i>
+              </div>
+
+              <h3>Anonymous support line</h3>
+
+              <p>
+                A dedicated WhatsApp channel your employees can reach out on —
+                anonymously — for emotional support between formal sessions.
+              </p>
+            </article>
+
+            <!-- Card 05 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+
+              <h3>Wellness audit</h3>
+
+              <p>
+                A confidential assessment of your team's emotional climate —
+                anonymous surveys, pattern analysis, and a written
+                recommendation report. No individual data shared..
+              </p>
+            </article>
+
+            <!-- Card 06 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+
+              <h3>After-hours support</h3>
+
+              <p>
+                Especially for IT & night-shift teams — counseling sessions
+                available between 7pm and 10pm to serve employees who can't
+                access daytime help.
+              </p>
+            </article>
+          </div>
+
+          <div class="organisations-context-box">
+            <h3>The Unheld corporate difference</h3>
+
+            <p>
+              Every corporate wellness provider in Chennai offers stress
+              management and mindfulness. Nobody offers guilt counseling for the
+              employee who missed a critical deadline and hasn't forgiven
+              themselves. Nobody offers shame work for the manager who was
+              passed over for promotion and can't shake the feeling they don't
+              belong. We do. That's the gap we fill — and it's the reason our
+              programmes produce lasting change, not just short-term relief.
+            </p>
+          </div>
+
+          <div class="organisations-context-steps">
+            <!-- Step 01 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-1 </span>
+
+              <h3>Needs assessment call</h3>
+
+              <p>
+                30-minute call with HR or leadership to understand your team's
+                specific challenges. Completely confidential.
+              </p>
+            </article>
+
+            <!-- Step 02 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-2 </span>
+
+              <h3>Programme design</h3>
+
+              <p>
+                We build a customised plan — session format, frequency,
+                counselor profile, anonymous access methods.
+              </p>
+            </article>
+
+            <!-- Step 03 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-3 </span>
+
+              <h3>Rollout & sessions</h3>
+
+              <p>
+                We come to your office. Employees sign up (anonymously if they
+                prefer). Sessions begin within the week.
+              </p>
+            </article>
+
+            <!-- Step 04 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-4 </span>
+
+              <h3>Monthly review</h3>
+
+              <p>
+                Aggregated (never individual) insights shared with HR. No
+                employee data is ever disclosed.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="organisations-context-panel" data-context-panel="school">
+          <!-- Intro -->
+
+          <div class="organisations-context-intro">
+            <p>
+              "We don't just counsel students — we work with teachers and
+              parents too. Because a child's healing doesn't stop at the school
+              gate."
+            </p>
+          </div>
+
+          <div class="organisations-context-cards">
+            <!-- Card 01 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+
+              <h3>Student counseling sessions</h3>
+
+              <p>
+                Individual sessions for students aged 12–22 dealing with
+                academic pressure, peer shame, family guilt, or identity
+                confusion. Anonymous access available.
+              </p>
+            </article>
+
+            <!-- Card 02 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-face-frown"></i>
+              </div>
+
+              <h3>Classroom emotional wellness</h3>
+
+              <p>
+                45-minute in-class sessions to build emotional vocabulary,
+                reduce shame around struggle, and normalise help-seeking.
+                Age-appropriate content.
+              </p>
+            </article>
+
+            <!-- Card 03 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+
+              <h3>Teacher burnout support</h3>
+
+              <p>
+                Teachers carry enormous emotional weight with almost no support
+                system. Monthly sessions for teaching staff — separate from
+                student programmes.
+              </p>
+            </article>
+
+            <!-- Card 04 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-house"></i>
+              </div>
+
+              <h3>Parent guidance workshops</h3>
+
+              <p>
+                Group sessions for parents on managing their own guilt,
+                communicating without shame, and supporting children through
+                failure. One of our most-requested services.
+              </p>
+            </article>
+
+            <!-- Card 05 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+
+              <h3>Crisis referral pathway</h3>
+
+              <p>
+                A clear, trained protocol for identifying students in acute
+                distress and connecting them to the right level of support —
+                immediately, sensitively, confidentially.
+              </p>
+            </article>
+
+            <!-- Card 06 -->
+
+            <article class="organisations-context-card">
+              <div class="organisations-context-card-icon">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+
+              <h3>Exam season intensives</h3>
+
+              <p>
+                Targeted support during board exam periods — group workshops on
+                performance pressure, perfectionism, and fear of failure.
+                Available January–April.
+              </p>
+            </article>
+          </div>
+
+          <div class="organisations-context-box">
+            <h3>The 360° school approach — what no one else does</h3>
+
+            <p>
+              Most school counselors see students only. We work in three rings
+              simultaneously: students (the most visible struggle), teachers
+              (who absorb students' pain and have nowhere to put it), and
+              parents (who often transfer their own unresolved shame onto their
+              children's performance). Healing one ring without the others is
+              like watering a plant while the roots remain dry.
+            </p>
+          </div>
+
+          <div class="organisations-context-steps">
+            <!-- Step 01 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-1 </span>
+
+              <h3>Principal / counselor meeting</h3>
+
+              <p>
+                Understanding your school's culture, existing support, and the
+                specific pain points you see most often.
+              </p>
+            </article>
+
+            <!-- Step 02 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-2 </span>
+
+              <h3>Programme selection</h3>
+
+              <p>
+                Choose from our school menu: student sessions, classroom
+                workshops, teacher support, or the full 360° package.
+              </p>
+            </article>
+
+            <!-- Step 03 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-3 </span>
+
+              <h3>We come to your campus</h3>
+
+              <p>
+                Our counselors visit on a fixed weekly or fortnightly schedule.
+                Students can also self-refer anonymously.
+              </p>
+            </article>
+
+            <!-- Step 04 -->
+
+            <article class="organisations-context-step">
+              <span class="organisations-step-number"> Step-4 </span>
+
+              <h3>End-of-term report</h3>
+
+              <p>
+                Aggregate wellbeing insights for management — themes, patterns,
+                recommendations. No individual student data ever shared.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organisations - Pricing -->
+    <section class="organisations-pricing" id="organisationsPricing">
+      <div class="container-xl">
+        <div class="organisations-pricing-header">
+          <span class="organisations-pricing-eyebrow"> PRICING </span>
+
+          <h2 class="organisations-pricing-title">
+            Transparent packages,
+            <span>no lock-ins</span>
+          </h2>
+
+          <div class="organisations-pricing-line"></div>
+
+          <p class="organisations-pricing-description">
+            All packages are customisable. Final pricing is discussed after the
+            free needs assessment call — never before we understand your
+            context.
+          </p>
+        </div>
+
+        <div class="organisations-pricing-grid">
+          <article class="organisations-pricing-card">
+            <div class="organisations-pricing-card-inner">
+              <!-- Always visible -->
+
+              <div class="organisations-pricing-summary">
+                <span class="organisations-pricing-card-subtitle">
+                  STARTER
+                </span>
+
+                <h3 class="organisations-pricing-card-title">
+                  Monthly Wellness Visits
+                </h3>
+
+                <div class="organisations-pricing-price">
+                  <span class="organisations-price">₹12,000</span>
+
+                  <span class="organisations-price-period"> / month </span>
+                </div>
+              </div>
+
+              <!-- Desktop hover content -->
+
+              <div class="organisations-pricing-details">
+                <div class="organisations-pricing-divider"></div>
+
+                <ul class="organisations-pricing-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> 4 on-site counseling sessions</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Up to 20 employees / students</span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Anonymous WhatsApp support line </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span>Monthly summary report</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#organisations-enquiry"
+                  class="organisations-pricing-btn"
+                >
+                  Enquire Now
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="organisations-pricing-card organisations-pricing-featured"
+          >
+            <!-- <span class="organisations-pricing-badge"> MOST CHOSEN </span> -->
+
+            <div class="organisations-pricing-card-inner">
+              <!-- Always visible -->
+
+              <div class="organisations-pricing-summary">
+                <span class="organisations-pricing-card-subtitle">
+                  MOST CHOSEN
+                </span>
+
+                <h3 class="organisations-pricing-card-title">
+                  Full Wellness Programme
+                </h3>
+
+                <div class="organisations-pricing-price">
+                  <span class="organisations-price"> ₹28,000 </span>
+
+                  <span class="organisations-price-period"> / month </span>
+                </div>
+              </div>
+
+              <!-- Desktop hover content -->
+
+              <div class="organisations-pricing-details">
+                <div class="organisations-pricing-divider"></div>
+
+                <ul class="organisations-pricing-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> 8 on-site sessions per month </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Unlimited employees / students </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> 1 group workshop per month </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Anonymous support line </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Dedicated counselor for your org </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Monthly insights report </span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#organisations-enquiry"
+                  class="organisations-pricing-btn"
+                >
+                  Get Started
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="organisations-pricing-card">
+            <div class="organisations-pricing-card-inner">
+              <!-- Always visible -->
+
+              <div class="organisations-pricing-summary">
+                <span class="organisations-pricing-card-subtitle">
+                  ONE-TIME
+                </span>
+
+                <h3 class="organisations-pricing-card-title">
+                  Workshop or Audit
+                </h3>
+
+                <div class="organisations-pricing-price">
+                  <span class="organisations-price"> ₹8,000 </span>
+
+                  <span class="organisations-price-period"> / onwards </span>
+                </div>
+              </div>
+
+              <!-- Desktop hover content -->
+
+              <div class="organisations-pricing-details">
+                <div class="organisations-pricing-divider"></div>
+
+                <ul class="organisations-pricing-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Single 2–3 hour group workshop </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Or: confidential wellness audit </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Written report included </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> No ongoing commitment </span>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+
+                    <span> Good starting point to try us first </span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#organisations-enquiry"
+                  class="organisations-pricing-btn"
+                >
+                  Talk To Us
+
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Organisations Choose Us -->
+    <section class="organisations-why-choose" id="organisationsWhyChoose">
+      <div class="container-xl">
+        <!-- Section Intro -->
+        <div class="organisations-why-choose-header">
+          <span class="organisations-why-choose-eyebrow">
+            WHY ORGANISATIONS CHOOSE US
+          </span>
+
+          <h2 class="organisations-why-choose-title">
+            What makes
+            <span>The Unheld different</span>
+            from standard EAP providers
+          </h2>
+
+          <div class="organisations-why-choose-line"></div>
+        </div>
+
+        <!-- Cards -->
+        <div class="organisations-why-choose-grid">
+          <!-- Card 01 -->
+          <article class="organisations-why-choose-card active" tabindex="0">
+            <div class="organisations-why-choose-card-content">
+              <p>
+                "We tried three wellness vendors before. They all ran the same
+                mindfulness workshop. The Unheld was the first to actually talk
+                about the guilt employees feel around underperformance. That
+                session changed things."
+              </p>
+
+              <span>— HR Head, Chennai IT firm (pilot participant)</span>
+            </div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="organisations-why-choose-card" tabindex="0">
+            <div class="organisations-why-choose-card-content">
+              <p>
+                "Our teachers were burning out silently. No one had ever offered
+                them a space. The Unheld came in for just two sessions and our
+                staff retention improved noticeably within the term."
+              </p>
+
+              <span>— Principal, CBSE school, Chennai</span>
+            </div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="organisations-why-choose-card" tabindex="0">
+            <div class="organisations-why-choose-card-content">
+              <p>
+                "The anonymous access was the game-changer. 14 of our 60
+                employees used the service in month one — far more than any
+                previous programme because there was no fear of HR finding out."
+              </p>
+
+              <span>— Founder, Chennai startup (60 employees)</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organisations FAQ Section -->
+    <section class="organisations-faq" id="organisationsFaq">
+      <div class="container-xl">
+        <!-- Section Header -->
+        <div class="organisations-faq-header">
+          <span class="organisations-faq-eyebrow">
+            FREQUENTLY ASKED QUESTIONS
+          </span>
+
+          <h2 class="organisations-faq-title">
+            Things organisations
+            <span>always ask</span>
+          </h2>
+
+          <div class="organisations-faq-line"></div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="organisations-faq-list">
+          <!-- FAQ 01 -->
+          <div class="organisations-faq-item">
+            <button
+              type="button"
+              class="organisations-faq-question"
+              aria-expanded="false"
+            >
+              <span class="organisations-faq-number"> 01 </span>
+
+              <span class="organisations-faq-question-text">
+                Will HR or management Know what employees share in sessions?
+              </span>
+
+              <span class="organisations-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="organisations-faq-answer">
+              <div class="organisations-faq-answer-inner">
+                <p>
+                  Never. Individual session content is 100% confidential. We
+                  only share aggregated, anonymised patterns with management —
+                  for example, "burnout and overwork themes are common across
+                  the team" — never individual disclosures. This is
+                  non-negotiable for us.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 02 -->
+          <div class="organisations-faq-item">
+            <button
+              type="button"
+              class="organisations-faq-question"
+              aria-expanded="false"
+            >
+              <span class="organisations-faq-number"> 02 </span>
+
+              <span class="organisations-faq-question-text">
+                Do employees have to register or give their names?
+              </span>
+
+              <span class="organisations-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="organisations-faq-answer">
+              <div class="organisations-faq-answer-inner">
+                <p>
+                  No. Employees can access sessions completely anonymously. This
+                  is by design — our research and experience shows anonymous
+                  access triples engagement rates versus named registration
+                  systems. We'll work with you to set up an anonymous booking
+                  flow.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 03 -->
+          <div class="organisations-faq-item">
+            <button
+              type="button"
+              class="organisations-faq-question"
+              aria-expanded="false"
+            >
+              <span class="organisations-faq-number"> 03 </span>
+
+              <span class="organisations-faq-question-text">
+                How is the different from a standard EAP (Employee Assitant
+                Programme)?
+              </span>
+
+              <span class="organisations-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="organisations-faq-answer">
+              <div class="organisations-faq-answer-inner">
+                <p>
+                  Most EAPs are national call-centre models — your employee
+                  speaks to a different person each time, from a generic list.
+                  The Unheld sends a dedicated counselor to your premises,
+                  matches them to your team's specific emotional patterns, and
+                  specialises in the emotions most common in Indian workplaces —
+                  guilt, shame, inferiority, and secrets — which standard EAPs
+                  rarely address.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 04 -->
+          <div class="organisations-faq-item">
+            <button
+              type="button"
+              class="organisations-faq-question"
+              aria-expanded="false"
+            >
+              <span class="organisations-faq-number"> 04 </span>
+
+              <span class="organisations-faq-question-text">
+                What's the minimum commitment?
+              </span>
+
+              <span class="organisations-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="organisations-faq-answer">
+              <div class="organisations-faq-answer-inner">
+                <p>
+                  There's no minimum commitment. You can start with a single
+                  workshop or a one-time wellness audit to experience the
+                  approach first. We'd rather earn your trust than lock you into
+                  a contract.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 05 -->
+          <div class="organisations-faq-item">
+            <button
+              type="button"
+              class="organisations-faq-question"
+              aria-expanded="false"
+            >
+              <span class="organisations-faq-number"> 05 </span>
+
+              <span class="organisations-faq-question-text">
+                Do you work with schools outside Chennai ?
+              </span>
+
+              <span class="organisations-faq-icon">
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="organisations-faq-answer">
+              <div class="organisations-faq-answer-inner">
+                <p>
+                  Yes — through our "We Come To You" service, we travel across
+                  Tamil Nadu for school and corporate partnerships. Travel costs
+                  apply for locations beyond Chennai. Contact us to discuss your
+                  location.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organisation Enquiry -->
+    <section class="organisations-enquiry" id="organisations-enquiry">
+      <div class="container-xl">
+        <!-- Section Header -->
+        <div class="organisations-enquiry-header">
+          <h2 class="organisations-enquiry-title">
+            Let's build something
+            <span>your people will actually use.</span>
+          </h2>
+
+          <div class="organisations-enquiry-line"></div>
+
+          <p class="organisations-enquiry-description">
+            Tell us about your organisation. We'll respond within 24 hours with a proposed approach — no jargon, no sales deck.
+          </p>
+        </div>
+
+        <!-- Enquiry Form -->
+        <div class="organisations-enquiry-form-wrapper">
+          <div class="organisations-enquiry-form-card">
+            <div class="organisations-enquiry-form-header">
+              <span class="organisations-enquiry-form-icon">
+                <i class="bi bi-chat-heart"></i>
+              </span>
+
+              <div>
+                <h3>Free Needs Assessment</h3>
+
+                <p>No commitment. Just a conversation.</p>
+              </div>
+            </div>
+
+            <form action="#" method="POST" class="organisations-enquiry-form">
+              <!-- Name + Designation -->
+              <div class="organisations-enquiry-row">
+                <div class="organisations-enquiry-field">
+                  <label for="organisationContactName"> Your Name </label>
+
+                  <div class="organisations-enquiry-input-wrap">
+                    <i class="bi bi-person"></i>
+
+                    <input
+                      type="text"
+                      id="organisationContactName"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="organisations-enquiry-field">
+                  <label for="organisationDesignation"> Designation </label>
+
+                  <div class="organisations-enquiry-input-wrap">
+                    <i class="bi bi-briefcase"></i>
+
+                    <input
+                      type="text"
+                      id="organisationDesignation"
+                      name="designation"
+                      placeholder="HR Manager / Principal"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Organisation Name -->
+              <div class="organisations-enquiry-field">
+                <label for="organisationName"> Organisation Name </label>
+
+                <div class="organisations-enquiry-input-wrap">
+                  <i class="bi bi-building"></i>
+
+                  <input
+                    type="text"
+                    id="organisationName"
+                    name="organisation"
+                    placeholder="Company or school name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Organisation Type + Size -->
+              <div class="organisations-enquiry-row">
+                <div class="organisations-enquiry-field">
+                  <label for="organisationType"> Organisation Type </label>
+
+                  <div class="organisations-enquiry-input-wrap">
+                    <i class="bi bi-grid"></i>
+
+                    <select
+                      id="organisationType"
+                      name="organisationType"
+                      required
+                    >
+                      <option value="" selected disabled>Select...</option>
+
+                      <option value="corporate">Corporate</option>
+
+                      <option value="school">School</option>
+
+                      <option value="college">College</option>
+
+                      <option value="ngo">NGO</option>
+
+                      <option value="other">Other</option>
+                    </select>
+
+                    <i class="bi bi-chevron-down select-arrow"></i>
+                  </div>
+                </div>
+
+                <div class="organisations-enquiry-field">
+                  <label for="organisationSize"> Team / Student Size </label>
+
+                  <div class="organisations-enquiry-input-wrap">
+                    <i class="bi bi-people"></i>
+
+                    <select
+                      id="organisationSize"
+                      name="organisationSize"
+                      required
+                    >
+                      <option value="" selected disabled>Select...</option>
+
+                      <option value="1-50">1 - 50</option>
+
+                      <option value="51-100">51 - 100</option>
+
+                      <option value="101-250">101 - 250</option>
+
+                      <option value="251-500">251 - 500</option>
+
+                      <option value="500+">500+</option>
+                    </select>
+
+                    <i class="bi bi-chevron-down select-arrow"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- District / City -->
+              <div class="organisations-enquiry-field">
+                <label for="organisationLocation"> District / City </label>
+
+                <div class="organisations-enquiry-input-wrap">
+                  <i class="bi bi-geo-alt"></i>
+
+                  <input
+                    type="text"
+                    id="organisationLocation"
+                    name="location"
+                    placeholder="Chennai, Coimbatore, Madurai..."
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Main Challenge -->
+              <div class="organisations-enquiry-field">
+                <label for="organisationChallenge">
+                  What's the main challenge you're seeing?
+                  <span>(optional)</span>
+                </label>
+
+                <div
+                  class="organisations-enquiry-input-wrap organisations-enquiry-textarea-wrap"
+                >
+                  <i class="bi bi-chat-square-text"></i>
+
+                  <textarea
+                    id="organisationChallenge"
+                    name="challenge"
+                    rows="4"
+                    placeholder="e.g. employee burnout, student anxiety during exams, teacher stress..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Preferred Contact -->
+              <div class="organisations-enquiry-field">
+                <label for="organisationContactMethod">
+                  Best Way To Reach You
+                </label>
+
+                <div class="organisations-enquiry-input-wrap">
+                  <i class="bi bi-send"></i>
+
+                  <select
+                    id="organisationContactMethod"
+                    name="contactMethod"
+                    required
+                  >
+                    <option value="" selected disabled>Select...</option>
+
+                    <option value="whatsapp">WhatsApp</option>
+
+                    <option value="email">Email</option>
+
+                    <option value="phone">Phone</option>
+                  </select>
+
+                  <i class="bi bi-chevron-down select-arrow"></i>
+                </div>
+              </div>
+
+              <!-- Contact -->
+              <div class="organisations-enquiry-field">
+                <label for="organisationContact">
+                  WhatsApp / Email / Phone
+                </label>
+
+                <div class="organisations-enquiry-input-wrap">
+                  <i class="bi bi-person-lines-fill"></i>
+
+                  <input
+                    type="text"
+                    id="organisationContact"
+                    name="contact"
+                    placeholder="Your contact"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="organisations-enquiry-submit">
+                <i class="bi bi-send-fill"></i>
+
+                <span> Submit Enquiry — We'll Respond in 24 Hours </span>
+              </button>
+
+              <!-- Confidentiality -->
+              <div class="organisations-enquiry-confidential">
+                <i class="bi bi-lock-fill"></i>
+
+                <span>
+                  Your details are never shared. This enquiry is confidential.
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Main -->
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-about">
+            <img src="images/logo.png" class="footer-logo" alt="The Unheard" />
+
+            <p>
+              Embrace the power of healing to restore balance, reconnect with
+              yourself, and begin your journey toward emotional wellness.
+            </p>
+
+            <div class="footer-social-icons">
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Explore -->
+          <div class="footer-column">
+            <h3>Explore</h3>
+
+            <ul class="footer-links">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="about.html">About</a>
+              </li>
+
+              <li>
+                <a href="sanctuaries.html">Sanctuaries</a>
+              </li>
+
+              <li>
+                <a href="we-come-to-you.html">We Come To You</a>
+              </li>
+
+              <li>
+                <a href="organisations.html">Organisations</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="footer-column footer-hours">
+            <h3>Working Hours</h3>
+
+            <div class="footer-info-item">
+              <span class="footer-info-icon">
+                <i class="bi bi-clock"></i>
+              </span>
+
+              <p>Our doors are open 24/7 for your healing journey.</p>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <ul class="footer-contact-list">
+              <!-- Phone -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-telephone"></i>
+                </span>
+
+                <a href="tel:+919840221718"> +91 98402 21718 </a>
+              </li>
+
+              <!-- Email -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-envelope"></i>
+                </span>
+
+                <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+              </li>
+
+              <!-- WhatsApp -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-whatsapp"></i>
+                </span>
+
+                <a href="#"> WhatsApp Us </a>
+              </li>
+
+              <!-- Address -->
+              <li>
+                <span class="footer-info-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </span>
+
+                <span class="footer-address"> Chennai, Tamil Nadu, India </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 The Unheld. All Rights Reserved.
+          </div>
+
+          <div class="footer-credit">
+            Designed &amp; Developed by
+            <a href="#" target="_blank" rel="noopener">
+              Dazzle Tech Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* =======================================================
+     ELEMENTS
+  ======================================================== */
+
+        const contextTabs = document.querySelectorAll(
+          ".organisations-context-tab",
+        );
+
+        const contextPanels = document.querySelectorAll(
+          ".organisations-context-panel",
+        );
+
+        const contextCards = document.querySelectorAll(
+          ".organisations-context-card",
+        );
+
+        /* =======================================================
+     CARD REVEAL OBSERVER
+  ======================================================== */
+
+        const cardObserver = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              const card = entry.target;
+
+              /*
+               * Prevent the same card from
+               * being animated twice.
+               */
+
+              if (card.classList.contains("revealed")) {
+                observer.unobserve(card);
+
+                return;
+              }
+
+              /*
+               * Get the card's position inside
+               * its current 6-card grid.
+               */
+
+              const parent = card.closest(".organisations-context-cards");
+
+              let index = 0;
+
+              if (parent) {
+                const cards = Array.from(
+                  parent.querySelectorAll(".organisations-context-card"),
+                );
+
+                index = cards.indexOf(card);
+              }
+
+              /*
+               * Desktop:
+               * Two cards are visible in a row,
+               * so reveal them with a small stagger.
+               *
+               * Mobile:
+               * Use a smaller stagger.
+               */
+
+              const isMobile = window.innerWidth <= 767;
+
+              let delay;
+
+              if (isMobile) {
+                delay = index * 80;
+              } else {
+                delay = (index % 2) * 120;
+              }
+
+              setTimeout(function () {
+                card.classList.add("revealed");
+              }, delay);
+
+              /*
+               * Stop observing this card.
+               */
+
+              observer.unobserve(card);
+            });
+          },
+          {
+            threshold: 0.12,
+
+            rootMargin: "0px 0px -70px 0px",
+          },
+        );
+
+        /* =======================================================
+     OBSERVE ALL CONTEXT CARDS
+  ======================================================== */
+
+        contextCards.forEach(function (card) {
+          cardObserver.observe(card);
+        });
+
+        /* =======================================================
+     TAB SWITCHING
+  ======================================================== */
+
+        contextTabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            const target = tab.getAttribute("data-context-tab");
+
+            if (!target) {
+              return;
+            }
+
+            /* -----------------------------------------------
+           If already active, do nothing
+        ------------------------------------------------ */
+
+            if (tab.classList.contains("active")) {
+              return;
+            }
+
+            /* -----------------------------------------------
+           Remove active from all tabs
+        ------------------------------------------------ */
+
+            contextTabs.forEach(function (item) {
+              item.classList.remove("active");
+            });
+
+            /* -----------------------------------------------
+           Hide all panels
+        ------------------------------------------------ */
+
+            contextPanels.forEach(function (panel) {
+              panel.classList.remove("active");
+            });
+
+            /* -----------------------------------------------
+           Activate clicked tab
+        ------------------------------------------------ */
+
+            tab.classList.add("active");
+
+            /* -----------------------------------------------
+           Find target panel
+        ------------------------------------------------ */
+
+            const targetPanel = document.querySelector(
+              '[data-context-panel="' + target + '"]',
+            );
+
+            if (!targetPanel) {
+              return;
+            }
+
+            targetPanel.classList.add("active");
+
+            /*
+             * Wait until the panel is displayed,
+             * then check whether any cards are
+             * already inside the viewport.
+             */
+
+            requestAnimationFrame(function () {
+              revealVisibleCards(targetPanel);
+            });
+          });
+        });
+
+        /* =======================================================
+     REVEAL VISIBLE CARDS
+  ======================================================== */
+
+        function revealVisibleCards(panel) {
+          const cards = panel.querySelectorAll(".organisations-context-card");
+
+          cards.forEach(function (card) {
+            /*
+             * Already revealed?
+             */
+
+            if (card.classList.contains("revealed")) {
+              return;
+            }
+
+            const rect = card.getBoundingClientRect();
+
+            const viewportHeight = window.innerHeight;
+
+            /*
+             * Card is currently visible.
+             */
+
+            const isVisible =
+              rect.top < viewportHeight * 0.9 && rect.bottom > 0;
+
+            if (!isVisible) {
+              return;
+            }
+
+            /*
+             * Small stagger.
+             */
+
+            const cardsArray = Array.from(cards);
+
+            const index = cardsArray.indexOf(card);
+
+            const isMobile = window.innerWidth <= 767;
+
+            const delay = isMobile ? index * 80 : (index % 2) * 120;
+
+            setTimeout(function () {
+              card.classList.add("revealed");
+            }, delay);
+
+            /*
+             * We don't need to observe this
+             * card anymore.
+             */
+
+            cardObserver.unobserve(card);
+          });
+        }
+
+        /* =======================================================
+     INITIAL ACTIVE PANEL
+  ======================================================== */
+
+        const initialPanel = document.querySelector(
+          ".organisations-context-panel.active",
+        );
+
+        if (initialPanel) {
+          /*
+           * Only cards already visible on
+           * initial page load are revealed.
+           */
+
+          requestAnimationFrame(function () {
+            revealVisibleCards(initialPanel);
+          });
+        }
+
+        /* =======================================================
+     RESIZE HANDLING
+  ======================================================== */
+
+        let resizeTimer;
+
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+
+          resizeTimer = setTimeout(function () {
+            const activePanel = document.querySelector(
+              ".organisations-context-panel.active",
+            );
+
+            if (activePanel) {
+              revealVisibleCards(activePanel);
+            }
+          }, 150);
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".organisations-faq-item");
+
+        if (!faqItems.length) {
+          return;
+        }
+
+        faqItems.forEach(function (item) {
+          const button = item.querySelector(".organisations-faq-question");
+
+          if (!button) {
+            return;
+          }
+
+          button.addEventListener("click", function () {
+            const isActive = item.classList.contains("active");
+
+            /*
+             * Close all other FAQ items
+             */
+
+            faqItems.forEach(function (otherItem) {
+              otherItem.classList.remove("active");
+
+              const otherButton = otherItem.querySelector(
+                ".organisations-faq-question",
+              );
+
+              if (otherButton) {
+                otherButton.setAttribute("aria-expanded", "false");
+              }
+            });
+
+            /*
+             * Open clicked item
+             */
+
+            if (!isActive) {
+              item.classList.add("active");
+
+              button.setAttribute("aria-expanded", "true");
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("siteMenuToggle");
+
+        const menu = document.getElementById("siteMobileMenu");
+
+        const menuClose = document.getElementById("siteMenuClose");
+
+        const backdrop = document.getElementById("siteMenuBackdrop");
+
+
+        if (!menuToggle || !menu || !menuClose || !backdrop) {
+          console.warn("Mobile navigation elements not found.");
+
+          return;
+        }
+
+
+        function openMenu() {
+          menu.classList.add("show");
+
+          backdrop.classList.add("show");
+
+          menuToggle.classList.add("active");
+
+          menuToggle.setAttribute("aria-expanded", "true");
+
+          menu.setAttribute("aria-hidden", "false");
+
+          menuToggle.setAttribute("aria-label", "Close navigation");
+
+          document.body.classList.add("site-menu-open");
+        }
+
+        function closeMenu() {
+          menu.classList.remove("show");
+
+          backdrop.classList.remove("show");
+
+          menuToggle.classList.remove("active");
+
+          menuToggle.setAttribute("aria-expanded", "false");
+
+          menu.setAttribute("aria-hidden", "true");
+
+          menuToggle.setAttribute("aria-label", "Open navigation");
+
+          document.body.classList.remove("site-menu-open");
+        }
+
+
+        menuToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          event.stopPropagation();
+
+          if (menu.classList.contains("show")) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+
+        menuClose.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          closeMenu();
+        });
+
+        backdrop.addEventListener("click", function () {
+          closeMenu();
+        });
+
+
+        const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
+
+        menuLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && menu.classList.contains("show")) {
+            closeMenu();
+          }
+        });
+        
+        window.addEventListener("resize", function () {
+          /*
+        When returning to desktop,
+        always close mobile menu.
+      */
+
+          if (window.innerWidth >= 992) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
