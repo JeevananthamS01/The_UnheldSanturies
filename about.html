@@ -40,7 +40,7 @@
   </head>
 
   <body>
-   <!-- Header -->
+    <!-- Header -->
     <header class="site-header">
       <div class="header-top d-none d-lg-block">
         <div class="container-xl header-top-inner">
@@ -92,7 +92,7 @@
           <div class="site-navigation">
             <ul class="navbar-nav site-nav-list">
               <li class="nav-item">
-                <a class="nav-link " href="index.html"> Home </a>
+                <a class="nav-link" href="index.html"> Home </a>
               </li>
 
               <li class="nav-item">
@@ -181,7 +181,7 @@
         <div class="site-mobile-menu-body">
           <ul class="site-mobile-nav-list">
             <li>
-              <a href="index.html" > Home </a>
+              <a href="index.html"> Home </a>
             </li>
 
             <li>
@@ -516,7 +516,9 @@
                   <i class="bi bi-envelope"></i>
                 </span>
 
-                <a href="mailto:business@theunheld.in"> business@theunheld.in </a>
+                <a href="mailto:business@theunheld.in">
+                  business@theunheld.in
+                </a>
               </li>
 
               <!-- WhatsApp -->
@@ -548,7 +550,11 @@
 
           <div class="footer-credit">
             Designed &amp; Developed by
-            <a href="https://dazzletechsolutions.com/" target="_blank" rel="noopener">
+            <a
+              href="https://dazzletechsolutions.com/"
+              target="_blank"
+              rel="noopener"
+            >
               Dazzle Tech Solutions
             </a>
           </div>
@@ -564,102 +570,5 @@
     <script src="lib/js/bootstrap.bundle.min.js"></script>
     <script src="lib/js/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.getElementById("siteMenuToggle");
-
-        const menu = document.getElementById("siteMobileMenu");
-
-        const menuClose = document.getElementById("siteMenuClose");
-
-        const backdrop = document.getElementById("siteMenuBackdrop");
-
-        if (!menuToggle || !menu || !menuClose || !backdrop) {
-          console.warn("Mobile navigation elements not found.");
-
-          return;
-        }
-
-        function openMenu() {
-          menu.classList.add("show");
-
-          backdrop.classList.add("show");
-
-          menuToggle.classList.add("active");
-
-          menuToggle.setAttribute("aria-expanded", "true");
-
-          menu.setAttribute("aria-hidden", "false");
-
-          menuToggle.setAttribute("aria-label", "Close navigation");
-
-          document.body.classList.add("site-menu-open");
-        }
-
-        function closeMenu() {
-          menu.classList.remove("show");
-
-          backdrop.classList.remove("show");
-
-          menuToggle.classList.remove("active");
-
-          menuToggle.setAttribute("aria-expanded", "false");
-
-          menu.setAttribute("aria-hidden", "true");
-
-          menuToggle.setAttribute("aria-label", "Open navigation");
-
-          document.body.classList.remove("site-menu-open");
-        }
-
-        menuToggle.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          event.stopPropagation();
-
-          if (menu.classList.contains("show")) {
-            closeMenu();
-          } else {
-            openMenu();
-          }
-        });
-
-        menuClose.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          closeMenu();
-        });
-
-        backdrop.addEventListener("click", function () {
-          closeMenu();
-        });
-
-        const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
-
-        menuLinks.forEach(function (link) {
-          link.addEventListener("click", function () {
-            closeMenu();
-          });
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && menu.classList.contains("show")) {
-            closeMenu();
-          }
-        });
-
-        window.addEventListener("resize", function () {
-          /*
-        When returning to desktop,
-        always close mobile menu.
-      */
-
-          if (window.innerWidth >= 992) {
-            closeMenu();
-          }
-        });
-      });
-    </script>
   </body>
 </html>

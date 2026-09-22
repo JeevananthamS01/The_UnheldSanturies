@@ -98,19 +98,19 @@
           <div class="site-navigation">
             <ul class="navbar-nav site-nav-list">
               <li class="nav-item">
-                <a class="nav-link " href="index.html"> Home </a>
+                <a class="nav-link" href="index.html"> Home </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="about.html"> About </a>
+                <a class="nav-link" href="about.html"> About </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="sanctuaries.html"> Sanctuaries </a>
+                <a class="nav-link" href="sanctuaries.html"> Sanctuaries </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="we-come-to-you.html">
+                <a class="nav-link" href="we-come-to-you.html">
                   We Come To You
                 </a>
               </li>
@@ -187,15 +187,15 @@
         <div class="site-mobile-menu-body">
           <ul class="site-mobile-nav-list">
             <li>
-              <a href="index.html" > Home </a>
+              <a href="index.html"> Home </a>
             </li>
 
             <li>
-              <a href="about.html" > About </a>
+              <a href="about.html"> About </a>
             </li>
 
             <li>
-              <a href="sanctuaries.html" > Sanctuaries </a>
+              <a href="sanctuaries.html"> Sanctuaries </a>
             </li>
 
             <li>
@@ -1594,267 +1594,5 @@
     <script src="js/index.js"></script>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const contextTabs = document.querySelectorAll(
-          ".organisations-context-tab",
-        );
-
-        const contextPanels = document.querySelectorAll(
-          ".organisations-context-panel",
-        );
-
-        const contextCards = document.querySelectorAll(
-          ".organisations-context-card",
-        );
-
-        const cardObserver = new IntersectionObserver(
-          function (entries, observer) {
-            entries.forEach(function (entry) {
-              if (!entry.isIntersecting) {
-                return;
-              }
-
-              const card = entry.target;
-
-              if (card.classList.contains("revealed")) {
-                observer.unobserve(card);
-                return;
-              }
-
-              const parent = card.closest(".organisations-context-cards");
-
-              let index = 0;
-
-              if (parent) {
-                const cards = Array.from(
-                  parent.querySelectorAll(".organisations-context-card"),
-                );
-
-                index = cards.indexOf(card);
-              }
-
-              const isMobile = window.innerWidth <= 767;
-
-              const delay = isMobile ? index * 80 : (index % 2) * 120;
-
-              setTimeout(function () {
-                card.classList.add("revealed");
-              }, delay);
-
-              observer.unobserve(card);
-            });
-          },
-          {
-            threshold: 0.12,
-            rootMargin: "0px 0px -70px 0px",
-          },
-        );
-
-        contextCards.forEach(function (card) {
-          cardObserver.observe(card);
-        });
-
-        function revealVisibleCards(panel) {
-          if (!panel) {
-            return;
-          }
-
-          const cards = panel.querySelectorAll(".organisations-context-card");
-
-          cards.forEach(function (card) {
-            if (card.classList.contains("revealed")) {
-              return;
-            }
-
-            const rect = card.getBoundingClientRect();
-
-            const viewportHeight = window.innerHeight;
-
-            const isVisible =
-              rect.top < viewportHeight * 0.9 && rect.bottom > 0;
-
-            if (!isVisible) {
-              return;
-            }
-
-            const cardsArray = Array.from(cards);
-
-            const index = cardsArray.indexOf(card);
-
-            const isMobile = window.innerWidth <= 767;
-
-            const delay = isMobile ? index * 80 : (index % 2) * 120;
-
-            setTimeout(function () {
-              card.classList.add("revealed");
-            }, delay);
-
-            cardObserver.unobserve(card);
-          });
-        }
-
-        function activateContext(target, updateUrl) {
-          if (target !== "corporate" && target !== "school") {
-            return;
-          }
-
-          const targetTab = document.querySelector(
-            '.organisations-context-tab[data-context-tab="' + target + '"]',
-          );
-
-          const targetPanel = document.querySelector(
-            '.organisations-context-panel[data-context-panel="' + target + '"]',
-          );
-
-          if (!targetTab || !targetPanel) {
-            return;
-          }
-
-          contextTabs.forEach(function (tab) {
-            tab.classList.remove("active");
-            tab.setAttribute("aria-selected", "false");
-          });
-
-          contextPanels.forEach(function (panel) {
-            panel.classList.remove("active");
-          });
-
-          targetTab.classList.add("active");
-          targetTab.setAttribute("aria-selected", "true");
-
-          targetPanel.classList.add("active");
-
-          if (updateUrl) {
-            const url = new URL(window.location.href);
-
-            url.searchParams.set("context", target);
-
-            window.history.replaceState(
-              {},
-              "",
-              url.pathname + "?" + url.searchParams.toString(),
-            );
-          }
-
-          requestAnimationFrame(function () {
-            revealVisibleCards(targetPanel);
-          });
-        }
-
-        contextTabs.forEach(function (tab) {
-          tab.addEventListener("click", function () {
-            const target = tab.getAttribute("data-context-tab");
-
-            if (!target) {
-              return;
-            }
-
-            if (tab.classList.contains("active")) {
-              return;
-            }
-
-            activateContext(target, true);
-          });
-        });
-
-        const params = new URLSearchParams(window.location.search);
-
-        const requestedContext = params.get("context");
-
-        if (requestedContext === "corporate" || requestedContext === "school") {
-          activateContext(requestedContext, false);
-
-          setTimeout(function () {
-            const contextSection = document.getElementById(
-              "organisationsContext",
-            );
-
-            if (contextSection) {
-              contextSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          }, 150);
-        } else {
-          const initialPanel = document.querySelector(
-            ".organisations-context-panel.active",
-          );
-
-          if (initialPanel) {
-            requestAnimationFrame(function () {
-              revealVisibleCards(initialPanel);
-            });
-          }
-        }
-
-        let resizeTimer;
-
-        window.addEventListener("resize", function () {
-          clearTimeout(resizeTimer);
-
-          resizeTimer = setTimeout(function () {
-            const activePanel = document.querySelector(
-              ".organisations-context-panel.active",
-            );
-
-            if (activePanel) {
-              revealVisibleCards(activePanel);
-            }
-          }, 150);
-        });
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqItems = document.querySelectorAll(".organisations-faq-item");
-
-        if (!faqItems.length) {
-          return;
-        }
-
-        faqItems.forEach(function (item) {
-          const button = item.querySelector(".organisations-faq-question");
-
-          if (!button) {
-            return;
-          }
-
-          button.addEventListener("click", function () {
-            const isActive = item.classList.contains("active");
-
-            /*
-             * Close all other FAQ items
-             */
-
-            faqItems.forEach(function (otherItem) {
-              otherItem.classList.remove("active");
-
-              const otherButton = otherItem.querySelector(
-                ".organisations-faq-question",
-              );
-
-              if (otherButton) {
-                otherButton.setAttribute("aria-expanded", "false");
-              }
-            });
-
-            /*
-             * Open clicked item
-             */
-
-            if (!isActive) {
-              item.classList.add("active");
-
-              button.setAttribute("aria-expanded", "true");
-            }
-          });
-        });
-      });
-    </script>
-
   </body>
 </html>

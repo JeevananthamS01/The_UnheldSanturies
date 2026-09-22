@@ -482,4 +482,876 @@ document.addEventListener("DOMContentLoaded", function () {
 
     unheardCtaObserver.observe(unheardFinalCta);
   }
+
+  /* =====================================================
+     CHECK MAP
+  ===================================================== */
+
+  const mapElement = document.getElementById("tamilNaduMap");
+
+  if (mapElement && typeof L !== "undefined") {
+    /* =====================================================
+       TAMIL NADU MAP
+    ===================================================== */
+
+    const map = L.map("tamilNaduMap", {
+      center: [10.8505, 78.7047],
+
+      zoom: 7,
+
+      zoomControl: true,
+
+      attributionControl: true,
+
+      scrollWheelZoom: false,
+
+      doubleClickZoom: true,
+
+      dragging: true,
+
+      touchZoom: true,
+
+      boxZoom: false,
+
+      keyboard: false,
+    });
+
+    /* =====================================================
+       OPENSTREETMAP
+    ===================================================== */
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    }).addTo(map);
+
+    /* =====================================================
+       LOCATIONS
+    ===================================================== */
+
+    const locations = [
+      { name: "Chennai", lat: 13.0827, lng: 80.2707 },
+      { name: "Coimbatore", lat: 11.0168, lng: 76.9558 },
+      { name: "Madurai", lat: 9.9252, lng: 78.1198 },
+      { name: "Tirunelveli", lat: 8.7139, lng: 77.7567 },
+      { name: "Salem", lat: 11.6643, lng: 78.146 },
+      { name: "Tiruchirappalli", lat: 10.7905, lng: 78.7047 },
+      { name: "Vellore", lat: 12.9165, lng: 79.1325 },
+      { name: "Erode", lat: 11.341, lng: 77.7172 },
+      { name: "Thanjavur", lat: 10.7867, lng: 79.1378 },
+      { name: "Tiruppur", lat: 11.1085, lng: 77.3411 },
+      { name: "Kanchipuram", lat: 12.8342, lng: 79.7036 },
+      { name: "Dindigul", lat: 10.3673, lng: 77.9803 },
+      { name: "Cuddalore", lat: 11.748, lng: 79.7714 },
+      { name: "Nagapattinam", lat: 10.7672, lng: 79.8449 },
+      { name: "Krishnagiri", lat: 12.5186, lng: 78.2137 },
+      { name: "Nagercoil", lat: 8.1833, lng: 77.4119 },
+      { name: "Ramanathapuram", lat: 9.3639, lng: 78.8395 },
+      { name: "Thoothukudi", lat: 8.7642, lng: 78.1348 },
+      { name: "Villupuram", lat: 11.9401, lng: 79.4861 },
+      { name: "Sivaganga", lat: 9.8433, lng: 78.4809 },
+      { name: "Pudukkottai", lat: 10.3833, lng: 78.8001 },
+      { name: "The Nilgiris", lat: 11.4102, lng: 76.695 },
+      { name: "Dharmapuri", lat: 12.1211, lng: 78.1582 },
+      { name: "Namakkal", lat: 11.2194, lng: 78.1677 },
+    ];
+
+    /* =====================================================
+       CUSTOM PIN
+    ===================================================== */
+
+    const pinIcon = L.divIcon({
+      className: "coverage-map-marker",
+
+      html: `
+        <div class="coverage-map-pin"></div>
+      `,
+
+      iconSize: [42, 50],
+
+      iconAnchor: [21, 50],
+
+      popupAnchor: [0, -45],
+    });
+
+    /* =====================================================
+       ADD LOCATION MARKERS
+    ===================================================== */
+
+    const markers = [];
+
+    locations.forEach(function (location) {
+      const marker = L.marker([location.lat, location.lng], {
+        icon: pinIcon,
+      });
+
+      marker.addTo(map);
+
+      marker.bindTooltip(location.name, {
+        direction: "top",
+
+        offset: [0, -40],
+
+        className: "coverage-leaflet-tooltip",
+
+        permanent: false,
+
+        opacity: 1,
+      });
+
+      markers.push(marker);
+    });
+
+    /* =====================================================
+       FIT MAP TO LOCATIONS
+    ===================================================== */
+
+    if (markers.length) {
+      const bounds = L.latLngBounds(
+        locations.map(function (location) {
+          return [location.lat, location.lng];
+        }),
+      );
+
+      map.fitBounds(bounds, {
+        padding: [50, 50],
+
+        maxZoom: 8,
+      });
+    }
+
+    /* =====================================================
+       MAP RESIZE
+    ===================================================== */
+
+    function refreshMap() {
+      map.invalidateSize();
+    }
+
+    setTimeout(refreshMap, 300);
+
+    setTimeout(refreshMap, 800);
+
+    window.addEventListener("resize", function () {
+      setTimeout(refreshMap, 150);
+    });
+
+    /* =====================================================
+       MOBILE TOUCH BEHAVIOR
+    ===================================================== */
+
+    function updateMobileMap() {
+      if (window.innerWidth <= 767) {
+        map.options.scrollWheelZoom = false;
+
+        map.options.doubleClickZoom = false;
+      } else {
+        map.options.scrollWheelZoom = false;
+
+        map.options.doubleClickZoom = true;
+      }
+    }
+
+    updateMobileMap();
+
+    window.addEventListener("resize", updateMobileMap);
+  }
+
+  /* =====================================================
+     OUR PROCESS
+  ===================================================== */
+
+  const processSection = document.querySelector("#our-process");
+
+  if (processSection) {
+    const steps = [...processSection.querySelectorAll(".our-process-step")];
+
+    const processProgress = processSection.querySelector(
+      ".our-process-progress",
+    );
+
+    /* =====================================================
+       REVEAL / HIDE STEPS
+    ===================================================== */
+
+    const processObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          } else {
+            entry.target.classList.remove("is-visible");
+          }
+        });
+      },
+      {
+        threshold: 0.35,
+
+        rootMargin: "0px 0px -15% 0px",
+      },
+    );
+
+    steps.forEach((step) => {
+      processObserver.observe(step);
+    });
+
+    /* =====================================================
+       TIMELINE PROGRESS
+    ===================================================== */
+
+    function updateProcessProgress() {
+      const timeline = processSection.querySelector(".our-process-timeline");
+
+      if (!timeline || !processProgress) return;
+
+      const rect = timeline.getBoundingClientRect();
+
+      const viewportHeight = window.innerHeight;
+
+      const triggerPoint = viewportHeight * 0.55;
+
+      const distance = triggerPoint - rect.top;
+
+      const totalHeight = timeline.offsetHeight;
+
+      const percentage = Math.max(
+        0,
+        Math.min(100, (distance / totalHeight) * 100),
+      );
+
+      processProgress.style.height = percentage + "%";
+    }
+
+    window.addEventListener("scroll", updateProcessProgress, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", updateProcessProgress);
+
+    updateProcessProgress();
+  }
+
+  /* =====================================================
+     DURING VISIT CAROUSEL
+  ===================================================== */
+
+  const duringVisitCarousel = document.querySelector(".during-visit-carousel");
+
+  if (duringVisitCarousel) {
+    const duringVisitViewport = duringVisitCarousel.querySelector(
+      ".during-visit-viewport",
+    );
+
+    const duringVisitTrack = duringVisitCarousel.querySelector(
+      ".during-visit-track",
+    );
+
+    const duringVisitCards = duringVisitTrack
+      ? [...duringVisitTrack.querySelectorAll(".during-visit-card")]
+      : [];
+
+    const duringVisitPrev =
+      duringVisitCarousel.querySelector(".during-visit-prev");
+
+    const duringVisitNext =
+      duringVisitCarousel.querySelector(".during-visit-next");
+
+    const duringVisitDots = document.querySelector(".during-visit-dots");
+
+    const duringVisitCurrent = document.querySelector(".during-visit-current");
+
+    if (duringVisitViewport && duringVisitTrack && duringVisitCards.length) {
+      /* =====================================================
+         SETTINGS
+      ===================================================== */
+
+      let duringVisitIndex = 0;
+
+      let duringVisitVisibleCards = 3;
+
+      let duringVisitAutoPlay;
+
+      const DURING_VISIT_AUTO_DELAY = 3500;
+
+      /* =====================================================
+         GET VISIBLE CARDS
+      ===================================================== */
+
+      function getDuringVisitVisibleCards() {
+        if (window.innerWidth <= 767) {
+          return 1;
+        }
+
+        if (window.innerWidth <= 991) {
+          return 2;
+        }
+
+        return 3;
+      }
+
+      /* =====================================================
+         MAX INDEX
+      ===================================================== */
+
+      function getDuringVisitMaxIndex() {
+        return Math.max(0, duringVisitCards.length - duringVisitVisibleCards);
+      }
+
+      /* =====================================================
+         CREATE DOTS
+      ===================================================== */
+
+      function createDuringVisitDots() {
+        if (!duringVisitDots) {
+          return;
+        }
+
+        duringVisitDots.innerHTML = "";
+
+        const total = getDuringVisitMaxIndex() + 1;
+
+        for (let i = 0; i < total; i++) {
+          const dot = document.createElement("button");
+
+          dot.type = "button";
+
+          dot.className = "during-visit-dot";
+
+          dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+
+          dot.addEventListener("click", function () {
+            duringVisitIndex = i;
+
+            updateDuringVisitCarousel();
+
+            restartDuringVisitAutoPlay();
+          });
+
+          duringVisitDots.appendChild(dot);
+        }
+      }
+
+      /* =====================================================
+         GET CARD WIDTH
+      ===================================================== */
+
+      function getDuringVisitCardWidth() {
+        if (!duringVisitCards.length) {
+          return 0;
+        }
+
+        const card = duringVisitCards[0];
+
+        const cardWidth = card.offsetWidth;
+
+        const styles = window.getComputedStyle(duringVisitTrack);
+
+        const gap = parseFloat(styles.columnGap || styles.gap || 0);
+
+        return cardWidth + gap;
+      }
+
+      /* =====================================================
+         UPDATE CAROUSEL
+      ===================================================== */
+
+      function updateDuringVisitCarousel() {
+        duringVisitVisibleCards = getDuringVisitVisibleCards();
+
+        const maxIndex = getDuringVisitMaxIndex();
+
+        if (duringVisitIndex > maxIndex) {
+          duringVisitIndex = maxIndex;
+        }
+
+        const cardWidth = getDuringVisitCardWidth();
+
+        const translateX = duringVisitIndex * cardWidth;
+
+        duringVisitTrack.style.transform = `translateX(-${translateX}px)`;
+
+        updateDuringVisitDots();
+
+        updateDuringVisitCounter();
+      }
+
+      /* =====================================================
+         UPDATE DOTS
+      ===================================================== */
+
+      function updateDuringVisitDots() {
+        if (!duringVisitDots) {
+          return;
+        }
+
+        const dots = duringVisitDots.querySelectorAll(".during-visit-dot");
+
+        dots.forEach(function (dot, index) {
+          dot.classList.toggle("active", index === duringVisitIndex);
+        });
+      }
+
+      /* =====================================================
+         UPDATE COUNTER
+      ===================================================== */
+
+      function updateDuringVisitCounter() {
+        if (!duringVisitCurrent) {
+          return;
+        }
+
+        const displayNumber = String(duringVisitIndex + 1).padStart(2, "0");
+
+        duringVisitCurrent.textContent = displayNumber;
+      }
+
+      /* =====================================================
+         NEXT
+      ===================================================== */
+
+      function duringVisitNextSlide() {
+        const maxIndex = getDuringVisitMaxIndex();
+
+        if (duringVisitIndex >= maxIndex) {
+          duringVisitIndex = 0;
+        } else {
+          duringVisitIndex++;
+        }
+
+        updateDuringVisitCarousel();
+      }
+
+      /* =====================================================
+         PREVIOUS
+      ===================================================== */
+
+      function duringVisitPreviousSlide() {
+        const maxIndex = getDuringVisitMaxIndex();
+
+        if (duringVisitIndex <= 0) {
+          duringVisitIndex = maxIndex;
+        } else {
+          duringVisitIndex--;
+        }
+
+        updateDuringVisitCarousel();
+      }
+
+      /* =====================================================
+         BUTTON EVENTS
+      ===================================================== */
+
+      if (duringVisitNext) {
+        duringVisitNext.addEventListener("click", function () {
+          duringVisitNextSlide();
+
+          restartDuringVisitAutoPlay();
+        });
+      }
+
+      if (duringVisitPrev) {
+        duringVisitPrev.addEventListener("click", function () {
+          duringVisitPreviousSlide();
+
+          restartDuringVisitAutoPlay();
+        });
+      }
+
+      /* =====================================================
+         AUTO PLAY
+      ===================================================== */
+
+      function startDuringVisitAutoPlay() {
+        stopDuringVisitAutoPlay();
+
+        duringVisitAutoPlay = setInterval(function () {
+          duringVisitNextSlide();
+        }, DURING_VISIT_AUTO_DELAY);
+      }
+
+      function stopDuringVisitAutoPlay() {
+        if (duringVisitAutoPlay) {
+          clearInterval(duringVisitAutoPlay);
+
+          duringVisitAutoPlay = null;
+        }
+      }
+
+      function restartDuringVisitAutoPlay() {
+        stopDuringVisitAutoPlay();
+
+        startDuringVisitAutoPlay();
+      }
+
+      /* =====================================================
+         PAUSE ON HOVER
+      ===================================================== */
+
+      duringVisitCarousel.addEventListener("mouseenter", function () {
+        stopDuringVisitAutoPlay();
+      });
+
+      duringVisitCarousel.addEventListener("mouseleave", function () {
+        startDuringVisitAutoPlay();
+      });
+
+      /* =====================================================
+         TOUCH / SWIPE
+      ===================================================== */
+
+      let duringVisitTouchStartX = 0;
+
+      let duringVisitTouchEndX = 0;
+
+      duringVisitViewport.addEventListener(
+        "touchstart",
+        function (event) {
+          duringVisitTouchStartX = event.changedTouches[0].screenX;
+
+          stopDuringVisitAutoPlay();
+        },
+        {
+          passive: true,
+        },
+      );
+
+      duringVisitViewport.addEventListener(
+        "touchend",
+        function (event) {
+          duringVisitTouchEndX = event.changedTouches[0].screenX;
+
+          const difference = duringVisitTouchStartX - duringVisitTouchEndX;
+
+          const swipeDistance = 45;
+
+          if (Math.abs(difference) > swipeDistance) {
+            if (difference > 0) {
+              duringVisitNextSlide();
+            } else {
+              duringVisitPreviousSlide();
+            }
+          }
+
+          startDuringVisitAutoPlay();
+        },
+        {
+          passive: true,
+        },
+      );
+
+      /* =====================================================
+         RESPONSIVE RESIZE
+      ===================================================== */
+
+      let duringVisitResizeTimer;
+
+      window.addEventListener("resize", function () {
+        clearTimeout(duringVisitResizeTimer);
+
+        duringVisitResizeTimer = setTimeout(function () {
+          duringVisitVisibleCards = getDuringVisitVisibleCards();
+
+          createDuringVisitDots();
+
+          updateDuringVisitCarousel();
+        }, 150);
+      });
+
+      /* =====================================================
+         INITIALIZE
+      ===================================================== */
+
+      duringVisitVisibleCards = getDuringVisitVisibleCards();
+
+      createDuringVisitDots();
+
+      updateDuringVisitCarousel();
+
+      startDuringVisitAutoPlay();
+    }
+  }
+
+  /* =====================================================
+     UNHEARD FAQ
+  ===================================================== */
+
+  const unheardFaqItems = document.querySelectorAll(".unheard-faq-item");
+
+  if (unheardFaqItems.length) {
+    unheardFaqItems.forEach(function (item) {
+      const button = item.querySelector(".unheard-faq-question");
+
+      if (!button) {
+        return;
+      }
+
+      button.addEventListener("click", function () {
+        const isActive = item.classList.contains("active");
+
+        unheardFaqItems.forEach(function (otherItem) {
+          otherItem.classList.remove("active");
+
+          const otherButton = otherItem.querySelector(".unheard-faq-question");
+
+          if (otherButton) {
+            otherButton.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+
+          button.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+
+  /* =====================================================
+     ORGANISATIONS CONTEXT TABS
+  ===================================================== */
+
+  const contextTabs = document.querySelectorAll(".organisations-context-tab");
+
+  const contextPanels = document.querySelectorAll(
+    ".organisations-context-panel",
+  );
+
+  const contextCards = document.querySelectorAll(".organisations-context-card");
+
+  const cardObserver = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const card = entry.target;
+
+        if (card.classList.contains("revealed")) {
+          observer.unobserve(card);
+          return;
+        }
+
+        const parent = card.closest(".organisations-context-cards");
+
+        let index = 0;
+
+        if (parent) {
+          const cards = Array.from(
+            parent.querySelectorAll(".organisations-context-card"),
+          );
+
+          index = cards.indexOf(card);
+        }
+
+        const isMobile = window.innerWidth <= 767;
+
+        const delay = isMobile ? index * 80 : (index % 2) * 120;
+
+        setTimeout(function () {
+          card.classList.add("revealed");
+        }, delay);
+
+        observer.unobserve(card);
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -70px 0px",
+    },
+  );
+
+  contextCards.forEach(function (card) {
+    cardObserver.observe(card);
+  });
+
+  function revealVisibleCards(panel) {
+    if (!panel) {
+      return;
+    }
+
+    const cards = panel.querySelectorAll(".organisations-context-card");
+
+    cards.forEach(function (card) {
+      if (card.classList.contains("revealed")) {
+        return;
+      }
+
+      const rect = card.getBoundingClientRect();
+
+      const viewportHeight = window.innerHeight;
+
+      const isVisible = rect.top < viewportHeight * 0.9 && rect.bottom > 0;
+
+      if (!isVisible) {
+        return;
+      }
+
+      const cardsArray = Array.from(cards);
+
+      const index = cardsArray.indexOf(card);
+
+      const isMobile = window.innerWidth <= 767;
+
+      const delay = isMobile ? index * 80 : (index % 2) * 120;
+
+      setTimeout(function () {
+        card.classList.add("revealed");
+      }, delay);
+
+      cardObserver.unobserve(card);
+    });
+  }
+
+  function activateContext(target, updateUrl) {
+    if (target !== "corporate" && target !== "school") {
+      return;
+    }
+
+    const targetTab = document.querySelector(
+      '.organisations-context-tab[data-context-tab="' + target + '"]',
+    );
+
+    const targetPanel = document.querySelector(
+      '.organisations-context-panel[data-context-panel="' + target + '"]',
+    );
+
+    if (!targetTab || !targetPanel) {
+      return;
+    }
+
+    contextTabs.forEach(function (tab) {
+      tab.classList.remove("active");
+      tab.setAttribute("aria-selected", "false");
+    });
+
+    contextPanels.forEach(function (panel) {
+      panel.classList.remove("active");
+    });
+
+    targetTab.classList.add("active");
+    targetTab.setAttribute("aria-selected", "true");
+
+    targetPanel.classList.add("active");
+
+    if (updateUrl) {
+      const url = new URL(window.location.href);
+
+      url.searchParams.set("context", target);
+
+      window.history.replaceState(
+        {},
+        "",
+        url.pathname + "?" + url.searchParams.toString(),
+      );
+    }
+
+    requestAnimationFrame(function () {
+      revealVisibleCards(targetPanel);
+    });
+  }
+
+  contextTabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      const target = tab.getAttribute("data-context-tab");
+
+      if (!target) {
+        return;
+      }
+
+      if (tab.classList.contains("active")) {
+        return;
+      }
+
+      activateContext(target, true);
+    });
+  });
+
+  const params = new URLSearchParams(window.location.search);
+
+  const requestedContext = params.get("context");
+
+  if (requestedContext === "corporate" || requestedContext === "school") {
+    activateContext(requestedContext, false);
+
+    setTimeout(function () {
+      const contextSection = document.getElementById("organisationsContext");
+
+      if (contextSection) {
+        contextSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 150);
+  } else {
+    const initialPanel = document.querySelector(
+      ".organisations-context-panel.active",
+    );
+
+    if (initialPanel) {
+      requestAnimationFrame(function () {
+        revealVisibleCards(initialPanel);
+      });
+    }
+  }
+
+  let organisationsContextResizeTimer;
+
+  window.addEventListener("resize", function () {
+    clearTimeout(organisationsContextResizeTimer);
+
+    organisationsContextResizeTimer = setTimeout(function () {
+      const activePanel = document.querySelector(
+        ".organisations-context-panel.active",
+      );
+
+      if (activePanel) {
+        revealVisibleCards(activePanel);
+      }
+    }, 150);
+  });
+
+  /* =====================================================
+     ORGANISATIONS FAQ
+  ===================================================== */
+
+  const organisationsFaqItems = document.querySelectorAll(
+    ".organisations-faq-item",
+  );
+
+  if (organisationsFaqItems.length) {
+    organisationsFaqItems.forEach(function (item) {
+      const button = item.querySelector(".organisations-faq-question");
+
+      if (!button) {
+        return;
+      }
+
+      button.addEventListener("click", function () {
+        const isActive = item.classList.contains("active");
+
+        organisationsFaqItems.forEach(function (otherItem) {
+          otherItem.classList.remove("active");
+
+          const otherButton = otherItem.querySelector(
+            ".organisations-faq-question",
+          );
+
+          if (otherButton) {
+            otherButton.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+
+          button.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
 });

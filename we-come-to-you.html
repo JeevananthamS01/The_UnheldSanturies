@@ -46,7 +46,7 @@
     </style>
   </head>
   <body>
-     <!-- Header -->
+    <!-- Header -->
     <header class="site-header">
       <div class="header-top d-none d-lg-block">
         <div class="container-xl header-top-inner">
@@ -98,15 +98,15 @@
           <div class="site-navigation">
             <ul class="navbar-nav site-nav-list">
               <li class="nav-item">
-                <a class="nav-link " href="index.html"> Home </a>
+                <a class="nav-link" href="index.html"> Home </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="about.html"> About </a>
+                <a class="nav-link" href="about.html"> About </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="sanctuaries.html"> Sanctuaries </a>
+                <a class="nav-link" href="sanctuaries.html"> Sanctuaries </a>
               </li>
 
               <li class="nav-item">
@@ -187,15 +187,15 @@
         <div class="site-mobile-menu-body">
           <ul class="site-mobile-nav-list">
             <li>
-              <a href="index.html" > Home </a>
+              <a href="index.html"> Home </a>
             </li>
 
             <li>
-              <a href="about.html" > About </a>
+              <a href="about.html"> About </a>
             </li>
 
             <li>
-              <a href="sanctuaries.html" > Sanctuaries </a>
+              <a href="sanctuaries.html"> Sanctuaries </a>
             </li>
 
             <li>
@@ -266,21 +266,18 @@
 
             <!-- Buttons -->
             <div class="we-come-to-you-hero-actions">
-              <a href="" class="btn-light">
-                Book a Home Visit
+              <a href="" class="btn-light"> Book a Home Visit </a>
+
+              <a
+                class="btn-light"
+                href="https://wa.me/919840221718"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
               </a>
 
-              <a class="btn-light"
-                  href="https://wa.me/919840221718"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </a>
-
-              <a href="#our-process" class="btn-light">
-                How It's Works
-              </a>
+              <a href="#our-process" class="btn-light"> How It's Works </a>
             </div>
 
             <!-- Highlights -->
@@ -510,7 +507,6 @@
     <!-- Coverage Map -->
     <section class="coverage-map" id="coverageMap">
       <div class="container-xl">
-
         <div class="coverage-map-header">
           <span class="coverage-map-eyebrow"> COVERAGE MAP </span>
 
@@ -588,7 +584,6 @@
           <!-- Viewport -->
           <div class="during-visit-viewport">
             <div class="during-visit-track">
-
               <article class="during-visit-card">
                 <div class="during-visit-card-icon">
                   <i class="fa-solid fa-door-open"></i>
@@ -683,7 +678,6 @@
           </button>
         </div>
 
-
         <div class="during-visit-controls">
           <div class="during-visit-dots"></div>
 
@@ -760,7 +754,10 @@
                   </li>
                 </ul>
 
-                <a href="sanctuaries.html#unheardBooking" class="unheard-pricing-btn">
+                <a
+                  href="sanctuaries.html#unheardBooking"
+                  class="unheard-pricing-btn"
+                >
                   Book A Session
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -818,7 +815,10 @@
                   </li>
                 </ul>
 
-                <a href="sanctuaries.html#unheardBooking" class="unheard-pricing-btn">
+                <a
+                  href="sanctuaries.html#unheardBooking"
+                  class="unheard-pricing-btn"
+                >
                   Book A Session
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -876,7 +876,10 @@
                   </li>
                 </ul>
 
-                <a href="sanctuaries.html#unheardBooking" class="unheard-pricing-btn">
+                <a
+                  href="sanctuaries.html#unheardBooking"
+                  class="unheard-pricing-btn"
+                >
                   Get Started
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -890,7 +893,6 @@
     <!-- Faq Section -->
     <section class="unheard-faq" id="faq">
       <div class="container-xl">
-
         <div class="unheard-faq-header">
           <span class="unheard-faq-eyebrow"> FREQUENTLY ASKED QUESTIONS </span>
 
@@ -1061,7 +1063,7 @@
       </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <!-- Footer Main -->
@@ -1154,7 +1156,9 @@
                   <i class="bi bi-envelope"></i>
                 </span>
 
-                <a href="mailto:business@theunheld.in"> business@theunheld.in </a>
+                <a href="mailto:business@theunheld.in">
+                  business@theunheld.in
+                </a>
               </li>
 
               <!-- WhatsApp -->
@@ -1186,7 +1190,11 @@
 
           <div class="footer-credit">
             Designed &amp; Developed by
-            <a href="https://dazzletechsolutions.com/" target="_blank" rel="noopener">
+            <a
+              href="https://dazzletechsolutions.com/"
+              target="_blank"
+              rel="noopener"
+            >
               Dazzle Tech Solutions
             </a>
           </div>
@@ -1204,770 +1212,6 @@
     <script src="js/index.js"></script>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        /* =====================================================
-     CHECK MAP
-  ===================================================== */
-
-        const mapElement = document.getElementById("tamilNaduMap");
-
-        if (!mapElement || typeof L === "undefined") {
-          return;
-        }
-
-        /* =====================================================
-     TAMIL NADU MAP
-  ===================================================== */
-
-        const map = L.map("tamilNaduMap", {
-          center: [10.8505, 78.7047],
-
-          zoom: 7,
-
-          zoomControl: true,
-
-          attributionControl: true,
-
-          scrollWheelZoom: false,
-
-          doubleClickZoom: true,
-
-          dragging: true,
-
-          touchZoom: true,
-
-          boxZoom: false,
-
-          keyboard: false,
-        });
-
-        /* =====================================================
-     OPENSTREETMAP
-  ===================================================== */
-
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          maxZoom: 18,
-
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
-        }).addTo(map);
-
-        /* =====================================================
-     LOCATIONS
-  ===================================================== */
-
-        const locations = [
-          {
-            name: "Chennai",
-            lat: 13.0827,
-            lng: 80.2707,
-          },
-
-          {
-            name: "Coimbatore",
-            lat: 11.0168,
-            lng: 76.9558,
-          },
-
-          {
-            name: "Madurai",
-            lat: 9.9252,
-            lng: 78.1198,
-          },
-
-          {
-            name: "Tirunelveli",
-            lat: 8.7139,
-            lng: 77.7567,
-          },
-
-          {
-            name: "Salem",
-            lat: 11.6643,
-            lng: 78.146,
-          },
-
-          {
-            name: "Tiruchirappalli",
-            lat: 10.7905,
-            lng: 78.7047,
-          },
-
-          {
-            name: "Vellore",
-            lat: 12.9165,
-            lng: 79.1325,
-          },
-
-          {
-            name: "Erode",
-            lat: 11.341,
-            lng: 77.7172,
-          },
-
-          {
-            name: "Thanjavur",
-            lat: 10.7867,
-            lng: 79.1378,
-          },
-
-          {
-            name: "Tiruppur",
-            lat: 11.1085,
-            lng: 77.3411,
-          },
-
-          {
-            name: "Kanchipuram",
-            lat: 12.8342,
-            lng: 79.7036,
-          },
-
-          {
-            name: "Dindigul",
-            lat: 10.3673,
-            lng: 77.9803,
-          },
-
-          {
-            name: "Cuddalore",
-            lat: 11.748,
-            lng: 79.7714,
-          },
-
-          {
-            name: "Nagapattinam",
-            lat: 10.7672,
-            lng: 79.8449,
-          },
-
-          {
-            name: "Krishnagiri",
-            lat: 12.5186,
-            lng: 78.2137,
-          },
-
-          {
-            name: "Nagercoil",
-            lat: 8.1833,
-            lng: 77.4119,
-          },
-
-          {
-            name: "Ramanathapuram",
-            lat: 9.3639,
-            lng: 78.8395,
-          },
-
-          {
-            name: "Thoothukudi",
-            lat: 8.7642,
-            lng: 78.1348,
-          },
-
-          {
-            name: "Villupuram",
-            lat: 11.9401,
-            lng: 79.4861,
-          },
-
-          {
-            name: "Sivaganga",
-            lat: 9.8433,
-            lng: 78.4809,
-          },
-
-          {
-            name: "Pudukkottai",
-            lat: 10.3833,
-            lng: 78.8001,
-          },
-
-          {
-            name: "The Nilgiris",
-            lat: 11.4102,
-            lng: 76.695,
-          },
-
-          {
-            name: "Dharmapuri",
-            lat: 12.1211,
-            lng: 78.1582,
-          },
-
-          {
-            name: "Namakkal",
-            lat: 11.2194,
-            lng: 78.1677,
-          },
-        ];
-
-        /* =====================================================
-     CUSTOM PIN
-  ===================================================== */
-
-        const pinIcon = L.divIcon({
-          className: "coverage-map-marker",
-
-          html: `
-        <div class="coverage-map-pin"></div>
-      `,
-
-          iconSize: [42, 50],
-
-          iconAnchor: [21, 50],
-
-          popupAnchor: [0, -45],
-        });
-
-        /* =====================================================
-     ADD LOCATION MARKERS
-  ===================================================== */
-
-        const markers = [];
-
-        locations.forEach(function (location) {
-          const marker = L.marker([location.lat, location.lng], {
-            icon: pinIcon,
-          });
-
-          marker.addTo(map);
-
-          /* =========================
-         LOCATION NAME
-      ========================== */
-
-          marker.bindTooltip(location.name, {
-            direction: "top",
-
-            offset: [0, -40],
-
-            className: "coverage-leaflet-tooltip",
-
-            permanent: false,
-
-            opacity: 1,
-          });
-
-          markers.push(marker);
-        });
-
-        /* =====================================================
-     FIT MAP TO LOCATIONS
-  ===================================================== */
-
-        if (markers.length) {
-          const bounds = L.latLngBounds(
-            locations.map(function (location) {
-              return [location.lat, location.lng];
-            }),
-          );
-
-          map.fitBounds(bounds, {
-            padding: [50, 50],
-
-            maxZoom: 8,
-          });
-        }
-
-        /* =====================================================
-     MAP RESIZE
-  ===================================================== */
-
-        function refreshMap() {
-          map.invalidateSize();
-        }
-
-        setTimeout(refreshMap, 300);
-
-        setTimeout(refreshMap, 800);
-
-        window.addEventListener("resize", function () {
-          setTimeout(refreshMap, 150);
-        });
-
-        /* =====================================================
-     MOBILE TOUCH BEHAVIOR
-  ===================================================== */
-
-        function updateMobileMap() {
-          if (window.innerWidth <= 767) {
-            map.options.scrollWheelZoom = false;
-
-            map.options.doubleClickZoom = false;
-          } else {
-            map.options.scrollWheelZoom = false;
-
-            map.options.doubleClickZoom = true;
-          }
-        }
-
-        updateMobileMap();
-
-        window.addEventListener("resize", updateMobileMap);
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const section = document.querySelector("#our-process");
-
-        if (!section) return;
-
-        const steps = [...section.querySelectorAll(".our-process-step")];
-
-        const progress = section.querySelector(".our-process-progress");
-
-        /* =====================================================
-     REVEAL / HIDE STEPS
-  ===================================================== */
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-              } else {
-                /*
-            When the user scrolls back up,
-            the card hides again.
-          */
-
-                entry.target.classList.remove("is-visible");
-              }
-            });
-          },
-          {
-            threshold: 0.35,
-
-            rootMargin: "0px 0px -15% 0px",
-          },
-        );
-
-        steps.forEach((step) => {
-          observer.observe(step);
-        });
-
-        /* =====================================================
-     TIMELINE PROGRESS
-  ===================================================== */
-
-        function updateProgress() {
-          const timeline = section.querySelector(".our-process-timeline");
-
-          if (!timeline || !progress) return;
-
-          const rect = timeline.getBoundingClientRect();
-
-          const viewportHeight = window.innerHeight;
-
-          const triggerPoint = viewportHeight * 0.55;
-
-          const distance = triggerPoint - rect.top;
-
-          const totalHeight = timeline.offsetHeight;
-
-          const percentage = Math.max(
-            0,
-            Math.min(100, (distance / totalHeight) * 100),
-          );
-
-          progress.style.height = percentage + "%";
-        }
-
-        window.addEventListener("scroll", updateProgress, {
-          passive: true,
-        });
-
-        window.addEventListener("resize", updateProgress);
-
-        updateProgress();
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const carousel = document.querySelector(".during-visit-carousel");
-        if (!carousel) return;
-
-        const viewport = carousel.querySelector(".during-visit-viewport");
-
-        const track = carousel.querySelector(".during-visit-track");
-
-        const cards = [...track.querySelectorAll(".during-visit-card")];
-
-        const prevButton = carousel.querySelector(".during-visit-prev");
-
-        const nextButton = carousel.querySelector(".during-visit-next");
-
-        const dotsContainer = document.querySelector(".during-visit-dots");
-
-        const currentCounter = document.querySelector(".during-visit-current");
-
-        if (!viewport || !track || !cards.length) {
-          return;
-        }
-
-        /* =====================================================
-     SETTINGS
-  ===================================================== */
-
-        let currentIndex = 0;
-
-        let visibleCards = 3;
-
-        let autoPlay;
-
-        const AUTO_DELAY = 3500;
-
-        /* =====================================================
-     GET VISIBLE CARDS
-  ===================================================== */
-
-        function getVisibleCards() {
-          if (window.innerWidth <= 767) {
-            return 1;
-          }
-
-          if (window.innerWidth <= 991) {
-            return 2;
-          }
-
-          return 3;
-        }
-
-        /* =====================================================
-     MAX INDEX
-  ===================================================== */
-
-        function getMaxIndex() {
-          return Math.max(0, cards.length - visibleCards);
-        }
-
-        /* =====================================================
-     CREATE DOTS
-  ===================================================== */
-
-        function createDots() {
-          if (!dotsContainer) {
-            return;
-          }
-
-          dotsContainer.innerHTML = "";
-
-          const total = getMaxIndex() + 1;
-
-          for (let i = 0; i < total; i++) {
-            const dot = document.createElement("button");
-
-            dot.type = "button";
-
-            dot.className = "during-visit-dot";
-
-            dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
-
-            dot.addEventListener("click", function () {
-              currentIndex = i;
-
-              updateCarousel();
-
-              restartAutoPlay();
-            });
-
-            dotsContainer.appendChild(dot);
-          }
-        }
-
-        /* =====================================================
-     GET CARD WIDTH
-  ===================================================== */
-
-        function getCardWidth() {
-          if (!cards.length) {
-            return 0;
-          }
-
-          const card = cards[0];
-
-          const cardWidth = card.offsetWidth;
-
-          const styles = window.getComputedStyle(track);
-
-          const gap = parseFloat(styles.columnGap || styles.gap || 0);
-
-          return cardWidth + gap;
-        }
-
-        /* =====================================================
-     UPDATE CAROUSEL
-  ===================================================== */
-
-        function updateCarousel() {
-          visibleCards = getVisibleCards();
-
-          const maxIndex = getMaxIndex();
-
-          if (currentIndex > maxIndex) {
-            currentIndex = maxIndex;
-          }
-
-          const cardWidth = getCardWidth();
-
-          const translateX = currentIndex * cardWidth;
-
-          track.style.transform = `translateX(-${translateX}px)`;
-
-          updateDots();
-
-          updateCounter();
-        }
-
-        /* =====================================================
-     UPDATE DOTS
-  ===================================================== */
-
-        function updateDots() {
-          if (!dotsContainer) {
-            return;
-          }
-
-          const dots = dotsContainer.querySelectorAll(".during-visit-dot");
-
-          dots.forEach(function (dot, index) {
-            dot.classList.toggle("active", index === currentIndex);
-          });
-        }
-
-        /* =====================================================
-     UPDATE COUNTER
-  ===================================================== */
-
-        function updateCounter() {
-          if (!currentCounter) {
-            return;
-          }
-
-          const displayNumber = String(currentIndex + 1).padStart(2, "0");
-
-          currentCounter.textContent = displayNumber;
-        }
-
-        /* =====================================================
-     NEXT
-  ===================================================== */
-
-        function nextSlide() {
-          const maxIndex = getMaxIndex();
-
-          if (currentIndex >= maxIndex) {
-            /*
-        Smoothly return to first position.
-      */
-
-            currentIndex = 0;
-          } else {
-            currentIndex++;
-          }
-
-          updateCarousel();
-        }
-
-        /* =====================================================
-     PREVIOUS
-  ===================================================== */
-
-        function previousSlide() {
-          const maxIndex = getMaxIndex();
-
-          if (currentIndex <= 0) {
-            currentIndex = maxIndex;
-          } else {
-            currentIndex--;
-          }
-
-          updateCarousel();
-        }
-
-        /* =====================================================
-     BUTTON EVENTS
-  ===================================================== */
-
-        nextButton.addEventListener("click", function () {
-          nextSlide();
-
-          restartAutoPlay();
-        });
-
-        prevButton.addEventListener("click", function () {
-          previousSlide();
-
-          restartAutoPlay();
-        });
-
-        /* =====================================================
-     AUTO PLAY
-  ===================================================== */
-
-        function startAutoPlay() {
-          stopAutoPlay();
-
-          autoPlay = setInterval(function () {
-            nextSlide();
-          }, AUTO_DELAY);
-        }
-
-        function stopAutoPlay() {
-          if (autoPlay) {
-            clearInterval(autoPlay);
-
-            autoPlay = null;
-          }
-        }
-
-        function restartAutoPlay() {
-          stopAutoPlay();
-
-          startAutoPlay();
-        }
-
-        /* =====================================================
-     PAUSE ON HOVER
-  ===================================================== */
-
-        carousel.addEventListener("mouseenter", function () {
-          stopAutoPlay();
-        });
-
-        carousel.addEventListener("mouseleave", function () {
-          startAutoPlay();
-        });
-
-        /* =====================================================
-     TOUCH / SWIPE
-  ===================================================== */
-
-        let touchStartX = 0;
-
-        let touchEndX = 0;
-
-        viewport.addEventListener(
-          "touchstart",
-          function (event) {
-            touchStartX = event.changedTouches[0].screenX;
-
-            stopAutoPlay();
-          },
-          {
-            passive: true,
-          },
-        );
-
-        viewport.addEventListener(
-          "touchend",
-          function (event) {
-            touchEndX = event.changedTouches[0].screenX;
-
-            const difference = touchStartX - touchEndX;
-
-            const swipeDistance = 45;
-
-            if (Math.abs(difference) > swipeDistance) {
-              if (difference > 0) {
-                nextSlide();
-              } else {
-                previousSlide();
-              }
-            }
-
-            startAutoPlay();
-          },
-          {
-            passive: true,
-          },
-        );
-
-        /* =====================================================
-     RESPONSIVE RESIZE
-  ===================================================== */
-
-        let resizeTimer;
-
-        window.addEventListener("resize", function () {
-          clearTimeout(resizeTimer);
-
-          resizeTimer = setTimeout(function () {
-            visibleCards = getVisibleCards();
-
-            createDots();
-
-            updateCarousel();
-          }, 150);
-        });
-
-        /* =====================================================
-     INITIALIZE
-  ===================================================== */
-
-        visibleCards = getVisibleCards();
-
-        createDots();
-
-        updateCarousel();
-
-        startAutoPlay();
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqItems = document.querySelectorAll(".unheard-faq-item");
-
-        if (!faqItems.length) {
-          return;
-        }
-
-        faqItems.forEach(function (item) {
-          const button = item.querySelector(".unheard-faq-question");
-
-          if (!button) {
-            return;
-          }
-
-          button.addEventListener("click", function () {
-            const isActive = item.classList.contains("active");
-
-            /*
-             * Close all other FAQ items
-             */
-
-            faqItems.forEach(function (otherItem) {
-              otherItem.classList.remove("active");
-
-              const otherButton = otherItem.querySelector(
-                ".unheard-faq-question",
-              );
-
-              if (otherButton) {
-                otherButton.setAttribute("aria-expanded", "false");
-              }
-            });
-
-            /*
-             * Open clicked item
-             */
-
-            if (!isActive) {
-              item.classList.add("active");
-
-              button.setAttribute("aria-expanded", "true");
-            }
-          });
-        });
-      });
-    </script>
-
   </body>
   <!-- Mirrored from wivana-html.zaderonstudio.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2026 11:08:08 GMT -->
 </html>
