@@ -154,28 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document.querySelectorAll(".nav-item.dropdown").forEach(function (dropdown) {
-    dropdown.addEventListener("mouseover", function () {
-      const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
-
-      if (toggle && typeof bootstrap !== "undefined") {
-        const instance = bootstrap.Dropdown.getOrCreateInstance(toggle);
-
-        instance.show();
-      }
-    });
-
-    dropdown.addEventListener("mouseleave", function () {
-      const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
-
-      if (toggle && typeof bootstrap !== "undefined") {
-        const instance = bootstrap.Dropdown.getOrCreateInstance(toggle);
-
-        instance.hide();
-      }
-    });
-  });
-
   const newsletterForm = document.getElementById("newsletterForm");
 
   if (newsletterForm) {
@@ -217,23 +195,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const menuToggle = document.getElementById("siteMenuToggle");
-
   const menu = document.getElementById("siteMobileMenu");
-
   const menuClose = document.getElementById("siteMenuClose");
-
   const backdrop = document.getElementById("siteMenuBackdrop");
 
   if (menuToggle && menu && menuClose && backdrop) {
+    const mobileDropdowns = menu.querySelectorAll(".mobile-dropdown-item");
+
+    function resetMobileDropdowns() {
+      mobileDropdowns.forEach(function (dropdown) {
+        dropdown.classList.remove("open");
+      });
+    }
+
     function openMenu() {
       menu.classList.add("show");
       backdrop.classList.add("show");
       menuToggle.classList.add("active");
 
       menuToggle.setAttribute("aria-expanded", "true");
-
       menu.setAttribute("aria-hidden", "false");
-
       menuToggle.setAttribute("aria-label", "Close navigation");
 
       document.body.classList.add("site-menu-open");
@@ -245,12 +226,12 @@ document.addEventListener("DOMContentLoaded", function () {
       menuToggle.classList.remove("active");
 
       menuToggle.setAttribute("aria-expanded", "false");
-
       menu.setAttribute("aria-hidden", "true");
-
       menuToggle.setAttribute("aria-label", "Open navigation");
 
       document.body.classList.remove("site-menu-open");
+
+      resetMobileDropdowns();
     }
 
     menuToggle.addEventListener("click", function (event) {
@@ -273,7 +254,38 @@ document.addEventListener("DOMContentLoaded", function () {
       closeMenu();
     });
 
-    const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
+    mobileDropdowns.forEach(function (dropdown) {
+      const mainLink = dropdown.querySelector(".mobile-dropdown-main");
+
+      if (!mainLink) {
+        return;
+      }
+
+      mainLink.addEventListener("click", function (event) {
+        const isOpen = dropdown.classList.contains("open");
+
+        if (!isOpen) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+
+          mobileDropdowns.forEach(function (item) {
+            if (item !== dropdown) {
+              item.classList.remove("open");
+            }
+          });
+
+          dropdown.classList.add("open");
+
+          return;
+        }
+
+        dropdown.classList.remove("open");
+      });
+    });
+
+    const menuLinks = menu.querySelectorAll(
+      ".site-mobile-nav-list a:not(.mobile-dropdown-main)",
+    );
 
     menuLinks.forEach(function (link) {
       link.addEventListener("click", function () {
@@ -369,177 +381,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", updateSanctuaryDots);
 
     updateSanctuaryDots();
-  }
-
-  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const howItsWorkSection = document.querySelector(".how-its-work");
-
-    const howItsWorkPin = document.querySelector(".how-its-work-pin");
-
-    const howItsWorkSteps = gsap.utils.toArray(".how-its-work-step");
-
-    const howItsWorkLine = document.querySelector(".how-its-work-line span");
-
-    if (
-      howItsWorkSection &&
-      howItsWorkPin &&
-      howItsWorkSteps.length &&
-      howItsWorkLine
-    ) {
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 768px)", function () {
-        gsap.set(howItsWorkSteps, {
-          clearProps: "all",
-        });
-
-        gsap.set(
-          howItsWorkSteps.map(function (step) {
-            return step.querySelector(".how-its-work-step-number");
-          }),
-          {
-            scale: 0.7,
-            opacity: 0.3,
-          },
-        );
-
-        gsap.set(
-          howItsWorkSteps.map(function (step) {
-            return step.querySelector(".how-its-work-step-content");
-          }),
-          {
-            opacity: 0,
-            y: 50,
-          },
-        );
-
-        gsap.set(howItsWorkLine, {
-          width: "0%",
-        });
-
-        const timeline = gsap.timeline({
-          defaults: {
-            ease: "power2.out",
-          },
-
-          scrollTrigger: {
-            trigger: howItsWorkSection,
-
-            start: "top top",
-
-            end: function () {
-              return `+=${Math.max(
-                0,
-                howItsWorkSection.offsetHeight - window.innerHeight,
-              )}`;
-            },
-
-            pin: howItsWorkPin,
-
-            pinSpacing: false,
-
-            scrub: 1,
-
-            anticipatePin: 1,
-
-            invalidateOnRefresh: true,
-
-            fastScrollEnd: true,
-
-            refreshPriority: 1,
-          },
-        });
-
-        timeline.to(
-          howItsWorkSteps[0].querySelector(".how-its-work-step-number"),
-          {
-            scale: 1,
-            opacity: 1,
-            duration: 0.6,
-          },
-        );
-
-        timeline.to(
-          howItsWorkSteps[0].querySelector(".how-its-work-step-content"),
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-        );
-
-        timeline.to(howItsWorkLine, {
-          width: "50%",
-          duration: 1,
-          ease: "none",
-        });
-
-        timeline.to(
-          howItsWorkSteps[1].querySelector(".how-its-work-step-number"),
-          {
-            scale: 1,
-            opacity: 1,
-            duration: 0.6,
-          },
-        );
-
-        timeline.to(
-          howItsWorkSteps[1].querySelector(".how-its-work-step-content"),
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-        );
-
-        timeline.to(howItsWorkLine, {
-          width: "100%",
-          duration: 1,
-          ease: "none",
-        });
-
-        timeline.to(
-          howItsWorkSteps[2].querySelector(".how-its-work-step-number"),
-          {
-            scale: 1,
-            opacity: 1,
-            duration: 0.6,
-          },
-        );
-
-        timeline.to(
-          howItsWorkSteps[2].querySelector(".how-its-work-step-content"),
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-        );
-
-        function refreshScrollTrigger() {
-          requestAnimationFrame(function () {
-            ScrollTrigger.refresh();
-          });
-        }
-
-        window.addEventListener("resize", refreshScrollTrigger);
-
-        return function () {
-          window.removeEventListener("resize", refreshScrollTrigger);
-
-          timeline.kill();
-        };
-      });
-
-      setTimeout(function () {
-        ScrollTrigger.refresh();
-      }, 300);
-    }
   }
 
   const reflections = [

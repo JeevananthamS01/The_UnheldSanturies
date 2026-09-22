@@ -1,6 +1,3 @@
-/* =========================================================
-   ORGANISATIONS HERO
-========================================================= */
 .organisations-hero {
   position: relative;
 
@@ -19,10 +16,6 @@
   overflow: hidden;
 }
 
-/* =========================================================
-   OVERLAY
-========================================================= */
-
 .organisations-hero-overlay {
   position: relative;
 
@@ -38,10 +31,6 @@
 
   background: rgba(17, 32, 21, 0.68);
 }
-
-/* =========================================================
-   CONTENT
-========================================================= */
 
 .organisations-hero-content {
   width: 100%;
@@ -60,10 +49,6 @@
 
   text-align: left;
 }
-
-/* =========================================================
-   LABEL
-========================================================= */
 
 .organisations-hero-label {
   display: inline-flex;
@@ -89,10 +74,6 @@
   font-size: 8px;
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
-
 .organisations-hero-title {
   max-width: 900px;
   margin: 0;
@@ -103,10 +84,6 @@
   line-height: 70px;
   letter-spacing: -1.8px;
 }
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .organisations-hero-description {
   margin-top: 20px;
@@ -119,10 +96,6 @@
   justify-content: start;
 }
 
-/* =========================================================
-   BUTTONS
-========================================================= */
-
 .organisations-hero-actions {
   display: flex;
 
@@ -134,10 +107,6 @@
 
   margin-top: 20px;
 }
-
-/* =========================================================
-   COUNTERS
-========================================================= */
 
 .organisations-counters {
   width: 100%;
@@ -155,10 +124,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* =========================================================
-   COUNTER
-========================================================= */
-
 .organisations-counter {
   position: relative;
 
@@ -166,8 +131,6 @@
 
   text-align: center;
 }
-
-/* Vertical divider */
 
 .organisations-counter + .organisations-counter::before {
   content: "";
@@ -184,10 +147,6 @@
 
   background: rgba(255, 255, 255, 0.2);
 }
-
-/* =========================================================
-   COUNTER VALUE
-========================================================= */
 
 .organisations-counter-value {
   margin-bottom: 12px;
@@ -207,10 +166,6 @@
   letter-spacing: -1px;
 }
 
-/* =========================================================
-   COUNTER DESCRIPTION
-========================================================= */
-
 .organisations-counter p {
   max-width: 250px;
 
@@ -224,10 +179,6 @@
 
   line-height: 1.65;
 }
-
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .organisations-hero {
@@ -281,10 +232,6 @@
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 767.98px) {
   .organisations-hero {
     min-height: auto;
@@ -301,8 +248,6 @@
     padding: 0 15px;
   }
 
-  /* Label */
-
   .organisations-hero-label {
     align-items: flex-start;
     gap: 7px;
@@ -318,8 +263,6 @@
     font-size: 7px;
   }
 
-  /* Title */
-
   .organisations-hero-title {
     width: 100%;
     font-size: 30px;
@@ -327,16 +270,12 @@
     letter-spacing: -0.8px;
   }
 
-  /* Description */
-
   .organisations-hero-description {
     width: 100%;
     margin-top: 23px;
     font-size: 14px;
     line-height: 20px;
   }
-
-  /* Buttons */
 
   .organisations-hero-actions {
     width: 100%;
@@ -349,8 +288,6 @@
     width: 100%;
     min-height: 46px;
   }
-
-  /* Counters */
 
   .organisations-counters {
     grid-template-columns: 1fr;
@@ -384,10 +321,6 @@
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 400px) {
   .organisations-hero-overlay {
     padding: 110px 0 50px;
@@ -406,10 +339,6 @@
   }
 }
 
-/* =========================================================
-   ORGANISATIONS — CHOOSE YOUR CONTEXT
-========================================================= */
-
 .organisations-context {
   position: relative;
   padding: 60px 0;
@@ -418,17 +347,9 @@
   overflow: hidden;
 }
 
-/* =========================================================
-   SECTION HEADER
-========================================================= */
-
 .organisations-context-header {
   text-align: left;
 }
-
-/* =========================================================
-   EYEBROW
-========================================================= */
 
 .organisations-context-eyebrow {
   display: inline-block;
@@ -441,10 +362,6 @@
   line-height: 1.5;
   text-transform: uppercase;
 }
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .organisations-context-title {
   margin: 0;
@@ -460,20 +377,12 @@
   color: var(--color-lighter);
 }
 
-/* =========================================================
-   EYEBROW LINE
-========================================================= */
-
 .organisations-context-line {
   width: 58px;
   height: 2px;
   margin: 10px 0;
   background: var(--color-main);
 }
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .organisations-context-description {
   max-width: 800px;
@@ -483,10 +392,6 @@
   font-size: 16px;
   line-height: 1.85;
 }
-
-/* =========================================================
-   TABS
-========================================================= */
 
 .organisations-context-tabs {
   display: inline-flex;
@@ -498,10 +403,6 @@
   border-radius: 50px;
   background: rgba(92, 146, 105, 0.045);
 }
-
-/* =========================================================
-   TAB BUTTON
-========================================================= */
 
 .organisations-context-tab {
   min-width: 150px;
@@ -532,10 +433,6 @@
   box-shadow: 0 8px 20px rgba(92, 146, 105, 0.2);
 }
 
-/* =========================================================
-   TAB PANEL
-========================================================= */
-
 .organisations-context-panel {
   display: none;
   margin-top: 20px;
@@ -544,10 +441,6 @@
 .organisations-context-panel.active {
   display: block;
 }
-
-/* =========================================================
-   INTRO
-========================================================= */
 
 .organisations-context-intro {
   max-width: 900px;
@@ -562,20 +455,12 @@
   line-height: 1.85;
 }
 
-/* =========================================================
-   SIX CARDS GRID
-========================================================= */
-
 .organisations-context-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
   max-width: 1050px;
 }
-
-/* =========================================================
-   CONTEXT CARD
-========================================================= */
 
 .organisations-context-card {
   position: relative;
@@ -602,18 +487,10 @@
     background 0.45s ease;
 }
 
-/* =========================================================
-   REVEALED CARD
-========================================================= */
-
 .organisations-context-card.revealed {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* =========================================================
-   CARD HOVER
-========================================================= */
 
 .organisations-context-card.revealed:hover {
   transform: translateY(-8px) scale(1.015);
@@ -635,10 +512,6 @@
 .organisations-context-card.revealed:hover::after {
   opacity: 1;
 }
-
-/* =========================================================
-   CARD ICON
-========================================================= */
 
 .organisations-context-card-icon {
   width: 45px;
@@ -662,10 +535,6 @@
   background: rgba(92, 146, 105, 0.16);
 }
 
-/* =========================================================
-   CARD TITLE
-========================================================= */
-
 .organisations-context-card h3 {
   margin: 0 0 10px;
 
@@ -677,10 +546,6 @@
   line-height: 1.2;
 }
 
-/* =========================================================
-   CARD DESCRIPTION
-========================================================= */
-
 .organisations-context-card p {
   max-width: 470px;
   margin: 0;
@@ -689,10 +554,6 @@
   font-size: 13px;
   line-height: 1.75;
 }
-
-/* =========================================================
-   SUPPORT BOX — LIQUID GLASS
-========================================================= */
 
 .organisations-context-box {
   position: relative;
@@ -724,10 +585,6 @@
     box-shadow 0.35s ease;
 }
 
-/* =========================================================
-   GLASS TOP REFLECTION
-========================================================= */
-
 .organisations-context-box::before {
   content: "";
 
@@ -751,10 +608,6 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   SOFT GREEN GLASS GLOW
-========================================================= */
-
 .organisations-context-box::after {
   content: "";
 
@@ -777,10 +630,6 @@
   transition: transform 0.6s ease;
 }
 
-/* =========================================================
-   HOVER
-========================================================= */
-
 .organisations-context-box:hover {
   transform: translateY(-5px);
 
@@ -796,10 +645,6 @@
   transform: scale(1.3) translate(-10px, 10px);
 }
 
-/* =========================================================
-   BOX TITLE
-========================================================= */
-
 .organisations-context-box h3 {
   margin: 0 0 10px;
   color: #fff;
@@ -809,10 +654,6 @@
   line-height: 1.2;
 }
 
-/* =========================================================
-   BOX DESCRIPTION
-========================================================= */
-
 .organisations-context-box p {
   max-width: 900px;
   margin: 0;
@@ -821,10 +662,6 @@
   font-size: 14px;
   line-height: 1.8;
 }
-
-/* =========================================================
-   PROCESS STEPS
-========================================================= */
 
 .organisations-context-steps {
   display: grid;
@@ -837,10 +674,6 @@
 
   margin-top: 35px;
 }
-
-/* =========================================================
-   LIQUID GLASS STEP CARD
-========================================================= */
 
 .organisations-context-step {
   position: relative;
@@ -859,10 +692,6 @@
     box-shadow 0.35s ease;
 }
 
-/* =========================================================
-   GLASS HIGHLIGHT
-========================================================= */
-
 .organisations-context-step::before {
   content: "";
   position: absolute;
@@ -871,10 +700,6 @@
   width: 100%;
   height: 1px;
 }
-
-/* =========================================================
-   GLASS GLOW
-========================================================= */
 
 .organisations-context-step::after {
   content: "";
@@ -896,10 +721,6 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   STEP HOVER
-========================================================= */
-
 .organisations-context-step:hover {
   transform: translateY(-7px);
 
@@ -907,10 +728,6 @@
 
   box-shadow: 0 25px 55px rgba(17, 32, 21, 0.11);
 }
-
-/* =========================================================
-   STEP NUMBER
-========================================================= */
 
 .organisations-step-number {
   position: relative;
@@ -939,10 +756,6 @@
   letter-spacing: 1px;
 }
 
-/* =========================================================
-   STEP TITLE
-========================================================= */
-
 .organisations-context-step h3 {
   position: relative;
   z-index: 2;
@@ -957,10 +770,6 @@
   line-height: 1.2;
 }
 
-/* =========================================================
-   STEP DESCRIPTION
-========================================================= */
-
 .organisations-context-step p {
   position: relative;
   z-index: 2;
@@ -973,10 +782,6 @@
   font-size: 12px;
   line-height: 1.7;
 }
-
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (max-width: 991.98px) {
   .organisations-context {
@@ -1006,16 +811,10 @@
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 767.98px) {
   .organisations-context {
     padding: 40px 0;
   }
-
-  /* Header */
 
   .organisations-context-eyebrow {
     margin-bottom: 12px;
@@ -1040,8 +839,6 @@
     line-height: 1.8;
   }
 
-  /* Tabs */
-
   .organisations-context-tabs {
     width: 100%;
     display: grid;
@@ -1057,13 +854,9 @@
     font-size: 14px;
   }
 
-  /* Panel */
-
   .organisations-context-panel {
     margin-top: 40px;
   }
-
-  /* Intro */
 
   .organisations-context-intro {
     margin-bottom: 30px;
@@ -1074,7 +867,6 @@
     line-height: 20px;
   }
 
-  /* Six cards */
   .organisations-context-cards {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -1090,8 +882,6 @@
     transform: translateY(-3px);
   }
 
-  /* Support box */
-
   .organisations-context-box {
     margin-top: 30px;
     padding: 25px 22px;
@@ -1106,8 +896,6 @@
     font-size: 14px;
     line-height: 20px;
   }
-
-  /* Steps */
 
   .organisations-context-steps {
     grid-template-columns: 1fr;
@@ -1130,10 +918,6 @@
     line-height: 20px;
   }
 }
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
 
 @media (max-width: 400px) {
   .organisations-context {
@@ -1175,10 +959,6 @@
   }
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
   .organisations-context-card,
   .organisations-context-step,
@@ -1186,10 +966,6 @@
     transition: none;
   }
 }
-
-/* =========================================================
-   ORGANISATIONS PRICING
-========================================================= */
 
 .organisations-pricing {
   position: relative;
@@ -1199,17 +975,9 @@
   overflow: hidden;
 }
 
-/* =========================================================
-   SECTION HEADER
-========================================================= */
-
 .organisations-pricing-header {
   text-align: left;
 }
-
-/* =========================================================
-   EYEBROW
-========================================================= */
 
 .organisations-pricing-eyebrow {
   display: inline-block;
@@ -1231,10 +999,6 @@
   text-transform: uppercase;
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
-
 .organisations-pricing-title {
   margin: 0;
   color: var(--heading-color);
@@ -1249,10 +1013,6 @@
   color: var(--color-main);
 }
 
-/* =========================================================
-   EYEBROW LINE
-========================================================= */
-
 .organisations-pricing-line {
   width: 58px;
 
@@ -1262,10 +1022,6 @@
 
   background: var(--color-main);
 }
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .organisations-pricing-description {
   max-width: 800px;
@@ -1281,10 +1037,6 @@
   line-height: 1.85;
 }
 
-/* =========================================================
-   PRICING GRID
-========================================================= */
-
 .organisations-pricing-grid {
   display: grid;
 
@@ -1297,10 +1049,6 @@
   margin-top: 40px;
 }
 
-/* =========================================================
-   PRICING CARD
-========================================================= */
-
 .organisations-pricing-card {
   position: relative;
 
@@ -1312,11 +1060,6 @@
 
   border-radius: 18px;
 
-  /*
-    Light green / white card
-    because section itself is white.
-  */
-
   background: linear-gradient(145deg, #f8fcf9 0%, #eef7f0 100%);
 
   box-shadow: 0 12px 35px rgba(17, 32, 21, 0.055);
@@ -1327,10 +1070,6 @@
     border-color 0.35s ease,
     box-shadow 0.35s ease;
 }
-
-/* =========================================================
-   CARD TOP ACCENT
-========================================================= */
 
 .organisations-pricing-card::before {
   content: "";
@@ -1354,10 +1093,6 @@
     opacity 0.35s ease;
 }
 
-/* =========================================================
-   CARD INNER
-========================================================= */
-
 .organisations-pricing-card-inner {
   position: relative;
 
@@ -1366,10 +1101,6 @@
   padding: 35px 32px;
 }
 
-/* =========================================================
-   SUMMARY
-========================================================= */
-
 .organisations-pricing-summary {
   display: flex;
 
@@ -1377,10 +1108,6 @@
 
   flex: none;
 }
-
-/* =========================================================
-   SUBTITLE
-========================================================= */
 
 .organisations-pricing-card-subtitle {
   display: block;
@@ -1400,10 +1127,6 @@
   line-height: 1.5;
 }
 
-/* =========================================================
-   TITLE
-========================================================= */
-
 .organisations-pricing-card-title {
   max-width: 270px;
 
@@ -1422,10 +1145,6 @@
   letter-spacing: -0.5px;
 }
 
-/* =========================================================
-   PRICE
-========================================================= */
-
 .organisations-pricing-price {
   display: flex;
 
@@ -1435,10 +1154,6 @@
 
   margin-top: 28px;
 }
-
-/* =========================================================
-   PRICE VALUE
-========================================================= */
 
 .organisations-price {
   color: var(--heading-color);
@@ -1452,10 +1167,6 @@
   line-height: 1;
 }
 
-/* =========================================================
-   PRICE PERIOD
-========================================================= */
-
 .organisations-price-period {
   color: var(--text-color-1);
 
@@ -1463,11 +1174,6 @@
 
   font-size: 13px;
 }
-
-/* =========================================================
-   DETAILS
-   Desktop initially hidden
-========================================================= */
 
 .organisations-pricing-details {
   max-height: 0;
@@ -1484,10 +1190,6 @@
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* =========================================================
-   DIVIDER
-========================================================= */
-
 .organisations-pricing-divider {
   width: 100%;
 
@@ -1497,10 +1199,6 @@
 
   background: rgba(17, 32, 21, 0.1);
 }
-
-/* =========================================================
-   FEATURES
-========================================================= */
 
 .organisations-pricing-features {
   display: flex;
@@ -1515,10 +1213,6 @@
 
   list-style: none;
 }
-
-/* =========================================================
-   FEATURE ITEM
-========================================================= */
 
 .organisations-pricing-features li {
   display: flex;
@@ -1535,10 +1229,6 @@
 
   line-height: 1.55;
 }
-
-/* =========================================================
-   CHECK ICON
-========================================================= */
 
 .organisations-pricing-features li i {
   width: 17px;
@@ -1562,10 +1252,6 @@
 
   font-size: 8px;
 }
-
-/* =========================================================
-   BUTTON
-========================================================= */
 
 .organisations-pricing-btn {
   width: 100%;
@@ -1605,19 +1291,11 @@
     transform 0.3s ease;
 }
 
-/* =========================================================
-   BUTTON ICON
-========================================================= */
-
 .organisations-pricing-btn i {
   font-size: 10px;
 
   transition: transform 0.3s ease;
 }
-
-/* =========================================================
-   BUTTON HOVER
-========================================================= */
 
 .organisations-pricing-btn:hover {
   background: var(--color-darker);
@@ -1631,16 +1309,8 @@
   transform: translateX(4px);
 }
 
-/* =========================================================
-   DESKTOP HOVER
-========================================================= */
-
 @media (min-width: 992px) {
   .organisations-pricing-card:hover {
-    /*
-      Let content determine expanded height.
-    */
-
     min-height: 0;
 
     transform: translateY(-8px);
@@ -1650,15 +1320,11 @@
     box-shadow: 0 25px 60px rgba(17, 32, 21, 0.12);
   }
 
-  /* Accent expands */
-
   .organisations-pricing-card:hover::before {
     width: 80px;
 
     opacity: 1;
   }
-
-  /* Reveal details */
 
   .organisations-pricing-card:hover .organisations-pricing-details {
     max-height: 400px;
@@ -1669,10 +1335,6 @@
   }
 }
 
-/* =========================================================
-   FEATURED CARD
-========================================================= */
-
 .organisations-pricing-featured {
   border-color: rgba(92, 146, 105, 0.28);
 
@@ -1680,10 +1342,6 @@
 
   box-shadow: 0 15px 40px rgba(92, 146, 105, 0.09);
 }
-
-/* =========================================================
-   FEATURED BADGE
-========================================================= */
 
 .organisations-pricing-badge {
   position: absolute;
@@ -1710,10 +1368,6 @@
   letter-spacing: 1px;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 991.98px) {
   .organisations-pricing {
     padding: 85px 0;
@@ -1736,10 +1390,6 @@
   .organisations-pricing-card-inner {
     padding: 30px 26px;
   }
-
-  /*
-    Always show details
-  */
 
   .organisations-pricing-details {
     max-height: none;
@@ -1764,16 +1414,10 @@
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 767.98px) {
   .organisations-pricing {
     padding: 40px 0;
   }
-
-  /* Header */
 
   .organisations-pricing-eyebrow {
     margin-bottom: 12px;
@@ -1797,15 +1441,11 @@
     line-height: 20px;
   }
 
-  /* Grid */
-
   .organisations-pricing-grid {
     grid-template-columns: 1fr;
     gap: 18px;
     margin-top: 42px;
   }
-
-  /* Card */
 
   .organisations-pricing-card {
     min-height: auto;
@@ -1816,22 +1456,16 @@
     padding: 28px 23px;
   }
 
-  /* Subtitle */
-
   .organisations-pricing-card-subtitle {
     margin-bottom: 13px;
     font-size: 12px;
   }
-
-  /* Title */
 
   .organisations-pricing-card-title {
     max-width: 100%;
     font-size: 24px;
     line-height: 28px;
   }
-
-  /* Price */
 
   .organisations-pricing-price {
     margin-top: 26px;
@@ -1841,8 +1475,6 @@
     font-size: 30px;
   }
 
-  /* Details */
-
   .organisations-pricing-details {
     max-height: none;
     opacity: 1;
@@ -1851,13 +1483,9 @@
     transition: none;
   }
 
-  /* Divider */
-
   .organisations-pricing-divider {
     margin: 25px 0 20px;
   }
-
-  /* Features */
 
   .organisations-pricing-features {
     gap: 11px;
@@ -1867,14 +1495,10 @@
     font-size: 14px;
   }
 
-  /* Button */
-
   .organisations-pricing-btn {
     min-height: 45px;
     margin-top: 23px;
   }
-
-  /* Remove desktop hover */
 
   .organisations-pricing-card:hover {
     min-height: auto;
@@ -1887,18 +1511,12 @@
     opacity: 0.75;
   }
 
-  /* Badge */
-
   .organisations-pricing-badge {
     top: 17px;
 
     right: 17px;
   }
 }
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
 
 @media (max-width: 400px) {
   .organisations-pricing {
@@ -1942,10 +1560,6 @@
   }
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
   .organisations-pricing-card,
   .organisations-pricing-details,
@@ -1955,10 +1569,6 @@
   }
 }
 
-/* =========================================================
-   WHY ORGANISATIONS CHOOSE US
-========================================================= */
-
 .organisations-why-choose {
   position: relative;
   padding: 60px 0;
@@ -1967,18 +1577,10 @@
   overflow: hidden;
 }
 
-/* =========================================================
-   SECTION HEADER
-========================================================= */
-
 .organisations-why-choose-header {
   max-width: 850px;
   text-align: left;
 }
-
-/* =========================================================
-   EYEBROW
-========================================================= */
 
 .organisations-why-choose-eyebrow {
   display: inline-block;
@@ -1991,10 +1593,6 @@
   line-height: 1.5;
   text-transform: uppercase;
 }
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .organisations-why-choose-title {
   max-width: 850px;
@@ -2011,20 +1609,12 @@
   color: var(--color-lighter);
 }
 
-/* =========================================================
-   EYEBROW LINE
-========================================================= */
-
 .organisations-why-choose-line {
   width: 58px;
   height: 2px;
   margin: 15px 0;
   background: var(--color-main);
 }
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .organisations-why-choose-description {
   max-width: 800px;
@@ -2035,10 +1625,6 @@
   line-height: 20px;
 }
 
-/* =========================================================
-   CARDS GRID
-========================================================= */
-
 .organisations-why-choose-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2046,10 +1632,6 @@
   max-width: 1100px;
   margin-top: 55px;
 }
-
-/* =========================================================
-   GLASS CARD
-========================================================= */
 
 .organisations-why-choose-card {
   position: relative;
@@ -2077,10 +1659,6 @@
     background 0.45s ease;
 }
 
-/* =========================================================
-   SOFT GREEN GLOW
-========================================================= */
-
 .organisations-why-choose-card::after {
   content: "";
   position: absolute;
@@ -2106,19 +1684,11 @@
     opacity 0.4s ease;
 }
 
-/* =========================================================
-   CARD CONTENT
-========================================================= */
-
 .organisations-why-choose-card-content {
   position: relative;
   z-index: 2;
   margin: 0;
 }
-
-/* =========================================================
-   CARD TITLE
-========================================================= */
 
 .organisations-why-choose-card span {
   color: var(--color-lighter);
@@ -2129,10 +1699,6 @@
   letter-spacing: -0.3px;
 }
 
-/* =========================================================
-   CARD DESCRIPTION
-========================================================= */
-
 .organisations-why-choose-card p {
   max-width: 420px;
   color: var(--text-color-2);
@@ -2140,10 +1706,6 @@
   font-size: 16px;
   line-height: 20px;
 }
-
-/* =========================================================
-   DESKTOP HOVER
-========================================================= */
 
 @media (min-width: 992px) {
   .organisations-why-choose-card:hover {
@@ -2168,10 +1730,6 @@
   }
 }
 
-/* =========================================================
-   ACTIVE / FOCUS
-========================================================= */
-
 .organisations-why-choose-card:focus,
 .organisations-why-choose-card:focus-visible,
 .organisations-why-choose-card.active {
@@ -2179,10 +1737,6 @@
 
   border-color: rgba(92, 146, 105, 0.35);
 }
-
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (max-width: 991.98px) {
   .organisations-why-choose {
@@ -2226,10 +1780,6 @@
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 767.98px) {
   .organisations-why-choose {
     padding: 40px 0;
@@ -2262,19 +1812,11 @@
     line-height: 20px;
   }
 
-  /* -----------------------------------------
-     Grid
-  ----------------------------------------- */
-
   .organisations-why-choose-grid {
     grid-template-columns: 1fr;
     gap: 14px;
     margin-top: 40px;
   }
-
-  /* -----------------------------------------
-     Card
-  ----------------------------------------- */
 
   .organisations-why-choose-card {
     min-height: 225px;
@@ -2285,28 +1827,16 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* -----------------------------------------
-     Card Title
-  ----------------------------------------- */
-
   .organisations-why-choose-card h3 {
     margin-bottom: 14px;
     font-size: 24px;
     line-height: 28px;
   }
 
-  /* -----------------------------------------
-     Card Paragraph
-  ----------------------------------------- */
-
   .organisations-why-choose-card p {
     font-size: 14px;
     line-height: 20px;
   }
-
-  /* -----------------------------------------
-     Mobile Active
-  ----------------------------------------- */
 
   .organisations-why-choose-card:focus,
   .organisations-why-choose-card:focus-visible,
@@ -2326,10 +1856,6 @@
     opacity: 1;
   }
 }
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
 
 @media (max-width: 400px) {
   .organisations-why-choose {
@@ -2371,20 +1897,12 @@
   }
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
   .organisations-why-choose-card,
   .organisations-why-choose-card::after {
     transition: none;
   }
 }
-
-/* =========================================================
-   ORGANISATIONS FAQ SECTION
-========================================================= */
 
 .organisations-faq {
   position: relative;
@@ -2398,19 +1916,11 @@
   overflow: hidden;
 }
 
-/* =========================================================
-   SECTION HEADER
-========================================================= */
-
 .organisations-faq-header {
   max-width: 850px;
 
   text-align: left;
 }
-
-/* =========================================================
-   EYEBROW
-========================================================= */
 
 .organisations-faq-eyebrow {
   display: inline-block;
@@ -2431,10 +1941,6 @@
 
   text-transform: uppercase;
 }
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .organisations-faq-title {
   max-width: 850px;
@@ -2458,10 +1964,6 @@
   color: var(--color-main);
 }
 
-/* =========================================================
-   LINE
-========================================================= */
-
 .organisations-faq-line {
   width: 58px;
 
@@ -2471,10 +1973,6 @@
 
   background: var(--color-main);
 }
-
-/* =========================================================
-   FAQ LIST
-========================================================= */
 
 .organisations-faq-list {
   display: flex;
@@ -2488,10 +1986,6 @@
   margin-top: 60px;
 }
 
-/* =========================================================
-   FAQ ITEM
-========================================================= */
-
 .organisations-faq-item {
   position: relative;
 
@@ -2500,10 +1994,6 @@
   border: 1px solid rgba(92, 146, 105, 0.16);
 
   border-radius: 15px;
-
-  /*
-    Liquid Glass
-  */
 
   background: linear-gradient(
     135deg,
@@ -2522,10 +2012,6 @@
     box-shadow 0.35s ease,
     transform 0.35s ease;
 }
-
-/* =========================================================
-   GLASS HIGHLIGHT
-========================================================= */
 
 .organisations-faq-item::before {
   content: "";
@@ -2550,19 +2036,11 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   HOVER
-========================================================= */
-
 .organisations-faq-item:hover {
   border-color: rgba(92, 146, 105, 0.3);
 
   box-shadow: 0 18px 45px rgba(17, 32, 21, 0.09);
 }
-
-/* =========================================================
-   QUESTION BUTTON
-========================================================= */
 
 .organisations-faq-question {
   width: 100%;
@@ -2595,8 +2073,6 @@
   font-family: var(--font-2), "Lato", sans-serif;
 }
 
-/* Remove browser button effects */
-
 .organisations-faq-question:hover,
 .organisations-faq-question:focus,
 .organisations-faq-question:active {
@@ -2606,10 +2082,6 @@
 
   box-shadow: none;
 }
-
-/* =========================================================
-   NUMBER
-========================================================= */
 
 .organisations-faq-number {
   color: rgba(92, 146, 105, 0.65);
@@ -2622,10 +2094,6 @@
 
   letter-spacing: 1px;
 }
-
-/* =========================================================
-   QUESTION TEXT
-========================================================= */
 
 .organisations-faq-question-text {
   color: var(--heading-color);
@@ -2640,10 +2108,6 @@
 
   transition: color 0.3s ease;
 }
-
-/* =========================================================
-   PLUS ICON
-========================================================= */
 
 .organisations-faq-icon {
   width: 38px;
@@ -2674,10 +2138,6 @@
     border-color 0.3s ease;
 }
 
-/* =========================================================
-   ANSWER
-========================================================= */
-
 .organisations-faq-answer {
   display: grid;
 
@@ -2690,10 +2150,6 @@
     opacity 0.35s ease;
 }
 
-/* =========================================================
-   ANSWER INNER
-========================================================= */
-
 .organisations-faq-answer-inner {
   min-height: 0;
 
@@ -2703,10 +2159,6 @@
 
   transition: padding 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-/* =========================================================
-   ANSWER TEXT
-========================================================= */
 
 .organisations-faq-answer p {
   max-width: 800px;
@@ -2724,10 +2176,6 @@
   line-height: 1.85;
 }
 
-/* =========================================================
-   ACTIVE FAQ
-========================================================= */
-
 .organisations-faq-item.active {
   border-color: rgba(92, 146, 105, 0.35);
 
@@ -2740,25 +2188,13 @@
   box-shadow: 0 20px 50px rgba(17, 32, 21, 0.1);
 }
 
-/* =========================================================
-   ACTIVE QUESTION
-========================================================= */
-
 .organisations-faq-item.active .organisations-faq-question-text {
   color: var(--color-main);
 }
 
-/* =========================================================
-   ACTIVE NUMBER
-========================================================= */
-
 .organisations-faq-item.active .organisations-faq-number {
   color: var(--color-main);
 }
-
-/* =========================================================
-   ACTIVE ICON
-========================================================= */
 
 .organisations-faq-item.active .organisations-faq-icon {
   transform: rotate(45deg);
@@ -2770,27 +2206,15 @@
   color: #ffffff;
 }
 
-/* =========================================================
-   ACTIVE ANSWER
-========================================================= */
-
 .organisations-faq-item.active .organisations-faq-answer {
   grid-template-rows: 1fr;
 
   opacity: 1;
 }
 
-/* =========================================================
-   ACTIVE ANSWER PADDING
-========================================================= */
-
 .organisations-faq-item.active .organisations-faq-answer-inner {
   padding-bottom: 0;
 }
-
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (max-width: 991.98px) {
   .organisations-faq {
@@ -2822,10 +2246,6 @@
     padding-right: 75px;
   }
 }
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 767.98px) {
   .organisations-faq {
@@ -2862,10 +2282,6 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* -----------------------------------------
-     Question
-  ----------------------------------------- */
-
   .organisations-faq-question {
     grid-template-columns:
       30px
@@ -2877,36 +2293,20 @@
     padding: 18px 16px;
   }
 
-  /* -----------------------------------------
-     Number
-  ----------------------------------------- */
-
   .organisations-faq-number {
     font-size: 9px;
   }
-
-  /* -----------------------------------------
-     Question Text
-  ----------------------------------------- */
 
   .organisations-faq-question-text {
     font-size: 18px;
     line-height: 22px;
   }
 
-  /* -----------------------------------------
-     Icon
-  ----------------------------------------- */
-
   .organisations-faq-icon {
     width: 32px;
     height: 32px;
     font-size: 10px;
   }
-
-  /* -----------------------------------------
-     Answer
-  ----------------------------------------- */
 
   .organisations-faq-answer-inner {
     padding-left: 56px;
@@ -2919,10 +2319,6 @@
     line-height: 20px;
   }
 }
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
 
 @media (max-width: 400px) {
   .organisations-faq {
@@ -2973,10 +2369,6 @@
   }
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
   .organisations-faq-item,
   .organisations-faq-icon,
@@ -2986,10 +2378,6 @@
   }
 }
 
-/* =========================================================
-   ORGANISATIONS ENQUIRY
-========================================================= */
-
 .organisations-enquiry {
   position: relative;
   padding: 60px 0 120px;
@@ -2998,18 +2386,10 @@
   overflow: hidden;
 }
 
-/* =========================================================
-   SECTION HEADER
-========================================================= */
-
 .organisations-enquiry-header {
   text-align: center;
   margin-bottom: 60px;
 }
-
-/* =========================================================
-   EYEBROW
-========================================================= */
 
 .organisations-enquiry-eyebrow {
   display: inline-block;
@@ -3022,10 +2402,6 @@
   line-height: 20px;
   text-transform: uppercase;
 }
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .organisations-enquiry-title {
   margin: 0;
@@ -3041,10 +2417,6 @@
   color: var(--color-lighter);
 }
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
 .organisations-enquiry-description {
   margin-top: 20px;
   color: #000;
@@ -3053,10 +2425,6 @@
   line-height: 20px;
 }
 
-/* =========================================================
-   FORM WRAPPER
-========================================================= */
-
 .organisations-enquiry-form-wrapper {
   display: flex;
 
@@ -3064,10 +2432,6 @@
 
   width: 100%;
 }
-
-/* =========================================================
-   FORM CARD
-========================================================= */
 
 .organisations-enquiry-form-card {
   width: 100%;
@@ -3078,7 +2442,7 @@
   background: linear-gradient(
     135deg,
     rgba(37, 80, 46, 0.897),
-   rgba(48, 94, 58, 0.65)
+    rgba(48, 94, 58, 0.65)
   );
 
   box-shadow:
@@ -3090,10 +2454,6 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-/* =========================================================
-   FORM HEADER
-========================================================= */
-
 .organisations-enquiry-form-header {
   display: flex;
 
@@ -3103,10 +2463,6 @@
 
   margin-bottom: 28px;
 }
-
-/* =========================================================
-   FORM ICON
-========================================================= */
 
 .organisations-enquiry-form-icon {
   width: 46px;
@@ -3131,10 +2487,6 @@
   font-size: 20px;
 }
 
-/* =========================================================
-   FORM HEADER TITLE
-========================================================= */
-
 .organisations-enquiry-form-header h3 {
   margin: 0 0 4px;
 
@@ -3157,10 +2509,6 @@
   font-size: 12px;
 }
 
-/* =========================================================
-   FORM
-========================================================= */
-
 .organisations-enquiry-form {
   display: flex;
 
@@ -3168,10 +2516,6 @@
 
   gap: 18px;
 }
-
-/* =========================================================
-   FORM ROW
-========================================================= */
 
 .organisations-enquiry-row {
   display: grid;
@@ -3181,17 +2525,9 @@
   gap: 10px;
 }
 
-/* =========================================================
-   FIELD
-========================================================= */
-
 .organisations-enquiry-field {
   width: 100%;
 }
-
-/* =========================================================
-   LABEL
-========================================================= */
 
 .organisations-enquiry-field label {
   display: block;
@@ -3215,19 +2551,11 @@
   font-size: 10px;
 }
 
-/* =========================================================
-   INPUT WRAPPER
-========================================================= */
-
 .organisations-enquiry-input-wrap {
   position: relative;
 
   width: 100%;
 }
-
-/* =========================================================
-   INPUT ICON
-========================================================= */
 
 .organisations-enquiry-input-wrap > i:first-child {
   position: absolute;
@@ -3245,10 +2573,6 @@
 
   z-index: 2;
 }
-
-/* =========================================================
-   INPUT / SELECT / TEXTAREA
-========================================================= */
 
 .organisations-enquiry-input-wrap input,
 .organisations-enquiry-input-wrap select,
@@ -3275,20 +2599,12 @@
     box-shadow 0.3s ease;
 }
 
-/* =========================================================
-   INPUT
-========================================================= */
-
 .organisations-enquiry-input-wrap input,
 .organisations-enquiry-input-wrap select {
   height: 43px;
 
   padding: 0 38px;
 }
-
-/* =========================================================
-   TEXTAREA
-========================================================= */
 
 .organisations-enquiry-input-wrap textarea {
   min-height: 60px;
@@ -3297,18 +2613,10 @@
   line-height: 20px;
 }
 
-/* =========================================================
-   PLACEHOLDER
-========================================================= */
-
 .organisations-enquiry-input-wrap input::placeholder,
 .organisations-enquiry-input-wrap textarea::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }
-
-/* =========================================================
-   SELECT
-========================================================= */
 
 .organisations-enquiry-input-wrap select {
   appearance: none;
@@ -3323,10 +2631,6 @@
 
   color: #ffffff;
 }
-
-/* =========================================================
-   SELECT ARROW
-========================================================= */
 
 .organisations-enquiry-input-wrap .select-arrow {
   position: absolute;
@@ -3343,10 +2647,6 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   FOCUS
-========================================================= */
-
 .organisations-enquiry-input-wrap input:focus,
 .organisations-enquiry-input-wrap select:focus,
 .organisations-enquiry-input-wrap textarea:focus {
@@ -3356,10 +2656,6 @@
 
   box-shadow: 0 0 0 3px rgba(92, 146, 105, 0.08);
 }
-
-/* =========================================================
-   SUBMIT BUTTON
-========================================================= */
 
 .organisations-enquiry-submit {
   width: 100%;
@@ -3410,10 +2706,6 @@
   box-shadow: 0 8px 25px rgba(92, 146, 105, 0.2);
 }
 
-/* =========================================================
-   CONFIDENTIAL NOTE
-========================================================= */
-
 .organisations-enquiry-confidential {
   display: flex;
 
@@ -3442,10 +2734,6 @@
   font-size: 11px;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 991.98px) {
   .organisations-enquiry {
     padding: 90px 0 100px;
@@ -3469,10 +2757,6 @@
     padding: 28px;
   }
 }
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 767.98px) {
   .organisations-enquiry {
@@ -3505,8 +2789,6 @@
     line-height: 20px;
   }
 
-  /* Form */
-
   .organisations-enquiry-form-card {
     padding: 22px 18px;
     border-radius: 15px;
@@ -3526,8 +2808,6 @@
   .organisations-enquiry-form-header h3 {
     font-size: 20px;
   }
-
-  /* Rows become single column */
 
   .organisations-enquiry-row {
     grid-template-columns: 1fr;
@@ -3565,10 +2845,6 @@
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 400px) {
   .organisations-enquiry {
     padding: 60px 0 70px;
@@ -3605,10 +2881,6 @@
     font-size: 10px;
   }
 }
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .organisations-enquiry-input-wrap input,

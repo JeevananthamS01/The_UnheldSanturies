@@ -8,7 +8,6 @@
     <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
     <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
     <link href="lib/css/fontawesome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -47,43 +46,38 @@
     </style>
   </head>
   <body>
-     <!-- Header -->
+    <!-- Header -->
     <header class="site-header">
       <div class="header-top d-none d-lg-block">
         <div class="container-xl header-top-inner">
-          <!-- Social -->
           <div class="header-socials">
             <a href="#" class="header-social-icon" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
+              <i class="bi bi-facebook"></i>
             </a>
 
             <a href="#" class="header-social-icon" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
+              <i class="bi bi-instagram"></i>
             </a>
 
             <a href="#" class="header-social-icon" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
+              <i class="bi bi-youtube"></i>
             </a>
 
             <a href="#" class="header-social-icon" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
+              <i class="bi bi-linkedin"></i>
             </a>
           </div>
 
-          <!-- Optional Alert -->
           <div id="header-alert"></div>
 
-          <!-- Contact -->
           <div class="header-contact">
             <div class="header-contact-item">
-              <i class="fa-regular fa-envelope"></i>
-
-              <a href="mailto:hello@theunheard.in"> business@unheld.com </a>
+              <i class="bi bi-envelope"></i>
+              <a href="mailto:business@theunheld.in"> business@theunheld.in </a>
             </div>
 
             <div class="header-contact-item">
-              <i class="fa-solid fa-phone"></i>
-
+              <i class="bi bi-telephone"></i>
               <a href="tel:+919840221718"> +91 98402 21718 </a>
             </div>
           </div>
@@ -95,43 +89,67 @@
           <a class="navbar-brand site-logo" href="index.html">
             <img
               src="images/logo.png"
-              alt="The Unheard"
-              width="166"
-              height="41"
+              alt="The unheld"
+              width="300"
+              height="150"
             />
           </a>
 
           <div class="site-navigation">
-            <!-- Desktop Navigation -->
             <ul class="navbar-nav site-nav-list">
               <li class="nav-item">
-                <a class="nav-link" href="index.html"> Home </a>
+                <a class="nav-link " href="index.html"> Home </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About </a>
+                <a class="nav-link " href="about.html"> About </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="sanctuaries.html"> Sanctuaries </a>
+                <a class="nav-link " href="sanctuaries.html"> Sanctuaries </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="we-come-to-you.html">
+                <a class="nav-link " href="we-come-to-you.html">
                   We Come To You
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link active" href="organisations.html">
-                  For Organisations
+              <li class="nav-item dropdown site-nav-dropdown">
+                <a
+                  class="nav-link active"
+                  href="organisations.html"
+                  id="corporateSchoolDropdown"
+                >
+                  For Corporates/School
+                  <i class="bi bi-chevron-down"></i>
                 </a>
+
+                <ul class="dropdown-menu site-dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="organisations.html?context=corporate"
+                    >
+                      For Corporates
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="organisations.html?context=school"
+                    >
+                      For Schools & Colleges
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
 
           <div class="header-action">
-            <a href="index.html#unheardBooking" class="btn-light"> Make Appointment </a>
+            <a href="#unheardBooking" class="btn-light"> Make Appointment </a>
           </div>
 
           <button
@@ -139,8 +157,8 @@
             class="site-menu-toggle"
             id="siteMenuToggle"
             aria-label="Open navigation"
-            aria-controls="siteMobileMenu"
             aria-expanded="false"
+            aria-controls="siteMobileMenu"
           >
             <span></span>
             <span></span>
@@ -152,10 +170,8 @@
       <div class="site-menu-backdrop" id="siteMenuBackdrop"></div>
 
       <aside class="site-mobile-menu" id="siteMobileMenu" aria-hidden="true">
-        <!-- Menu Header -->
-
         <div class="site-mobile-menu-header">
-          <span class="site-mobile-title"> MENU </span>
+          <div class="site-mobile-title">The Unheld</div>
 
           <button
             type="button"
@@ -168,8 +184,6 @@
           </button>
         </div>
 
-        <!-- Menu Body -->
-
         <div class="site-mobile-menu-body">
           <ul class="site-mobile-nav-list">
             <li>
@@ -177,28 +191,42 @@
             </li>
 
             <li>
-              <a href="about.html"> About </a>
+              <a href="about.html" > About </a>
             </li>
 
             <li>
-              <a href="sanctuaries.html"> Sanctuaries </a>
+              <a href="sanctuaries.html" > Sanctuaries </a>
             </li>
 
             <li>
               <a href="we-come-to-you.html"> We Come To You </a>
             </li>
 
-            <li>
-              <a href="organisations.html" class="active"> For Organisations </a>
+            <li class="mobile-dropdown-item">
+              <a href="organisations.html" class="mobile-dropdown-main active">
+                <span>For Corporates/School</span>
+
+                <span class="mobile-dropdown-arrow">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+
+              <div class="mobile-submenu">
+                <a href="organisations.html?context=corporate">
+                  For Corporates
+                </a>
+
+                <a href="organisations.html?context=school">
+                  For Schools & Colleges
+                </a>
+              </div>
             </li>
           </ul>
 
-          <!-- Mobile Appointment -->
-
           <div class="mobile-menu-action">
-            <a href="index.html#unheardBooking" class="mobile-menu-button">
+            <a href="#unheardBooking" class="mobile-menu-button">
               Make Appointment
-              <i class="fa-solid fa-arrow-right"></i>
+              <i class="bi bi-arrow-up-right"></i>
             </a>
           </div>
         </div>
@@ -216,9 +244,7 @@
                 <i class="fa-solid fa-plus"></i>
               </span>
 
-              <span>
-                UNHELD - Corporate & School Counseling · Tamil Nadu
-              </span>
+              <span> UNHELD - Corporate & School Counseling · Tamil Nadu </span>
             </div>
 
             <!-- Title -->
@@ -244,13 +270,14 @@
                 Enquire For Your School/College
               </a>
 
-              <a class="btn-light"
-                  href="https://wa.me/919840221718"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </a>
+              <a
+                class="btn-light"
+                href="https://wa.me/919840221718"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
             </div>
 
             <div class="organisations-counters">
@@ -330,6 +357,7 @@
         <div
           class="organisations-context-panel active"
           data-context-panel="corporate"
+          id="corporate"
         >
           <!-- Intro -->
 
@@ -508,7 +536,11 @@
           </div>
         </div>
 
-        <div class="organisations-context-panel" data-context-panel="school">
+        <div
+          class="organisations-context-panel"
+          data-context-panel="school"
+          id="school"
+        >
           <!-- Intro -->
 
           <div class="organisations-context-intro">
@@ -1176,7 +1208,8 @@
           <div class="organisations-enquiry-line"></div>
 
           <p class="organisations-enquiry-description">
-            Tell us about your organisation. We'll respond within 24 hours with a proposed approach — no jargon, no sales deck.
+            Tell us about your organisation. We'll respond within 24 hours with
+            a proposed approach — no jargon, no sales deck.
           </p>
         </div>
 
@@ -1412,7 +1445,7 @@
       </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <!-- Footer Main -->
@@ -1505,7 +1538,9 @@
                   <i class="bi bi-envelope"></i>
                 </span>
 
-                <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+                <a href="mailto:business@theunheld.in">
+                  business@theunheld.in
+                </a>
               </li>
 
               <!-- WhatsApp -->
@@ -1537,7 +1572,11 @@
 
           <div class="footer-credit">
             Designed &amp; Developed by
-            <a href="https://dazzletechsolutions.com/" target="_blank" rel="noopener">
+            <a
+              href="https://dazzletechsolutions.com/"
+              target="_blank"
+              rel="noopener"
+            >
               Dazzle Tech Solutions
             </a>
           </div>
@@ -1554,15 +1593,10 @@
     <script src="lib/js/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
 
-
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        /* =======================================================
-     ELEMENTS
-  ======================================================== */
-
         const contextTabs = document.querySelectorAll(
           ".organisations-context-tab",
         );
@@ -1575,10 +1609,6 @@
           ".organisations-context-card",
         );
 
-        /* =======================================================
-     CARD REVEAL OBSERVER
-  ======================================================== */
-
         const cardObserver = new IntersectionObserver(
           function (entries, observer) {
             entries.forEach(function (entry) {
@@ -1588,21 +1618,10 @@
 
               const card = entry.target;
 
-              /*
-               * Prevent the same card from
-               * being animated twice.
-               */
-
               if (card.classList.contains("revealed")) {
                 observer.unobserve(card);
-
                 return;
               }
-
-              /*
-               * Get the card's position inside
-               * its current 6-card grid.
-               */
 
               const parent = card.closest(".organisations-context-cards");
 
@@ -1616,131 +1635,35 @@
                 index = cards.indexOf(card);
               }
 
-              /*
-               * Desktop:
-               * Two cards are visible in a row,
-               * so reveal them with a small stagger.
-               *
-               * Mobile:
-               * Use a smaller stagger.
-               */
-
               const isMobile = window.innerWidth <= 767;
 
-              let delay;
-
-              if (isMobile) {
-                delay = index * 80;
-              } else {
-                delay = (index % 2) * 120;
-              }
+              const delay = isMobile ? index * 80 : (index % 2) * 120;
 
               setTimeout(function () {
                 card.classList.add("revealed");
               }, delay);
-
-              /*
-               * Stop observing this card.
-               */
 
               observer.unobserve(card);
             });
           },
           {
             threshold: 0.12,
-
             rootMargin: "0px 0px -70px 0px",
           },
         );
-
-        /* =======================================================
-     OBSERVE ALL CONTEXT CARDS
-  ======================================================== */
 
         contextCards.forEach(function (card) {
           cardObserver.observe(card);
         });
 
-        /* =======================================================
-     TAB SWITCHING
-  ======================================================== */
-
-        contextTabs.forEach(function (tab) {
-          tab.addEventListener("click", function () {
-            const target = tab.getAttribute("data-context-tab");
-
-            if (!target) {
-              return;
-            }
-
-            /* -----------------------------------------------
-           If already active, do nothing
-        ------------------------------------------------ */
-
-            if (tab.classList.contains("active")) {
-              return;
-            }
-
-            /* -----------------------------------------------
-           Remove active from all tabs
-        ------------------------------------------------ */
-
-            contextTabs.forEach(function (item) {
-              item.classList.remove("active");
-            });
-
-            /* -----------------------------------------------
-           Hide all panels
-        ------------------------------------------------ */
-
-            contextPanels.forEach(function (panel) {
-              panel.classList.remove("active");
-            });
-
-            /* -----------------------------------------------
-           Activate clicked tab
-        ------------------------------------------------ */
-
-            tab.classList.add("active");
-
-            /* -----------------------------------------------
-           Find target panel
-        ------------------------------------------------ */
-
-            const targetPanel = document.querySelector(
-              '[data-context-panel="' + target + '"]',
-            );
-
-            if (!targetPanel) {
-              return;
-            }
-
-            targetPanel.classList.add("active");
-
-            /*
-             * Wait until the panel is displayed,
-             * then check whether any cards are
-             * already inside the viewport.
-             */
-
-            requestAnimationFrame(function () {
-              revealVisibleCards(targetPanel);
-            });
-          });
-        });
-
-        /* =======================================================
-     REVEAL VISIBLE CARDS
-  ======================================================== */
-
         function revealVisibleCards(panel) {
+          if (!panel) {
+            return;
+          }
+
           const cards = panel.querySelectorAll(".organisations-context-card");
 
           cards.forEach(function (card) {
-            /*
-             * Already revealed?
-             */
-
             if (card.classList.contains("revealed")) {
               return;
             }
@@ -1749,20 +1672,12 @@
 
             const viewportHeight = window.innerHeight;
 
-            /*
-             * Card is currently visible.
-             */
-
             const isVisible =
               rect.top < viewportHeight * 0.9 && rect.bottom > 0;
 
             if (!isVisible) {
               return;
             }
-
-            /*
-             * Small stagger.
-             */
 
             const cardsArray = Array.from(cards);
 
@@ -1776,37 +1691,104 @@
               card.classList.add("revealed");
             }, delay);
 
-            /*
-             * We don't need to observe this
-             * card anymore.
-             */
-
             cardObserver.unobserve(card);
           });
         }
 
-        /* =======================================================
-     INITIAL ACTIVE PANEL
-  ======================================================== */
+        function activateContext(target, updateUrl) {
+          if (target !== "corporate" && target !== "school") {
+            return;
+          }
 
-        const initialPanel = document.querySelector(
-          ".organisations-context-panel.active",
-        );
+          const targetTab = document.querySelector(
+            '.organisations-context-tab[data-context-tab="' + target + '"]',
+          );
 
-        if (initialPanel) {
-          /*
-           * Only cards already visible on
-           * initial page load are revealed.
-           */
+          const targetPanel = document.querySelector(
+            '.organisations-context-panel[data-context-panel="' + target + '"]',
+          );
+
+          if (!targetTab || !targetPanel) {
+            return;
+          }
+
+          contextTabs.forEach(function (tab) {
+            tab.classList.remove("active");
+            tab.setAttribute("aria-selected", "false");
+          });
+
+          contextPanels.forEach(function (panel) {
+            panel.classList.remove("active");
+          });
+
+          targetTab.classList.add("active");
+          targetTab.setAttribute("aria-selected", "true");
+
+          targetPanel.classList.add("active");
+
+          if (updateUrl) {
+            const url = new URL(window.location.href);
+
+            url.searchParams.set("context", target);
+
+            window.history.replaceState(
+              {},
+              "",
+              url.pathname + "?" + url.searchParams.toString(),
+            );
+          }
 
           requestAnimationFrame(function () {
-            revealVisibleCards(initialPanel);
+            revealVisibleCards(targetPanel);
           });
         }
 
-        /* =======================================================
-     RESIZE HANDLING
-  ======================================================== */
+        contextTabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            const target = tab.getAttribute("data-context-tab");
+
+            if (!target) {
+              return;
+            }
+
+            if (tab.classList.contains("active")) {
+              return;
+            }
+
+            activateContext(target, true);
+          });
+        });
+
+        const params = new URLSearchParams(window.location.search);
+
+        const requestedContext = params.get("context");
+
+        if (requestedContext === "corporate" || requestedContext === "school") {
+          activateContext(requestedContext, false);
+
+          setTimeout(function () {
+            const contextSection = document.getElementById(
+              "organisationsContext",
+            );
+
+            if (contextSection) {
+              contextSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          }, 150);
+        } else {
+          const initialPanel = document.querySelector(
+            ".organisations-context-panel.active",
+          );
+
+          if (initialPanel) {
+            requestAnimationFrame(function () {
+              revealVisibleCards(initialPanel);
+            });
+          }
+        }
 
         let resizeTimer;
 
@@ -1874,106 +1856,5 @@
       });
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.getElementById("siteMenuToggle");
-
-        const menu = document.getElementById("siteMobileMenu");
-
-        const menuClose = document.getElementById("siteMenuClose");
-
-        const backdrop = document.getElementById("siteMenuBackdrop");
-
-
-        if (!menuToggle || !menu || !menuClose || !backdrop) {
-          console.warn("Mobile navigation elements not found.");
-
-          return;
-        }
-
-
-        function openMenu() {
-          menu.classList.add("show");
-
-          backdrop.classList.add("show");
-
-          menuToggle.classList.add("active");
-
-          menuToggle.setAttribute("aria-expanded", "true");
-
-          menu.setAttribute("aria-hidden", "false");
-
-          menuToggle.setAttribute("aria-label", "Close navigation");
-
-          document.body.classList.add("site-menu-open");
-        }
-
-        function closeMenu() {
-          menu.classList.remove("show");
-
-          backdrop.classList.remove("show");
-
-          menuToggle.classList.remove("active");
-
-          menuToggle.setAttribute("aria-expanded", "false");
-
-          menu.setAttribute("aria-hidden", "true");
-
-          menuToggle.setAttribute("aria-label", "Open navigation");
-
-          document.body.classList.remove("site-menu-open");
-        }
-
-
-        menuToggle.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          event.stopPropagation();
-
-          if (menu.classList.contains("show")) {
-            closeMenu();
-          } else {
-            openMenu();
-          }
-        });
-
-
-        menuClose.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          closeMenu();
-        });
-
-        backdrop.addEventListener("click", function () {
-          closeMenu();
-        });
-
-
-        const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
-
-        menuLinks.forEach(function (link) {
-          link.addEventListener("click", function () {
-            closeMenu();
-          });
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && menu.classList.contains("show")) {
-            closeMenu();
-          }
-        });
-        
-        window.addEventListener("resize", function () {
-          /*
-        When returning to desktop,
-        always close mobile menu.
-      */
-
-          if (window.innerWidth >= 992) {
-            closeMenu();
-          }
-        });
-      });
-    </script>
   </body>
 </html>

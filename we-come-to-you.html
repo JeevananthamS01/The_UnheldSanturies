@@ -8,7 +8,6 @@
     <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
     <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
     <link href="lib/css/fontawesome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -51,39 +50,34 @@
     <header class="site-header">
       <div class="header-top d-none d-lg-block">
         <div class="container-xl header-top-inner">
-          <!-- Social -->
           <div class="header-socials">
             <a href="#" class="header-social-icon" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
+              <i class="bi bi-facebook"></i>
             </a>
 
             <a href="#" class="header-social-icon" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
+              <i class="bi bi-instagram"></i>
             </a>
 
             <a href="#" class="header-social-icon" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
+              <i class="bi bi-youtube"></i>
             </a>
 
             <a href="#" class="header-social-icon" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
+              <i class="bi bi-linkedin"></i>
             </a>
           </div>
 
-          <!-- Optional Alert -->
           <div id="header-alert"></div>
 
-          <!-- Contact -->
           <div class="header-contact">
             <div class="header-contact-item">
-              <i class="fa-regular fa-envelope"></i>
-
-              <a href="mailto:hello@theunheard.in"> business@unheld.com </a>
+              <i class="bi bi-envelope"></i>
+              <a href="mailto:business@theunheld.in"> business@theunheld.in </a>
             </div>
 
             <div class="header-contact-item">
-              <i class="fa-solid fa-phone"></i>
-
+              <i class="bi bi-telephone"></i>
               <a href="tel:+919840221718"> +91 98402 21718 </a>
             </div>
           </div>
@@ -95,25 +89,24 @@
           <a class="navbar-brand site-logo" href="index.html">
             <img
               src="images/logo.png"
-              alt="The Unheard"
-              width="166"
-              height="41"
+              alt="The unheld"
+              width="300"
+              height="150"
             />
           </a>
 
           <div class="site-navigation">
-            <!-- Desktop Navigation -->
             <ul class="navbar-nav site-nav-list">
               <li class="nav-item">
                 <a class="nav-link " href="index.html"> Home </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About </a>
+                <a class="nav-link " href="about.html"> About </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="sanctuaries.html"> Sanctuaries </a>
+                <a class="nav-link " href="sanctuaries.html"> Sanctuaries </a>
               </li>
 
               <li class="nav-item">
@@ -122,17 +115,41 @@
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link " href="organisations.html">
-                  For Organisations
+              <li class="nav-item dropdown site-nav-dropdown">
+                <a
+                  class="nav-link"
+                  href="organisations.html"
+                  id="corporateSchoolDropdown"
+                >
+                  For Corporates/School
+                  <i class="bi bi-chevron-down"></i>
                 </a>
-              </li>
 
+                <ul class="dropdown-menu site-dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="organisations.html?context=corporate"
+                    >
+                      For Corporates
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="organisations.html?context=school"
+                    >
+                      For Schools & Colleges
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
 
           <div class="header-action">
-            <a href="index.html#unheardBooking" class="btn-light"> Make Appointment </a>
+            <a href="#unheardBooking" class="btn-light"> Make Appointment </a>
           </div>
 
           <button
@@ -140,8 +157,8 @@
             class="site-menu-toggle"
             id="siteMenuToggle"
             aria-label="Open navigation"
-            aria-controls="siteMobileMenu"
             aria-expanded="false"
+            aria-controls="siteMobileMenu"
           >
             <span></span>
             <span></span>
@@ -153,10 +170,8 @@
       <div class="site-menu-backdrop" id="siteMenuBackdrop"></div>
 
       <aside class="site-mobile-menu" id="siteMobileMenu" aria-hidden="true">
-        <!-- Menu Header -->
-
         <div class="site-mobile-menu-header">
-          <span class="site-mobile-title"> MENU </span>
+          <div class="site-mobile-title">The Unheld</div>
 
           <button
             type="button"
@@ -169,8 +184,6 @@
           </button>
         </div>
 
-        <!-- Menu Body -->
-
         <div class="site-mobile-menu-body">
           <ul class="site-mobile-nav-list">
             <li>
@@ -178,29 +191,42 @@
             </li>
 
             <li>
-              <a href="about.html"> About </a>
+              <a href="about.html" > About </a>
             </li>
 
             <li>
-              <a href="sanctuaries.html"> Sanctuaries </a>
+              <a href="sanctuaries.html" > Sanctuaries </a>
             </li>
 
             <li>
               <a href="we-come-to-you.html" class="active"> We Come To You </a>
             </li>
 
-            <li>
-              <a href="organisations.html"> For Organisations </a>
-            </li>
+            <li class="mobile-dropdown-item">
+              <a href="organisations.html" class="mobile-dropdown-main">
+                <span>For Corporates/School</span>
 
+                <span class="mobile-dropdown-arrow">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </a>
+
+              <div class="mobile-submenu">
+                <a href="organisations.html?context=corporate">
+                  For Corporates
+                </a>
+
+                <a href="organisations.html?context=school">
+                  For Schools & Colleges
+                </a>
+              </div>
+            </li>
           </ul>
 
-          <!-- Mobile Appointment -->
-
           <div class="mobile-menu-action">
-            <a href="index.html#unheardBooking" class="mobile-menu-button">
+            <a href="#unheardBooking" class="mobile-menu-button">
               Make Appointment
-              <i class="fa-solid fa-arrow-right"></i>
+              <i class="bi bi-arrow-up-right"></i>
             </a>
           </div>
         </div>
@@ -1128,7 +1154,7 @@
                   <i class="bi bi-envelope"></i>
                 </span>
 
-                <a href="mailto:hello@theunheard.in"> hello@theunheard.in </a>
+                <a href="mailto:business@theunheld.in"> business@theunheld.in </a>
               </li>
 
               <!-- WhatsApp -->
@@ -1942,107 +1968,6 @@
       });
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.getElementById("siteMenuToggle");
-
-        const menu = document.getElementById("siteMobileMenu");
-
-        const menuClose = document.getElementById("siteMenuClose");
-
-        const backdrop = document.getElementById("siteMenuBackdrop");
-
-
-        if (!menuToggle || !menu || !menuClose || !backdrop) {
-          console.warn("Mobile navigation elements not found.");
-
-          return;
-        }
-
-
-        function openMenu() {
-          menu.classList.add("show");
-
-          backdrop.classList.add("show");
-
-          menuToggle.classList.add("active");
-
-          menuToggle.setAttribute("aria-expanded", "true");
-
-          menu.setAttribute("aria-hidden", "false");
-
-          menuToggle.setAttribute("aria-label", "Close navigation");
-
-          document.body.classList.add("site-menu-open");
-        }
-
-        function closeMenu() {
-          menu.classList.remove("show");
-
-          backdrop.classList.remove("show");
-
-          menuToggle.classList.remove("active");
-
-          menuToggle.setAttribute("aria-expanded", "false");
-
-          menu.setAttribute("aria-hidden", "true");
-
-          menuToggle.setAttribute("aria-label", "Open navigation");
-
-          document.body.classList.remove("site-menu-open");
-        }
-
-
-        menuToggle.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          event.stopPropagation();
-
-          if (menu.classList.contains("show")) {
-            closeMenu();
-          } else {
-            openMenu();
-          }
-        });
-
-
-        menuClose.addEventListener("click", function (event) {
-          event.preventDefault();
-
-          closeMenu();
-        });
-
-        backdrop.addEventListener("click", function () {
-          closeMenu();
-        });
-
-
-        const menuLinks = menu.querySelectorAll(".site-mobile-nav-list a");
-
-        menuLinks.forEach(function (link) {
-          link.addEventListener("click", function () {
-            closeMenu();
-          });
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && menu.classList.contains("show")) {
-            closeMenu();
-          }
-        });
-        
-        window.addEventListener("resize", function () {
-          /*
-        When returning to desktop,
-        always close mobile menu.
-      */
-
-          if (window.innerWidth >= 992) {
-            closeMenu();
-          }
-        });
-      });
-    </script>
   </body>
   <!-- Mirrored from wivana-html.zaderonstudio.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jul 2026 11:08:08 GMT -->
 </html>
