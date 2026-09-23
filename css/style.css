@@ -4306,3 +4306,60 @@ body.site-menu-open {
     line-height: 22px;
   }
 }
+
+
+/* WhatsApp Chat-btn*/
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 34px;
+  z-index: 9999;
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.35);
+  animation: whatsappPulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  color: #fff;
+  transform: scale(1.08);
+  text-decoration: none;
+}
+
+.whatsapp-left {
+  right: 25px;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .whatsapp-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+    bottom: 18px;
+  }
+
+  .whatsapp-left {
+    right: 18px;
+  }
+}

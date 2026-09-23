@@ -109,6 +109,22 @@
         font-size: 18px;
       }
 
+      @media (max-width: 992px) {
+        .service-hero h1 {
+          font-size: 52px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .service-hero {
+          padding: 120px 0 80px;
+        }
+
+        .service-hero h1 {
+          font-size: 30px;
+        }
+      }
+
       .hero-btn {
         display: inline-block;
         margin-top: 40px;
@@ -143,6 +159,12 @@
         font-size: 18px;
       }
 
+      @media (max-width: 768px) {
+        .intro-box h2 {
+          font-size: 30px;
+        }
+      }
+
       .sanctuary-nav {
         background: var(--color-darker);
         position: sticky;
@@ -173,6 +195,19 @@
         color: #fff;
       }
 
+      @media (max-width: 768px) {
+        .sanctuary-nav .container {
+          justify-content: flex-start;
+          overflow: auto;
+          flex-wrap: nowrap;
+          padding: 15px;
+        }
+
+        .sanctuary-nav a {
+          white-space: nowrap;
+        }
+      }
+
       .row {
         display: flex;
         align-items: center;
@@ -183,8 +218,48 @@
         flex-direction: row-reverse;
       }
 
+      @media (max-width: 992px) {
+        .row {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .row.reverse {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
       .content {
         flex: 1;
+      }
+
+      .content h2 {
+        font-family: var(--font-1), sans-serif;
+        font-size: 44px;
+        line-height: 48px;
+        color: var(--heading-color);
+        margin-bottom: 10px;
+      }
+
+      .content p {
+        color: var(--text-color-1);
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 10px;
+        margin-bottom: 18px;
+      }
+
+      @media (max-width: 992px) {
+        .content h2 {
+          font-size: 44px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .content h2 {
+          font-size: 30px;
+        }
       }
 
       .image {
@@ -197,6 +272,18 @@
         box-shadow: 0 30px 60px rgba(17, 32, 21, 0.18);
       }
 
+      @media (max-width: 992px) {
+        .image img {
+          height: 480px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .image img {
+          height: 320px;
+        }
+      }
+
       .section-number {
         display: inline-block;
         color: var(--color-main);
@@ -207,27 +294,11 @@
         margin-bottom: 10px;
       }
 
-      .content h2 {
-        font-family: var(--font-1), sans-serif;
-        font-size: 44px;
-        line-height: 48px;
-        color: var(--heading-color);
-        margin-bottom: 10px;
-      }
-
       .lead {
         color: #99c7a3;
         font-size: 24px;
         line-height: 22px;
         font-weight: 600;
-      }
-
-      .content p {
-        color: var(--text-color-1);
-        font-size: 14px;
-        line-height: 20px;
-        margin-top: 10px;
-        margin-bottom: 18px;
       }
 
       .features {
@@ -249,6 +320,18 @@
         background: rgba(92, 146, 105, 0.1);
         transform: translateY(-4px);
         border-color: var(--color-lighter);
+      }
+
+      @media (max-width: 992px) {
+        .features {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .features {
+          grid-template-columns: 1fr;
+        }
       }
 
       .service-btn {
@@ -301,6 +384,18 @@
         gap: 30px;
       }
 
+      @media (max-width: 992px) {
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       .why-card {
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.15);
@@ -314,6 +409,12 @@
         transform: translateY(-10px);
         border-color: var(--color-lighter);
         box-shadow: 0 25px 50px rgba(17, 32, 21, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .why-card {
+          padding: 25px;
+        }
       }
 
       .why-icon {
@@ -351,6 +452,18 @@
         gap: 25px;
       }
 
+      @media (max-width: 992px) {
+        .info-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       .info-box {
         background: var(--color-darker);
         border-radius: 18px;
@@ -374,6 +487,12 @@
       .info-box p {
         color: rgba(255, 255, 255, 0.85);
         font-size: 17px;
+      }
+
+      @media (max-width: 768px) {
+        .info-box {
+          padding: 25px;
+        }
       }
 
       .faq-section {
@@ -410,6 +529,12 @@
         color: var(--text-color-1);
       }
 
+      @media (max-width: 768px) {
+        .faq-item {
+          padding: 25px;
+        }
+      }
+
       .service-cta {
         padding: 120px 0;
         background:
@@ -443,6 +568,22 @@
         color: rgba(255, 255, 255, 0.8);
         font-size: 18px;
         margin-bottom: 40px;
+      }
+
+      @media (max-width: 992px) {
+        .cta-content h2 {
+          font-size: 44px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .cta-content h2 {
+          font-size: 34px;
+        }
+
+        .cta-content p {
+          font-size: 16px;
+        }
       }
 
       .cta-buttons {
@@ -481,6 +622,20 @@
         background: var(--color-lighter);
         color: var(--heading-color);
         transform: translateY(-5px);
+      }
+
+      @media (max-width: 768px) {
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+          width: 100%;
+          max-width: 300px;
+          text-align: center;
+        }
       }
 
       .sanctuary-section,
@@ -537,112 +692,6 @@
       ::-webkit-scrollbar-thumb:hover {
         background: var(--color-lighter);
       }
-
-      @media (max-width: 992px) {
-        .service-hero h1 {
-          font-size: 52px;
-        }
-
-        .row {
-          flex-direction: column;
-        }
-
-        .row.reverse {
-          flex-direction: column;
-        }
-
-        .image img {
-          height: 480px;
-        }
-
-        .content h2 {
-          font-size: 44px;
-        }
-
-        .features {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .why-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .info-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .cta-content h2 {
-          font-size: 44px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .service-hero {
-          padding: 120px 0 80px;
-        }
-
-        .service-hero h1 {
-          font-size: 38px;
-        }
-
-        .intro-box h2 {
-          font-size: 34px;
-        }
-
-        .content h2 {
-          font-size: 34px;
-        }
-
-        .image img {
-          height: 320px;
-        }
-
-        .features {
-          grid-template-columns: 1fr;
-        }
-
-        .sanctuary-nav .container {
-          justify-content: flex-start;
-          overflow: auto;
-          flex-wrap: nowrap;
-          padding: 15px;
-        }
-
-        .sanctuary-nav a {
-          white-space: nowrap;
-        }
-
-        .why-grid,
-        .info-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .why-card,
-        .info-box,
-        .faq-item {
-          padding: 25px;
-        }
-
-        .cta-content h2 {
-          font-size: 34px;
-        }
-
-        .cta-content p {
-          font-size: 16px;
-        }
-
-        .cta-buttons {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .primary-btn,
-        .secondary-btn {
-          width: 100%;
-          max-width: 300px;
-          text-align: center;
-        }
-      }
     </style>
   </head>
 
@@ -652,7 +701,11 @@
       <div class="header-top d-none d-lg-block">
         <div class="container-xl header-top-inner">
           <div class="header-socials">
-            <a href="#" class="header-social-icon" aria-label="Facebook">
+            <a
+              href="https://www.facebook.com/people/The-Unheld/61594140883202/"
+              class="header-social-icon"
+              aria-label="Facebook"
+            >
               <i class="bi bi-facebook"></i>
             </a>
 
@@ -1204,7 +1257,10 @@
             </p>
 
             <div class="footer-social-icons">
-              <a href="#" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/people/The-Unheld/61594140883202/"
+                aria-label="Facebook"
+              >
                 <i class="bi bi-facebook"></i>
               </a>
 
@@ -1325,6 +1381,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- WhatsApp Floating Buttons -->
+    <div class="whatsapp-floating">
+      <!-- Left WhatsApp -->
+      <a
+        href="https://wa.me/919840221718?text=Hello%20Unheld%2C%20I%27m%20looking%20for%20a%20safe%20space%20to%20talk%20and%20would%20like%20to%20know%20more%20about%20your%20support.%20Can%20we%20talk%3F"
+        class="whatsapp-btn whatsapp-left"
+        target="_blank"
+        aria-label="WhatsApp Contact 1"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
 
     <!-- Bootstrap Icons -->
     <link
